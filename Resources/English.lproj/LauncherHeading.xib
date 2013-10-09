@@ -1,182 +1,559 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4510" systemVersion="13A584" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
-    <dependencies>
-        <deployment defaultVersion="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4510"/>
-    </dependencies>
-    <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="BXLauncherItem">
-            <connections>
-                <outlet property="menu" destination="aOK-Mz-ET1" id="Y2P-1L-33W"/>
-                <outlet property="view" destination="1CY-d1-CKM" id="sp5-UG-ohJ"/>
-            </connections>
-        </customObject>
-        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <view id="1CY-d1-CKM" userLabel="Item View" customClass="BXLauncherHeadingView">
-            <rect key="frame" x="0.0" y="0.0" width="640" height="44"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-            <subviews>
-                <customView id="y4J-Xb-RNt" userLabel="Alignment wrapper">
-                    <rect key="frame" x="0.0" y="2" width="640" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="vPB-9b-cSm" customClass="BXThemedLabel">
-                            <rect key="frame" x="128" y="12" width="455" height="19"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="HEADING TITLE" id="s4w-YF-J1z">
-                                <font key="font" metaFont="systemBold"/>
-                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                            </textFieldCell>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="BXLauncherHeadingTheme"/>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <binding destination="-2" name="value" keyPath="representedObject.title.uppercaseString" id="boU-6E-QO0"/>
-                            </connections>
-                        </textField>
-                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fT8-4W-nrU">
-                            <rect key="frame" x="99" y="10" width="24" height="24"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="28E32C6C-E902-47DB-9DA5-439C8D3C958D" id="i1m-Na-c3k" customClass="BXThemedImageCell">
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="BXLauncherHeadingTheme"/>
-                                </userDefinedRuntimeAttributes>
-                            </imageCell>
-                            <connections>
-                                <binding destination="-2" name="value" keyPath="representedObject.icon" id="8N1-ZQ-bzV"/>
-                            </connections>
-                        </imageView>
-                        <imageView id="w0u-7G-bbz">
-                            <rect key="frame" x="20" y="2" width="600" height="4"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="axesIndependently" image="LaunchPanelDivider" id="sFr-OM-S6z"/>
-                        </imageView>
-                    </subviews>
-                </customView>
-            </subviews>
-            <connections>
-                <outlet property="delegate" destination="-2" id="hN5-bI-Vql"/>
-            </connections>
-        </view>
-        <menu id="aOK-Mz-ET1">
-            <items>
-                <menuItem title="Switch to Drive" id="tE5-p1-5qY">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="openItemInDOS:" target="-2" id="2GQ-nF-A1n"/>
-                    </connections>
-                </menuItem>
-                <menuItem title="Show in Finder" id="Rbh-DG-gHt">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="revealItemInFinder:" target="-2" id="JPr-CB-HxF"/>
-                    </connections>
-                </menuItem>
-            </items>
-        </menu>
-    </objects>
-    <resources>
-        <image name="28E32C6C-E902-47DB-9DA5-439C8D3C958D" width="32" height="32">
-            <mutableData key="keyedArchiveRepresentation">
-YnBsaXN0MDDUAQIDBAUGREVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QDwcI
-ExgdHicoKSoyNTg+QVUkbnVsbNUJCgsMDQ4PEBESViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzXE5T
-SXNUZW1wbGF0ZVdOU0NvbG9ygA4SAMAAAIACCYAM0hQJFRdaTlMub2JqZWN0c6EWgAOAC9IUCRkcohob
-gASABYAKEADVHyAhIgkjHSQlJlZOU1NpemVfEA9OU0JpdHNQZXJTYW1wbGVfEBBOU0NvbG9yU3BhY2VO
-YW1lWU5TUERGRGF0YYAGgAeACIAJWHszMiwgMzJ9XxAZTlNDYWxpYnJhdGVkUkdCQ29sb3JTcGFjZU8R
-E2wlUERGLTEuMwolxOXy5eun86DQxMYKNCAwIG9iago8PCAvTGVuZ3RoIDUgMCBSIC9GaWx0ZXIgL0Zs
-YXRlRGVjb2RlID4+CnN0cmVhbQp4AWWVuXJlNwxE8/sVjB3Q2Igln8ThRPMBKlc5kOyS/z9wg3d5UrkU
-6OkIJIFGA+9z/ByfQ2lWSsawmUUUMT42qyVAoUVeZ1AsgFUmYhsErSa27Hg7gboCaJqv80zf3ERs4V/9
-VKk7iCz11HGe+8aOjlKyHDqNlIn7XMbCB5meZOznuVSrBca2ghGOKGJagztKffVN38l5LpRj0AwrX+FD
-ahZKAaEu36wJk1QHXQgFCuTxMHnB8Q5IEv4lEI8LXif98gBPrnSXV2Jv+EjkXeQjxftmbBC3BVPCB0SJ
-01YwlZF1g3Dpztii4kRiYEwezVbhcd4XSW2dQ2OJ75gl1d25mtznUCLak1O4KuLoDFYuUyD3KtGub1Gk
-gRTUqgRxtJ1fAMrUVLjihd5beWL5EgWwlLX6ahKW9WpXTvKVmVdTndlGTOS9IBnOFSO9w2cgJWTSBOYZ
-PiV5QRN4qGUpHguGYdy1Y757uk99IxDuryE+F3rV3ocChfQ+hqwJMeuFAAhtYBDFL4JjbgKHorMabY+b
-QaBgdih1XQQNiTJgq/u1h+AYKpUW+GYHSEHrrfR10U3u51DyE/VK6r7pruV43rsJzqHmq1twPSxi3iVf
-PX1QG5t59cjd7MBUlbaFCp3QTpDR9oRsIMbG5zijWINDhuRUNwkMiXandkWJfZLBh04MLNmOQrHc3hWy
-CjiundZk1xhlLdzNkBfcmpHysAMkFIPbBJPd9RGtrP5bLbOXRdec2AlDrM0Gg8EPAjtiMrDjCjuliZdL
-HDUFWw/e28vJEB+osOcBtsdNZZiQW5b/y7k1DlyKzPccIDeGyE+FeKi3Cm9lIiDM3own0060vYyHcnFv
-Wuyi0qwDxNtJnRc2SmBqd9Lmuk6VnRRLC9OA9KP3J9YBhAGApGiFYTGKLz8echoQnUb9d9QWmXD9C21p
-A18Nz90g2HK1dyxMhAxw1cVeWTVBD/awY3R4tzfLau/YVQv22+ccO7wLTHig7xFhqP4oBbefTnhIq/zr
-t/H3IPwo9oSMf/8cvwA++/NF8et4+xi///HB48c/+Lr7+R8/PF4ACmVuZHN0cmVhbQplbmRvYmoKNSAw
-IG9iago3OTkKZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAzIDAgUiAvUmVzb3Vy
-Y2VzIDYgMCBSIC9Db250ZW50cyA0IDAgUiAvTWVkaWFCb3ggWzAgMCAzMiAzMl0KPj4KZW5kb2JqCjYg
-MCBvYmoKPDwgL1Byb2NTZXQgWyAvUERGIC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0gL1hPYmplY3Qg
-PDwgL0ltMSA3IDAgUiA+PiA+PgplbmRvYmoKNyAwIG9iago8PCAvTGVuZ3RoIDggMCBSIC9UeXBlIC9Y
-T2JqZWN0IC9TdWJ0eXBlIC9JbWFnZSAvV2lkdGggMzIgL0hlaWdodCAzMiAvQ29sb3JTcGFjZQo5IDAg
-UiAvSW50ZW50IC9SZWxhdGl2ZUNvbG9yaW1ldHJpYyAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIg
-L0ZsYXRlRGVjb2RlCj4+CnN0cmVhbQp4Ae3QgQAAAADDoPlTH+SFUGHAgAEDBgwYMGDAwMvAAAwAAAEK
-ZW5kc3RyZWFtCmVuZG9iago4IDAgb2JqCjM2CmVuZG9iagoxMCAwIG9iago8PCAvTGVuZ3RoIDExIDAg
-UiAvTiAzIC9BbHRlcm5hdGUgL0RldmljZVJHQiAvRmlsdGVyIC9GbGF0ZURlY29kZSA+PgpzdHJlYW0K
-eAGdlndUFNcXx9/MbC+0XZYiZem9twWkLr1IlSYKy+4CS1nWZRewN0QFIoqICFYkKGLAaCgSK6JYCAgW
-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
-Tn7PCePUcqZSAlN2pUxy2dwd3Gc8T14Fb5zvxi/nj6W6pZanPklzS9uWNp7ukV6ZPiFgC6oFLzICMvZm
-TGeGZR7MnM2KzWrOJmQnZ58QKgkzhV05WjkFOf0iM1GRaGixy+LtiyfFweL6XCh3YW67hI7+TPVIjaXr
-pcN57nk1eW/yY/KPFygWCAt6lpgu2bRkbKnf0m+XYZZxl3Uu11m+ZvnwCq8V+1dCK1NWdq7SW1W4anS1
-/+pDa0hrMtf8tNZ6bfnaV+ti13UUahauLhxZ77++sUiuSFw0uMF1w96NmI2Cjb2b7Dbt3PSxmFd8pcS6
-pLLkfSm39Mo3Nt9UfTO7OXVzb5lj2Z4tuC3CLbe2emw9VK5YvrR8ZFvottYKZkVxxavtSdsvV9pX7t1B
-2iHdMVQVUtW+U3/nlp3vq9Orb9Z41zTv0ti1adf0bt7ugT2ee5r2au4t2ftun2Df7f3++1trDWsrD+AO
-5B14XBdT1/0t69uGevX6kvoPB4UHhw5FHupqcGpoOKxxuKwRbpQ2jh9JPHLtO5/v2pssmvY3M5pLjoKj
-0qNPv0/+/tax4GOdx1nHm34w+GFXC62luBVqXdI62ZbeNtQe395/IuhEZ4drR8uPlj8ePKlzsuaU8qmy
-06TThadnzyw9M3VWdHbiXNq5kc6kznvn487f6Iro6r0QfOHSRb+L57u9us9ccrt08rLL5RNXWFfarjpe
-be1x6Gn5yeGnll7H3tY+p772a87XOvrn9p8e8Bg4d93n+sUbgTeu3px3s//W/Fu3BxMHh27zbj+5k3Xn
-xd28uzP3Vt/H3i9+oPCg8qHGw9qfTX5uHnIcOjXsM9zzKOrRvRHuyLNfcn95P1r4mPq4ckx7rOGJ7ZOT
-437j154ueDr6TPRsZqLoV8Vfdz03fv7Db56/9UzGTY6+EL+Y/b30pdrLg6/sX3VOhU89fJ39ema6+I3a
-m0NvWW+738W+G5vJf49/X/XB5EPHx+CP92ezZ2f/AAOY8/wKZW5kc3RyZWFtCmVuZG9iagoxMSAwIG9i
-agoyNjE1CmVuZG9iago5IDAgb2JqClsgL0lDQ0Jhc2VkIDEwIDAgUiBdCmVuZG9iagozIDAgb2JqCjw8
-IC9UeXBlIC9QYWdlcyAvTWVkaWFCb3ggWzAgMCA2MTIgNzkyXSAvQ291bnQgMSAvS2lkcyBbIDIgMCBS
-IF0gPj4KZW5kb2JqCjEyIDAgb2JqCjw8IC9UeXBlIC9DYXRhbG9nIC9QYWdlcyAzIDAgUiA+PgplbmRv
-YmoKMTMgMCBvYmoKKE1hYyBPUyBYIDEwLjYuOCBRdWFydHogUERGQ29udGV4dCkKZW5kb2JqCjE0IDAg
-b2JqCiggQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2gpCmVuZG9iagoxNSAwIG9iagooRDoyMDEx
-MDgyMTEzMjIzMFowMCcwMCcpCmVuZG9iagoxIDAgb2JqCjw8IC9Qcm9kdWNlciAxMyAwIFIgL0NyZWF0
-b3IgMTQgMCBSIC9DcmVhdGlvbkRhdGUgMTUgMCBSIC9Nb2REYXRlIDE1IDAgUiA+PgplbmRvYmoKeHJl
-ZgowIDE2CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwNDQwNCAwMDAwMCBuIAowMDAwMDAwOTE0IDAw
-MDAwIG4gCjAwMDAwMDQxMjggMDAwMDAgbiAKMDAwMDAwMDAyMiAwMDAwMCBuIAowMDAwMDAwODk1IDAw
-MDAwIG4gCjAwMDAwMDEwMTYgMDAwMDAgbiAKMDAwMDAwMTEwNSAwMDAwMCBuIAowMDAwMDAxMzM1IDAw
-MDAwIG4gCjAwMDAwMDQwOTIgMDAwMDAgbiAKMDAwMDAwMTM1MyAwMDAwMCBuIAowMDAwMDA0MDcxIDAw
-MDAwIG4gCjAwMDAwMDQyMTEgMDAwMDAgbiAKMDAwMDAwNDI2MSAwMDAwMCBuIAowMDAwMDA0MzEzIDAw
-MDAwIG4gCjAwMDAwMDQzNjIgMDAwMDAgbiAKdHJhaWxlcgo8PCAvU2l6ZSAxNiAvUm9vdCAxMiAwIFIg
-L0luZm8gMSAwIFIgL0lEIFsgPGZmMDY5NzMyNjJmNWM2YjQ4MGM3Yjc1ZjJiNWU1Y2ZkPgo8ZmYwNjk3
-MzI2MmY1YzZiNDgwYzdiNzVmMmI1ZTVjZmQ+IF0gPj4Kc3RhcnR4cmVmCjQ0OTUKJSVFT0YK0issLS5a
-JGNsYXNzbmFtZVgkY2xhc3Nlc11OU1BERkltYWdlUmVwoy8wMV1OU1BERkltYWdlUmVwWk5TSW1hZ2VS
-ZXBYTlNPYmplY3TSKywzNFdOU0FycmF5ojMx0issNjdeTlNNdXRhYmxlQXJyYXmjNjMx0zk6CTs8PVdO
-U1doaXRlXE5TQ29sb3JTcGFjZUQwIDAAEAOADdIrLD9AV05TQ29sb3KiPzHSKyxCQ1dOU0ltYWdlokIx
-XxAPTlNLZXllZEFyY2hpdmVy0UZHVHJvb3SAAQAIABEAGgAjAC0AMgA3AEkATwBaAGEAbgB1AIIAigCM
-AJEAkwCUAJYAmwCmAKgAqgCsALEAtAC2ALgAugC8AMcAzgDgAPMA/QD/AQEBAwEFAQ4BKhSaFJ8UqhSz
-FMEUxRTTFN4U5xTsFPQU9xT8FQsVDxUWFR4VKxUwFTIVNBU5FUEVRBVJFVEVVBVmFWkVbgAAAAAAAAIB
-AAAAAAAAAEgAAAAAAAAAAAAAAAAAABVwA
-</mutableData>
-        </image>
-        <image name="LaunchPanelDivider" width="560" height="4"/>
-    </resources>
-</document>
+<?xml version="1.0" encoding="UTF-8"?>
+<archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
+	<data>
+		<int key="IBDocument.SystemTarget">1060</int>
+		<string key="IBDocument.SystemVersion">12F45</string>
+		<string key="IBDocument.InterfaceBuilderVersion">4510</string>
+		<string key="IBDocument.AppKitVersion">1187.40</string>
+		<string key="IBDocument.HIToolboxVersion">626.00</string>
+		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
+			<string key="NS.object.0">4510</string>
+		</object>
+		<array key="IBDocument.IntegratedClassDependencies">
+			<string>NSCustomObject</string>
+			<string>NSCustomView</string>
+			<string>NSImageCell</string>
+			<string>NSImageView</string>
+			<string>NSMenu</string>
+			<string>NSMenuItem</string>
+			<string>NSTextField</string>
+			<string>NSTextFieldCell</string>
+			<string>NSView</string>
+		</array>
+		<array key="IBDocument.PluginDependencies">
+			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+		</array>
+		<object class="NSMutableDictionary" key="IBDocument.Metadata">
+			<string key="NS.key.0">PluginDependencyRecalculationVersion</string>
+			<integer value="1" key="NS.object.0"/>
+		</object>
+		<array class="NSMutableArray" key="IBDocument.RootObjects" id="403882756">
+			<object class="NSCustomObject" id="613593811">
+				<string key="NSClassName">BXLauncherItem</string>
+			</object>
+			<object class="NSCustomObject" id="754364303">
+				<string key="NSClassName">FirstResponder</string>
+			</object>
+			<object class="NSCustomObject" id="791215834">
+				<string key="NSClassName">NSApplication</string>
+			</object>
+			<object class="NSView" id="621588022">
+				<nil key="NSNextResponder"/>
+				<int key="NSvFlags">1834</int>
+				<array class="NSMutableArray" key="NSSubviews">
+					<object class="NSCustomView" id="123447424">
+						<reference key="NSNextResponder" ref="621588022"/>
+						<int key="NSvFlags">1837</int>
+						<array class="NSMutableArray" key="NSSubviews">
+							<object class="NSImageView" id="791529332">
+								<reference key="NSNextResponder" ref="123447424"/>
+								<int key="NSvFlags">1826</int>
+								<object class="NSPSMatrix" key="NSFrameMatrix"/>
+								<set class="NSMutableSet" key="NSDragTypes">
+									<string>Apple PDF pasteboard type</string>
+									<string>Apple PICT pasteboard type</string>
+									<string>Apple PNG pasteboard type</string>
+									<string>NSFilenamesPboardType</string>
+									<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
+									<string>NeXT TIFF v4.0 pasteboard type</string>
+								</set>
+								<string key="NSFrame">{{20, 2}, {600, 4}}</string>
+								<reference key="NSSuperview" ref="123447424"/>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSImageCell" key="NSCell" id="727417204">
+									<int key="NSCellFlags">0</int>
+									<int key="NSCellFlags2">33554432</int>
+									<object class="NSCustomResource" key="NSContents">
+										<string key="NSClassName">NSImage</string>
+										<string key="NSResourceName">LaunchPanelDivider</string>
+									</object>
+									<int key="NSAlign">0</int>
+									<int key="NSScale">1</int>
+									<int key="NSStyle">0</int>
+									<bool key="NSAnimates">YES</bool>
+								</object>
+								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+								<bool key="NSEditable">YES</bool>
+							</object>
+							<object class="NSImageView" id="133658523">
+								<reference key="NSNextResponder" ref="123447424"/>
+								<int key="NSvFlags">1804</int>
+								<object class="NSPSMatrix" key="NSFrameMatrix"/>
+								<set class="NSMutableSet" key="NSDragTypes">
+									<string>Apple PDF pasteboard type</string>
+									<string>Apple PICT pasteboard type</string>
+									<string>Apple PNG pasteboard type</string>
+									<string>NSFilenamesPboardType</string>
+									<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
+									<string>NeXT TIFF v4.0 pasteboard type</string>
+								</set>
+								<string key="NSFrame">{{99, 10}, {24, 24}}</string>
+								<reference key="NSSuperview" ref="123447424"/>
+								<string key="NSHuggingPriority">{251, 251}</string>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSImageCell" key="NSCell" id="1006074046">
+									<int key="NSCellFlags">0</int>
+									<int key="NSCellFlags2">33554432</int>
+									<object class="NSImage" key="NSContents">
+										<int key="NSImageFlags">12582912</int>
+										<array class="NSMutableArray" key="NSReps">
+											<array>
+												<integer value="0"/>
+												<object class="NSPDFImageRep">
+													<string key="NSSize">{32, 32}</string>
+													<int key="NSBitsPerSample">0</int>
+													<string key="NSColorSpaceName">NSCalibratedRGBColorSpace</string>
+													<object class="NSMutableData" key="NSPDFData">
+														<bytes key="NS.bytes">JVBERi0xLjMKJcTl8uXrp/Og0MTGCjQgMCBvYmoKPDwgL0xlbmd0aCA1IDAgUiAvRmlsdGVyIC9GbGF0
+ZURlY29kZSA+PgpzdHJlYW0KeAFllblyZTcMRPP7FYwd0NiIJZ/E4UTzASpXOZDskv8/cIN3eVK5FOjp
+CCSBRgPvc/wcn0NpVkrGsJlFFDE+NqslQKFFXmdQLIBVJmIbBK0mtux4O4G6Amiar/NM39xEbOFf/VSp
+O4gs9dRxnvvGjo5Sshw6jZSJ+1zGwgeZnmTs57lUqwXGtoIRjihiWoM7Sn31Td/JeS6UY9AMK1/hQ2oW
+SgGhLt+sCZNUB10IBQrk8TB5wfEOSBL+JRCPC14n/fIAT650l1dib/hI5F3kI8X7ZmwQtwVTwgdEidNW
+MJWRdYNw6c7YouJEYmBMHs1W4XHeF0ltnUNjie+YJdXduZrc51Ai2pNTuCri6AxWLlMg9yrRrm9RpIEU
+1KoEcbSdXwDK1FS44oXeW3li+RIFsJS1+moSlvVqV07ylZlXU53ZRkzkvSAZzhUjvcNnICVk0gTmGT4l
+eUETeKhlKR4LhmHctWO+e7pPfSMQ7q8hPhd61d6HAoX0PoasCTHrhQAIbWAQxS+CY24Ch6KzGm2Pm0Gg
+YHYodV0EDYkyYKv7tYfgGCqVFvhmB0hB6630ddFN7udQ8hP1Suq+6a7leN67Cc6h5qtbcD0sYt4lXz19
+UBubefXI3ezAVJW2hQqd0E6Q0faEbCDGxuc4o1iDQ4bkVDcJDIl2p3ZFiX2SwYdODCzZjkKx3N4Vsgo4
+rp3WZNcYZS3czZAX3JqR8rADJBSD2wST3fURraz+Wy2zl0XXnNgJQ6zNBoPBDwI7YjKw4wo7pYmXSxw1
+BVsP3tvLyRAfqLDnAbbHTWWYkFuW/8u5NQ5cisz3HCA3hshPhXiotwpvZSIgzN6MJ9NOtL2Mh3Jxb1rs
+otKsA8TbSZ0XNkpganfS5rpOlZ0USwvTgPSj9yfWAYQBgKRohWExii8/HnIaEJ1G/XfUFplw/QttaQNf
+Dc/dINhytXcsTIQMcNXFXlk1QQ/2sGN0eLc3y2rv2FUL9tvnHDu8C0x4oO8RYaj+KAW3n054SKv867fx
+9yD8KPaEjH//HL8APvvzRfHrePsYv//xwePHP/i6+/kfPzxeAAplbmRzdHJlYW0KZW5kb2JqCjUgMCBv
+YmoKNzk5CmVuZG9iagoyIDAgb2JqCjw8IC9UeXBlIC9QYWdlIC9QYXJlbnQgMyAwIFIgL1Jlc291cmNl
+cyA2IDAgUiAvQ29udGVudHMgNCAwIFIgL01lZGlhQm94IFswIDAgMzIgMzJdCj4+CmVuZG9iago2IDAg
+b2JqCjw8IC9Qcm9jU2V0IFsgL1BERiAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdIC9YT2JqZWN0IDw8
+IC9JbTEgNyAwIFIgPj4gPj4KZW5kb2JqCjcgMCBvYmoKPDwgL0xlbmd0aCA4IDAgUiAvVHlwZSAvWE9i
+amVjdCAvU3VidHlwZSAvSW1hZ2UgL1dpZHRoIDMyIC9IZWlnaHQgMzIgL0NvbG9yU3BhY2UKOSAwIFIg
+L0ludGVudCAvUmVsYXRpdmVDb2xvcmltZXRyaWMgL0JpdHNQZXJDb21wb25lbnQgOCAvRmlsdGVyIC9G
+bGF0ZURlY29kZQo+PgpzdHJlYW0KeAHt0IEAAAAAw6D5Ux/khVBhwIABAwYMGDBgwMDLwAAMAAABCmVu
+ZHN0cmVhbQplbmRvYmoKOCAwIG9iagozNgplbmRvYmoKMTAgMCBvYmoKPDwgL0xlbmd0aCAxMSAwIFIg
+L04gMyAvQWx0ZXJuYXRlIC9EZXZpY2VSR0IgL0ZpbHRlciAvRmxhdGVEZWNvZGUgPj4Kc3RyZWFtCngB
+nZZ3VBTXF8ffzGwvtF2WImXpvbcFpC69SJUmCsvuAktZ1mUXsDdEBSKKiAhWJChiwGgoEiuiWAgIFuwB
+CSJKDEYRFZXMxhz19zsn+f1O3h93PvN995535977zhkAKAEhAmEOrABAtlAijvT3ZsbFJzDxvQAGRIAD
+NgBwuLmi0Ci/aICuQF82Mxd1kvFfCwLg9S2AWgCuWwSEM5l/6f/vQ5ErEksAgMLRADseP5eLciHKWfkS
+kUyfRJmekiljGCNjMZogyqoyTvvE5n/6fGJPGfOyhTzUR5aziJfNk3EXyhvzpHyUkRCUi/IE/HyUb6Cs
+nyXNFqD8BmV6Np+TCwCGItMlfG46ytYoU8TRkWyU5wJAoKR9xSlfsYRfgOYJADtHtEQsSEuXMI25Jkwb
+Z2cWM4Cfn8WXSCzCOdxMjpjHZOdkizjCJQB8+mZZFFCS1ZaJFtnRxtnR0cLWEi3/5/WPm5+9/hlkvf3k
+8TLiz55BjJ4v2pfYL1pOLQCsKbQ2W75oKTsBaFsPgOrdL5r+PgDkCwFo7fvqexiyeUmXSEQuVlb5+fmW
+Aj7XUlbQz+t/Onz2/Hv46jxL2Xmfa8f04adypFkSpqyo3JysHKmYmSvicPlMi/8e4n8d+FVaX+VhHslP
+5Yv5QvSoGHTKBMI0tN1CnkAiyBEyBcK/6/C/DPsqBxl+mmsUaHUfAT3JEij00QHyaw/A0MgASdyD7kCf
++xZCjAGymxerPfZp7lFG9/+0/2HgMvQVzhWkMWUyOzKayZWK82SM3gmZwQISkAd0oAa0gB4wBhbAFjgB
+V+AJfEEQCAPRIB4sAlyQDrKBGOSD5WANKAIlYAvYDqrBXlAHGkATOAbawElwDlwEV8E1cBPcA0NgFDwD
+k+A1mIEgCA9RIRqkBmlDBpAZZAuxIHfIFwqBIqF4KBlKg4SQFFoOrYNKoHKoGtoPNUDfQyegc9BlqB+6
+Aw1D49Dv0DsYgSkwHdaEDWErmAV7wcFwNLwQToMXw0vhQngzXAXXwkfgVvgcfBW+CQ/Bz+ApBCBkhIHo
+IBYIC2EjYUgCkoqIkZVIMVKJ1CJNSAfSjVxHhpAJ5C0Gh6FhmBgLjCsmADMfw8UsxqzElGKqMYcwrZgu
+zHXMMGYS8xFLxWpgzbAu2EBsHDYNm48twlZi67Et2AvYm9hR7GscDsfAGeGccAG4eFwGbhmuFLcb14w7
+i+vHjeCm8Hi8Gt4M74YPw3PwEnwRfif+CP4MfgA/in9DIBO0CbYEP0ICQUhYS6gkHCacJgwQxggzRAWi
+AdGFGEbkEZcQy4h1xA5iH3GUOENSJBmR3EjRpAzSGlIVqYl0gXSf9JJMJuuSnckRZAF5NbmKfJR8iTxM
+fktRophS2JREipSymXKQcpZyh/KSSqUaUj2pCVQJdTO1gXqe+pD6Ro4mZykXKMeTWyVXI9cqNyD3XJ4o
+byDvJb9Ifql8pfxx+T75CQWigqECW4GjsFKhRuGEwqDClCJN0UYxTDFbsVTxsOJlxSdKeCVDJV8lnlKh
+0gGl80ojNISmR2PTuLR1tDraBdooHUc3ogfSM+gl9O/ovfRJZSVle+UY5QLlGuVTykMMhGHICGRkMcoY
+xxi3GO9UNFW8VPgqm1SaVAZUplXnqHqq8lWLVZtVb6q+U2Oq+aplqm1Va1N7oI5RN1WPUM9X36N+QX1i
+Dn2O6xzunOI5x+bc1YA1TDUiNZZpHNDo0ZjS1NL01xRp7tQ8rzmhxdDy1MrQqtA6rTWuTdN21xZoV2if
+0X7KVGZ6MbOYVcwu5qSOhk6AjlRnv06vzoyuke583bW6zboP9Eh6LL1UvQq9Tr1JfW39UP3l+o36dw2I
+BiyDdIMdBt0G04ZGhrGGGwzbDJ8YqRoFGi01ajS6b0w19jBebFxrfMMEZ8IyyTTZbXLNFDZ1ME03rTHt
+M4PNHM0EZrvN+s2x5s7mQvNa80ELioWXRZ5Fo8WwJcMyxHKtZZvlcyt9qwSrrVbdVh+tHayzrOus79ko
+2QTZrLXpsPnd1tSWa1tje8OOaudnt8qu3e6FvZk9336P/W0HmkOowwaHTocPjk6OYscmx3Enfadkp11O
+gyw6K5xVyrrkjHX2dl7lfNL5rYuji8TlmMtvrhauma6HXZ/MNZrLn1s3d8RN143jtt9tyJ3pnuy+z33I
+Q8eD41Hr8chTz5PnWe855mXileF1xOu5t7W32LvFe5rtwl7BPuuD+Pj7FPv0+ir5zvet9n3op+uX5tfo
+N+nv4L/M/2wANiA4YGvAYKBmIDewIXAyyCloRVBXMCU4Krg6+FGIaYg4pCMUDg0K3RZ6f57BPOG8tjAQ
+Fhi2LexBuFH44vAfI3AR4RE1EY8jbSKXR3ZH0aKSog5HvY72ji6LvjffeL50fmeMfExiTEPMdKxPbHns
+UJxV3Iq4q/Hq8YL49gR8QkxCfcLUAt8F2xeMJjokFiXeWmi0sGDh5UXqi7IWnUqST+IkHU/GJscmH05+
+zwnj1HKmUgJTdqVMctncHdxnPE9eBW+c78Yv54+luqWWpz5Jc0vbljae7pFemT4hYAuqBS8yAjL2Zkxn
+hmUezJzNis1qziZkJ2efECoJM4VdOVo5BTn9IjNRkWhoscvi7YsnxcHi+lwod2Fuu4SO/kz1SI2l66XD
+ee55NXlv8mPyjxcoFggLepaYLtm0ZGyp39Jvl2GWcZd1LtdZvmb58AqvFftXQitTVnau0ltVuGp0tf/q
+Q2tIazLX/LTWem352lfrYtd1FGoWri4cWe+/vrFIrkhcNLjBdcPejZiNgo29m+w27dz0sZhXfKXEuqSy
+5H0pt/TKNzbfVH0zuzl1c2+ZY9meLbgtwi23tnpsPVSuWL60fGRb6LbWCmZFccWr7UnbL1faV+7dQdoh
+3TFUFVLVvlN/55ad76vTq2/WeNc079LYtWnX9G7e7oE9nnua9mruLdn7bp9g3+39/vtbaw1rKw/gDuQd
+eFwXU9f9Levbhnr1+pL6DweFB4cORR7qanBqaDiscbisEW6UNo4fSTxy7Tuf79qbLJr2NzOaS46Co9Kj
+T79P/v7WseBjncdZx5t+MPhhVwutpbgVal3SOtmW3jbUHt/efyLoRGeHa0fLj5Y/Hjypc7LmlPKpstOk
+04WnZ88sPTN1VnR24lzauZHOpM575+PO3+iK6Oq9EHzh0kW/i+e7vbrPXHK7dPKyy+UTV1hX2q46Xm3t
+cehp+cnhp5Zex97WPqe+9mvO1zr65/afHvAYOHfd5/rFG4E3rt6cd7P/1vxbtwcTB4du824/uZN158Xd
+vLsz91bfx94vfqDwoPKhxsPan01+bh5yHDo17DPc8yjq0b0R7sizX3J/eT9a+Jj6uHJMe6zhie2Tk+N+
+49eeLng6+kz0bGai6FfFX3c9N37+w2+ev/VMxk2OvhC/mP299KXay4Ov7F91ToVPPXyd/XpmuviN2ptD
+b1lvu9/FvhubyX+Pf1/1weRDx8fgj/dns2dn/wADmPP8CmVuZHN0cmVhbQplbmRvYmoKMTEgMCBvYmoK
+MjYxNQplbmRvYmoKOSAwIG9iagpbIC9JQ0NCYXNlZCAxMCAwIFIgXQplbmRvYmoKMyAwIG9iago8PCAv
+VHlwZSAvUGFnZXMgL01lZGlhQm94IFswIDAgNjEyIDc5Ml0gL0NvdW50IDEgL0tpZHMgWyAyIDAgUiBd
+ID4+CmVuZG9iagoxMiAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMyAwIFIgPj4KZW5kb2Jq
+CjEzIDAgb2JqCihNYWMgT1MgWCAxMC42LjggUXVhcnR6IFBERkNvbnRleHQpCmVuZG9iagoxNCAwIG9i
+agooIEFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoKQplbmRvYmoKMTUgMCBvYmoKKEQ6MjAxMTA4
+MjExMzIyMzBaMDAnMDAnKQplbmRvYmoKMSAwIG9iago8PCAvUHJvZHVjZXIgMTMgMCBSIC9DcmVhdG9y
+IDE0IDAgUiAvQ3JlYXRpb25EYXRlIDE1IDAgUiAvTW9kRGF0ZSAxNSAwIFIgPj4KZW5kb2JqCnhyZWYK
+MCAxNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDQ0MDQgMDAwMDAgbiAKMDAwMDAwMDkxNCAwMDAw
+MCBuIAowMDAwMDA0MTI4IDAwMDAwIG4gCjAwMDAwMDAwMjIgMDAwMDAgbiAKMDAwMDAwMDg5NSAwMDAw
+MCBuIAowMDAwMDAxMDE2IDAwMDAwIG4gCjAwMDAwMDExMDUgMDAwMDAgbiAKMDAwMDAwMTMzNSAwMDAw
+MCBuIAowMDAwMDA0MDkyIDAwMDAwIG4gCjAwMDAwMDEzNTMgMDAwMDAgbiAKMDAwMDAwNDA3MSAwMDAw
+MCBuIAowMDAwMDA0MjExIDAwMDAwIG4gCjAwMDAwMDQyNjEgMDAwMDAgbiAKMDAwMDAwNDMxMyAwMDAw
+MCBuIAowMDAwMDA0MzYyIDAwMDAwIG4gCnRyYWlsZXIKPDwgL1NpemUgMTYgL1Jvb3QgMTIgMCBSIC9J
+bmZvIDEgMCBSIC9JRCBbIDxmZjA2OTczMjYyZjVjNmI0ODBjN2I3NWYyYjVlNWNmZD4KPGZmMDY5NzMy
+NjJmNWM2YjQ4MGM3Yjc1ZjJiNWU1Y2ZkPiBdID4+CnN0YXJ0eHJlZgo0NDk1CiUlRU9GCg</bytes>
+													</object>
+												</object>
+											</array>
+										</array>
+										<object class="NSColor" key="NSColor">
+											<int key="NSColorSpace">3</int>
+											<bytes key="NSWhite">MCAwAA</bytes>
+										</object>
+										<bool key="NSIsTemplate">YES</bool>
+									</object>
+									<int key="NSAlign">0</int>
+									<int key="NSScale">0</int>
+									<int key="NSStyle">0</int>
+									<bool key="NSAnimates">NO</bool>
+								</object>
+								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+								<bool key="NSEditable">YES</bool>
+							</object>
+							<object class="NSTextField" id="673402740">
+								<reference key="NSNextResponder" ref="123447424"/>
+								<int key="NSvFlags">1802</int>
+								<object class="NSPSMatrix" key="NSFrameMatrix"/>
+								<string key="NSFrame">{{128, 12}, {455, 19}}</string>
+								<reference key="NSSuperview" ref="123447424"/>
+								<string key="NSHuggingPriority">{251, 750}</string>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSTextFieldCell" key="NSCell" id="879766218">
+									<int key="NSCellFlags">68157504</int>
+									<int key="NSCellFlags2">272630784</int>
+									<string key="NSContents">HEADING TITLE</string>
+									<object class="NSFont" key="NSSupport">
+										<string key="NSName">LucidaGrande-Bold</string>
+										<double key="NSSize">13</double>
+										<int key="NSfFlags">2072</int>
+									</object>
+									<reference key="NSControlView" ref="673402740"/>
+									<object class="NSColor" key="NSBackgroundColor">
+										<int key="NSColorSpace">6</int>
+										<string key="NSCatalogName">System</string>
+										<string key="NSColorName">controlColor</string>
+										<object class="NSColor" key="NSColor">
+											<int key="NSColorSpace">3</int>
+											<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
+										</object>
+									</object>
+									<object class="NSColor" key="NSTextColor">
+										<int key="NSColorSpace">6</int>
+										<string key="NSCatalogName">System</string>
+										<string key="NSColorName">controlTextColor</string>
+										<object class="NSColor" key="NSColor">
+											<int key="NSColorSpace">3</int>
+											<bytes key="NSWhite">MAA</bytes>
+										</object>
+									</object>
+								</object>
+								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+							</object>
+						</array>
+						<object class="NSPSMatrix" key="NSFrameMatrix"/>
+						<string key="NSFrame">{{0, 2}, {640, 40}}</string>
+						<reference key="NSSuperview" ref="621588022"/>
+						<string key="NSClassName">NSView</string>
+					</object>
+				</array>
+				<object class="NSPSMatrix" key="NSFrameMatrix"/>
+				<string key="NSFrameSize">{640, 44}</string>
+			</object>
+			<object class="NSMenu" id="252612382">
+				<string key="NSTitle"/>
+				<array class="NSMutableArray" key="NSMenuItems">
+					<object class="NSMenuItem" id="926200846">
+						<reference key="NSMenu" ref="252612382"/>
+						<string key="NSTitle">Switch to Drive</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<object class="NSCustomResource" key="NSOnImage" id="422093319">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">NSMenuCheckmark</string>
+						</object>
+						<object class="NSCustomResource" key="NSMixedImage" id="628192785">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">NSMenuMixedState</string>
+						</object>
+					</object>
+					<object class="NSMenuItem" id="685550379">
+						<reference key="NSMenu" ref="252612382"/>
+						<string key="NSTitle">Show in Finder</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="422093319"/>
+						<reference key="NSMixedImage" ref="628192785"/>
+					</object>
+				</array>
+			</object>
+		</array>
+		<object class="IBObjectContainer" key="IBDocument.Objects">
+			<bool key="usesAutoincrementingIDs">NO</bool>
+			<array class="NSMutableArray" key="connectionRecords">
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">menu</string>
+						<reference key="source" ref="613593811"/>
+						<reference key="destination" ref="252612382"/>
+					</object>
+					<string key="id">Y2P-1L-33W</string>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">view</string>
+						<reference key="source" ref="613593811"/>
+						<reference key="destination" ref="621588022"/>
+					</object>
+					<string key="id">sp5-UG-ohJ</string>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">openItemInDOS:</string>
+						<reference key="source" ref="613593811"/>
+						<reference key="destination" ref="926200846"/>
+					</object>
+					<string key="id">2GQ-nF-A1n</string>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">revealItemInFinder:</string>
+						<reference key="source" ref="613593811"/>
+						<reference key="destination" ref="685550379"/>
+					</object>
+					<string key="id">JPr-CB-HxF</string>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="621588022"/>
+						<reference key="destination" ref="613593811"/>
+					</object>
+					<string key="id">hN5-bI-Vql</string>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">representedObject.icon</string>
+						<reference key="source" ref="133658523"/>
+						<reference key="destination" ref="613593811"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="133658523"/>
+							<reference key="NSDestination" ref="613593811"/>
+							<string key="NSLabel">value: representedObject.icon</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">representedObject.icon</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<string key="id">8N1-ZQ-bzV</string>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">representedObject.title.uppercaseString</string>
+						<reference key="source" ref="673402740"/>
+						<reference key="destination" ref="613593811"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="673402740"/>
+							<reference key="NSDestination" ref="613593811"/>
+							<string key="NSLabel">value: representedObject.title.uppercaseString</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">representedObject.title.uppercaseString</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<string key="id">boU-6E-QO0</string>
+				</object>
+			</array>
+			<object class="IBMutableOrderedSet" key="objectRecords">
+				<array key="orderedObjects">
+					<object class="IBObjectRecord">
+						<string key="id">0</string>
+						<array key="object" id="0"/>
+						<reference key="children" ref="403882756"/>
+						<nil key="parent"/>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">-2</string>
+						<reference key="object" ref="613593811"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">File's Owner</string>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">-1</string>
+						<reference key="object" ref="754364303"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">First Responder</string>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">-3</string>
+						<reference key="object" ref="791215834"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">Application</string>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">1CY-d1-CKM</string>
+						<reference key="object" ref="621588022"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="123447424"/>
+						</array>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">Item View</string>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">y4J-Xb-RNt</string>
+						<reference key="object" ref="123447424"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="673402740"/>
+							<reference ref="133658523"/>
+							<reference ref="791529332"/>
+						</array>
+						<reference key="parent" ref="621588022"/>
+						<string key="objectName">Alignment wrapper</string>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">vPB-9b-cSm</string>
+						<reference key="object" ref="673402740"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="879766218"/>
+						</array>
+						<reference key="parent" ref="123447424"/>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">s4w-YF-J1z</string>
+						<reference key="object" ref="879766218"/>
+						<reference key="parent" ref="673402740"/>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">fT8-4W-nrU</string>
+						<reference key="object" ref="133658523"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="1006074046"/>
+						</array>
+						<reference key="parent" ref="123447424"/>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">i1m-Na-c3k</string>
+						<reference key="object" ref="1006074046"/>
+						<reference key="parent" ref="133658523"/>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">w0u-7G-bbz</string>
+						<reference key="object" ref="791529332"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="727417204"/>
+						</array>
+						<reference key="parent" ref="123447424"/>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">sFr-OM-S6z</string>
+						<reference key="object" ref="727417204"/>
+						<reference key="parent" ref="791529332"/>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">aOK-Mz-ET1</string>
+						<reference key="object" ref="252612382"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="926200846"/>
+							<reference ref="685550379"/>
+						</array>
+						<reference key="parent" ref="0"/>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">tE5-p1-5qY</string>
+						<reference key="object" ref="926200846"/>
+						<reference key="parent" ref="252612382"/>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">Rbh-DG-gHt</string>
+						<reference key="object" ref="685550379"/>
+						<reference key="parent" ref="252612382"/>
+					</object>
+				</array>
+			</object>
+			<dictionary class="NSMutableDictionary" key="flattenedProperties">
+				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<boolean value="NO" key="-1.showNotes"/>
+				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<boolean value="NO" key="-2.showNotes"/>
+				<string key="-3.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<boolean value="NO" key="-3.showNotes"/>
+				<string key="1CY-d1-CKM.CustomClassName">BXLauncherHeadingView</string>
+				<string key="1CY-d1-CKM.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<reference key="1CY-d1-CKM.IBUserGuides" ref="0"/>
+				<boolean value="NO" key="1CY-d1-CKM.showNotes"/>
+				<string key="Rbh-DG-gHt.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<boolean value="NO" key="Rbh-DG-gHt.showNotes"/>
+				<string key="aOK-Mz-ET1.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<boolean value="NO" key="aOK-Mz-ET1.showNotes"/>
+				<string key="fT8-4W-nrU.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<reference key="fT8-4W-nrU.IBUserGuides" ref="0"/>
+				<boolean value="NO" key="fT8-4W-nrU.showNotes"/>
+				<string key="i1m-Na-c3k.CustomClassName">BXThemedImageCell</string>
+				<object class="NSMutableDictionary" key="i1m-Na-c3k.IBAttributePlaceholdersKey">
+					<string key="NS.key.0">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+					<object class="IBUserDefinedRuntimeAttributesPlaceholder" key="NS.object.0">
+						<string key="name">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+						<reference key="object" ref="1006074046"/>
+						<array key="userDefinedRuntimeAttributes">
+							<object class="IBUserDefinedRuntimeAttribute">
+								<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
+								<string key="keyPath">themeKey</string>
+								<string key="value">BXLauncherHeadingTheme</string>
+							</object>
+						</array>
+					</object>
+				</object>
+				<string key="i1m-Na-c3k.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<boolean value="NO" key="i1m-Na-c3k.showNotes"/>
+				<string key="s4w-YF-J1z.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<boolean value="NO" key="s4w-YF-J1z.showNotes"/>
+				<string key="sFr-OM-S6z.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<boolean value="NO" key="sFr-OM-S6z.showNotes"/>
+				<string key="tE5-p1-5qY.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<boolean value="NO" key="tE5-p1-5qY.showNotes"/>
+				<string key="vPB-9b-cSm.CustomClassName">BXThemedLabel</string>
+				<object class="NSMutableDictionary" key="vPB-9b-cSm.IBAttributePlaceholdersKey">
+					<string key="NS.key.0">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+					<object class="IBUserDefinedRuntimeAttributesPlaceholder" key="NS.object.0">
+						<string key="name">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+						<reference key="object" ref="673402740"/>
+						<array key="userDefinedRuntimeAttributes">
+							<object class="IBUserDefinedRuntimeAttribute">
+								<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
+								<string key="keyPath">themeKey</string>
+								<string key="value">BXLauncherHeadingTheme</string>
+							</object>
+						</array>
+					</object>
+				</object>
+				<string key="vPB-9b-cSm.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<reference key="vPB-9b-cSm.IBUserGuides" ref="0"/>
+				<boolean value="NO" key="vPB-9b-cSm.showNotes"/>
+				<string key="w0u-7G-bbz.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<reference key="w0u-7G-bbz.IBUserGuides" ref="0"/>
+				<boolean value="NO" key="w0u-7G-bbz.showNotes"/>
+				<string key="y4J-Xb-RNt.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<reference key="y4J-Xb-RNt.IBUserGuides" ref="0"/>
+				<boolean value="NO" key="y4J-Xb-RNt.showNotes"/>
+			</dictionary>
+			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
+			<nil key="activeLocalization"/>
+			<dictionary class="NSMutableDictionary" key="localizations"/>
+			<nil key="sourceID"/>
+		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<int key="IBDocument.localizationMode">0</int>
+		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
+		<bool key="IBDocument.previouslyAttemptedUpgradeToXcode5">YES</bool>
+		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
+			<real value="1060" key="NS.object.0"/>
+		</object>
+		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.InterfaceBuilder3</string>
+			<integer value="4600" key="NS.object.0"/>
+		</object>
+		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
+		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="LaunchPanelDivider">{560, 4}</string>
+			<string key="NSMenuCheckmark">{11, 11}</string>
+			<string key="NSMenuMixedState">{10, 3}</string>
+		</dictionary>
+	</data>
+</archive>

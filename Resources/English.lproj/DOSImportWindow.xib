@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
-		<string key="IBDocument.SystemVersion">12E55</string>
-		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1187.39</string>
+		<string key="IBDocument.SystemVersion">12F45</string>
+		<string key="IBDocument.InterfaceBuilderVersion">4510</string>
+		<string key="IBDocument.AppKitVersion">1187.40</string>
 		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">3084</string>
+			<string key="NS.object.0">4510</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>NSButton</string>
@@ -53,7 +53,7 @@
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="1006">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSCustomView" id="773857734">
@@ -65,7 +65,6 @@
 									<int key="NSvFlags">269</int>
 									<string key="NSFrame">{{185, 6}, {270, 14}}</string>
 									<reference key="NSSuperview" ref="773857734"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="382941932"/>
 									<int key="NSTag">2</int>
 									<bool key="NSEnabled">YES</bool>
@@ -105,7 +104,6 @@
 									<int key="NSvFlags">268</int>
 									<string key="NSFrame">{{8, 3}, {100, 19}}</string>
 									<reference key="NSSuperview" ref="773857734"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="912332772"/>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSSegmentedCell" key="NSCell" id="838192882">
@@ -162,7 +160,6 @@
 											<int key="NSvFlags">298</int>
 											<string key="NSFrame">{{21, 5}, {72, 15}}</string>
 											<reference key="NSSuperview" ref="382941932"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="939793870"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<bool key="NSEnabled">YES</bool>
@@ -188,7 +185,6 @@
 											<int key="NSvFlags">297</int>
 											<string key="NSFrame">{{95, 4}, {27, 17}}</string>
 											<reference key="NSSuperview" ref="382941932"/>
-											<reference key="NSWindow"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSButtonCell" key="NSCell" id="483932984">
@@ -220,7 +216,6 @@
 											<int key="NSvFlags">300</int>
 											<string key="NSFrame">{{0, 4}, {19, 17}}</string>
 											<reference key="NSSuperview" ref="382941932"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="786970400"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<bool key="NSEnabled">YES</bool>
@@ -247,7 +242,6 @@
 									</array>
 									<string key="NSFrame">{{498, 0}, {122, 26}}</string>
 									<reference key="NSSuperview" ref="773857734"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="552948136"/>
 									<string key="NSReuseIdentifierKey">_NS:9</string>
 									<string key="NSClassName">NSView</string>
@@ -255,7 +249,6 @@
 							</array>
 							<string key="NSFrameSize">{640, 26}</string>
 							<reference key="NSSuperview" ref="1006"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="533401407"/>
 							<string key="NSClassName">BXBottomBar</string>
 						</object>
@@ -264,7 +257,6 @@
 							<int key="NSvFlags">290</int>
 							<string key="NSFrame">{{0, 26}, {640, 64}}</string>
 							<reference key="NSSuperview" ref="1006"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="773857734"/>
 							<string key="NSClassName">BXBlueprintPanel</string>
 						</object>
@@ -285,7 +277,6 @@
 													<int key="NSvFlags">301</int>
 													<string key="NSFrame">{{242, 160}, {156, 160}}</string>
 													<reference key="NSSuperview" ref="777416397"/>
-													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="910670518"/>
 													<string key="NSReuseIdentifierKey">_NS:9</string>
 													<string key="NSClassName">BXBlueprintProgressIndicator</string>
@@ -293,7 +284,6 @@
 											</array>
 											<string key="NSFrameSize">{640, 480}</string>
 											<reference key="NSSuperview" ref="307206382"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="671600945"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<string key="NSClassName">NSView</string>
@@ -307,7 +297,6 @@
 													<int key="NSvFlags">5394</int>
 													<string key="NSFrameSize">{640, 480}</string>
 													<reference key="NSSuperview" ref="764581856"/>
-													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="777416397"/>
 													<bool key="NSViewWantsBestResolutionOpenGLSurface">YES</bool>
 													<object class="NSOpenGLPixelFormat" key="NSPixelFormat">
@@ -319,14 +308,12 @@
 											</array>
 											<string key="NSFrameSize">{640, 480}</string>
 											<reference key="NSSuperview" ref="307206382"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="201958132"/>
 											<string key="NSClassName">BXInputView</string>
 										</object>
 									</array>
 									<string key="NSFrameSize">{640, 480}</string>
 									<reference key="NSSuperview" ref="89453087"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="764581856"/>
 									<string key="NSReuseIdentifierKey">_NS:9</string>
 									<string key="NSClassName">NSView</string>
@@ -334,14 +321,11 @@
 							</array>
 							<string key="NSFrame">{{0, 90}, {640, 480}}</string>
 							<reference key="NSSuperview" ref="1006"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="307206382"/>
 							<string key="NSClassName">BXBlueprintBackgroundView</string>
 						</object>
 					</array>
 					<string key="NSFrameSize">{640, 570}</string>
-					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="89453087"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
@@ -358,6 +342,7 @@
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
+			<bool key="usesAutoincrementingIDs">NO</bool>
 			<array class="NSMutableArray" key="connectionRecords">
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -365,7 +350,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="1005"/>
 					</object>
-					<int key="connectionID">169</int>
+					<string key="id">169</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -373,7 +358,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="910670518"/>
 					</object>
-					<int key="connectionID">917</int>
+					<string key="id">917</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -381,7 +366,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="773857734"/>
 					</object>
-					<int key="connectionID">918</int>
+					<string key="id">918</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -389,7 +374,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="744398180"/>
 					</object>
-					<int key="connectionID">953</int>
+					<string key="id">953</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -397,7 +382,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="949716796"/>
 					</object>
-					<int key="connectionID">973</int>
+					<string key="id">973</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -405,7 +390,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="819309219"/>
 					</object>
-					<int key="connectionID">983</int>
+					<string key="id">983</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -413,7 +398,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="764581856"/>
 					</object>
-					<int key="connectionID">1009</int>
+					<string key="id">1009</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -421,7 +406,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="201958132"/>
 					</object>
-					<int key="connectionID">1010</int>
+					<string key="id">1010</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -429,7 +414,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="777416397"/>
 					</object>
-					<int key="connectionID">1011</int>
+					<string key="id">1011</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -437,7 +422,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="671600945"/>
 					</object>
-					<int key="connectionID">1012</int>
+					<string key="id">1012</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -445,7 +430,7 @@
 						<reference key="source" ref="1003"/>
 						<reference key="destination" ref="939793870"/>
 					</object>
-					<int key="connectionID">992</int>
+					<string key="id">992</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -453,7 +438,7 @@
 						<reference key="source" ref="1003"/>
 						<reference key="destination" ref="552948136"/>
 					</object>
-					<int key="connectionID">993</int>
+					<string key="id">993</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -461,7 +446,7 @@
 						<reference key="source" ref="1005"/>
 						<reference key="destination" ref="1001"/>
 					</object>
-					<int key="connectionID">529</int>
+					<string key="id">529</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -469,7 +454,7 @@
 						<reference key="source" ref="1005"/>
 						<reference key="destination" ref="89453087"/>
 					</object>
-					<int key="connectionID">984</int>
+					<string key="id">984</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -477,7 +462,7 @@
 						<reference key="source" ref="819309219"/>
 						<reference key="destination" ref="773857734"/>
 					</object>
-					<int key="connectionID">927</int>
+					<string key="id">927</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -485,7 +470,7 @@
 						<reference key="source" ref="819309219"/>
 						<reference key="destination" ref="533401407"/>
 					</object>
-					<int key="connectionID">929</int>
+					<string key="id">929</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -493,7 +478,7 @@
 						<reference key="source" ref="819309219"/>
 						<reference key="destination" ref="533401407"/>
 					</object>
-					<int key="connectionID">930</int>
+					<string key="id">930</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -501,7 +486,7 @@
 						<reference key="source" ref="819309219"/>
 						<reference key="destination" ref="912332772"/>
 					</object>
-					<int key="connectionID">947</int>
+					<string key="id">947</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -509,7 +494,7 @@
 						<reference key="source" ref="819309219"/>
 						<reference key="destination" ref="382941932"/>
 					</object>
-					<int key="connectionID">998</int>
+					<string key="id">998</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -517,7 +502,7 @@
 						<reference key="source" ref="744398180"/>
 						<reference key="destination" ref="910670518"/>
 					</object>
-					<int key="connectionID">952</int>
+					<string key="id">952</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -525,7 +510,7 @@
 						<reference key="source" ref="949716796"/>
 						<reference key="destination" ref="764581856"/>
 					</object>
-					<int key="connectionID">1013</int>
+					<string key="id">1013</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -545,37 +530,37 @@
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">997</int>
+					<string key="id">997</string>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
 					<object class="IBObjectRecord">
-						<int key="objectID">0</int>
+						<string key="id">0</string>
 						<array key="object" id="0"/>
 						<reference key="children" ref="1000"/>
 						<nil key="parent"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">-2</int>
+						<string key="id">-2</string>
 						<reference key="object" ref="1001"/>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">File's Owner</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">-1</int>
+						<string key="id">-1</string>
 						<reference key="object" ref="1003"/>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">First Responder</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">-3</int>
+						<string key="id">-3</string>
 						<reference key="object" ref="1004"/>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Application</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">1</int>
+						<string key="id">1</string>
 						<reference key="object" ref="1005"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="1006"/>
@@ -583,7 +568,7 @@
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">2</int>
+						<string key="id">2</string>
 						<reference key="object" ref="1006"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="773857734"/>
@@ -593,7 +578,7 @@
 						<reference key="parent" ref="1005"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">3</int>
+						<string key="id">3</string>
 						<reference key="object" ref="773857734"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="533401407"/>
@@ -604,13 +589,13 @@
 						<string key="objectName">Status bar</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">893</int>
+						<string key="id">893</string>
 						<reference key="object" ref="910670518"/>
 						<reference key="parent" ref="1006"/>
 						<string key="objectName">Import Tips Panel Container</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">907</int>
+						<string key="id">907</string>
 						<reference key="object" ref="533401407"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="838192882"/>
@@ -618,12 +603,12 @@
 						<reference key="parent" ref="773857734"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">908</int>
+						<string key="id">908</string>
 						<reference key="object" ref="838192882"/>
 						<reference key="parent" ref="533401407"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">909</int>
+						<string key="id">909</string>
 						<reference key="object" ref="912332772"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="386940528"/>
@@ -631,12 +616,12 @@
 						<reference key="parent" ref="773857734"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">910</int>
+						<string key="id">910</string>
 						<reference key="object" ref="386940528"/>
 						<reference key="parent" ref="912332772"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">924</int>
+						<string key="id">924</string>
 						<reference key="object" ref="89453087"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="307206382"/>
@@ -645,23 +630,23 @@
 						<string key="objectName">Window Content Wrapper</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">926</int>
+						<string key="id">926</string>
 						<reference key="object" ref="819309219"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">957</int>
+						<string key="id">957</string>
 						<reference key="object" ref="949716796"/>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">DOS View Input Controller</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">950</int>
+						<string key="id">950</string>
 						<reference key="object" ref="744398180"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">985</int>
+						<string key="id">985</string>
 						<reference key="object" ref="382941932"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="786970400"/>
@@ -671,7 +656,7 @@
 						<reference key="parent" ref="773857734"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">988</int>
+						<string key="id">988</string>
 						<reference key="object" ref="786970400"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="777670263"/>
@@ -679,7 +664,7 @@
 						<reference key="parent" ref="382941932"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">987</int>
+						<string key="id">987</string>
 						<reference key="object" ref="939793870"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="483932984"/>
@@ -687,7 +672,7 @@
 						<reference key="parent" ref="382941932"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">986</int>
+						<string key="id">986</string>
 						<reference key="object" ref="552948136"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="453720171"/>
@@ -695,22 +680,22 @@
 						<reference key="parent" ref="382941932"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">991</int>
+						<string key="id">991</string>
 						<reference key="object" ref="453720171"/>
 						<reference key="parent" ref="552948136"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">990</int>
+						<string key="id">990</string>
 						<reference key="object" ref="483932984"/>
 						<reference key="parent" ref="939793870"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">989</int>
+						<string key="id">989</string>
 						<reference key="object" ref="777670263"/>
 						<reference key="parent" ref="786970400"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">999</int>
+						<string key="id">999</string>
 						<reference key="object" ref="307206382"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="777416397"/>
@@ -720,7 +705,7 @@
 						<string key="objectName">Panel Transition Wrapper</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">1000</int>
+						<string key="id">1000</string>
 						<reference key="object" ref="777416397"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="671600945"/>
@@ -729,7 +714,7 @@
 						<string key="objectName">Loading view</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">1001</int>
+						<string key="id">1001</string>
 						<reference key="object" ref="764581856"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="201958132"/>
@@ -738,12 +723,12 @@
 						<string key="objectName">DOS Input View</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">1007</int>
+						<string key="id">1007</string>
 						<reference key="object" ref="201958132"/>
 						<reference key="parent" ref="764581856"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">1008</int>
+						<string key="id">1008</string>
 						<reference key="object" ref="671600945"/>
 						<reference key="parent" ref="777416397"/>
 					</object>
@@ -793,689 +778,9 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1013</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">ADBFullscreenCapableWindow</string>
-					<string key="superclassName">NSWindow</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="toggleFullScreen:">id</string>
-						<string key="toggleFullScreenWithoutAnimation:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="toggleFullScreen:">
-							<string key="name">toggleFullScreen:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleFullScreenWithoutAnimation:">
-							<string key="name">toggleFullScreenWithoutAnimation:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/ADBFullscreenCapableWindow.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BGHUDSliderCell</string>
-					<string key="superclassName">NSSliderCell</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BGHUDSliderCell.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXBaseAppController</string>
-					<string key="superclassName">NSDocumentController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="decrementVolume:">id</string>
-						<string key="incrementVolume:">id</string>
-						<string key="maximizeVolume:">id</string>
-						<string key="minimizeVolume:">id</string>
-						<string key="openInDefaultApplication:">id</string>
-						<string key="revealInFinder:">id</string>
-						<string key="toggleMuted:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="decrementVolume:">
-							<string key="name">decrementVolume:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="incrementVolume:">
-							<string key="name">incrementVolume:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="maximizeVolume:">
-							<string key="name">maximizeVolume:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="minimizeVolume:">
-							<string key="name">minimizeVolume:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="openInDefaultApplication:">
-							<string key="name">openInDefaultApplication:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="revealInFinder:">
-							<string key="name">revealInFinder:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleMuted:">
-							<string key="name">toggleMuted:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="joypadController">BXJoypadController</string>
-						<string key="joystickController">BXJoystickController</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="joypadController">
-							<string key="name">joypadController</string>
-							<string key="candidateClassName">BXJoypadController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="joystickController">
-							<string key="name">joystickController</string>
-							<string key="candidateClassName">BXJoystickController</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXBaseAppController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXBlueprintBackgroundView</string>
-					<string key="superclassName">BXDOSWindowBackgroundView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXBlueprintBackgroundView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXBlueprintPanel</string>
-					<string key="superclassName">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXBlueprintPanel.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXBlueprintProgressIndicator</string>
-					<string key="superclassName">BXHUDSpinningProgressIndicator</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXBlueprintProgressIndicator.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXBottomBar</string>
-					<string key="superclassName">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXBottomBar.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXDOSWindow</string>
-					<string key="superclassName">ADBFullscreenCapableWindow</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">actualContentView</string>
-						<string key="NS.object.0">NSView</string>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">actualContentView</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">actualContentView</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXDOSWindow.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXDOSWindowBackgroundView</string>
-					<string key="superclassName">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXDOSWindowBackgroundView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXDOSWindowController</string>
-					<string key="superclassName">NSWindowController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="decrementFullscreenSize:">id</string>
-						<string key="hideProgramPanel:">id</string>
-						<string key="incrementFullscreenSize:">id</string>
-						<string key="performShowDOSView:">id</string>
-						<string key="performShowLaunchPanel:">id</string>
-						<string key="showProgramPanel:">id</string>
-						<string key="toggleLaunchPanel:">id</string>
-						<string key="toggleProgramPanelShown:">id</string>
-						<string key="toggleRenderingStyle:">id</string>
-						<string key="toggleStatusBarShown:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="decrementFullscreenSize:">
-							<string key="name">decrementFullscreenSize:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="hideProgramPanel:">
-							<string key="name">hideProgramPanel:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="incrementFullscreenSize:">
-							<string key="name">incrementFullscreenSize:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="performShowDOSView:">
-							<string key="name">performShowDOSView:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="performShowLaunchPanel:">
-							<string key="name">performShowLaunchPanel:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="showProgramPanel:">
-							<string key="name">showProgramPanel:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleLaunchPanel:">
-							<string key="name">toggleLaunchPanel:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleProgramPanelShown:">
-							<string key="name">toggleProgramPanelShown:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleRenderingStyle:">
-							<string key="name">toggleRenderingStyle:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleStatusBarShown:">
-							<string key="name">toggleStatusBarShown:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="documentationButton">NSToolbarItem</string>
-						<string key="inputController">BXInputController</string>
-						<string key="inputView">BXInputView</string>
-						<string key="launchPanel">NSView</string>
-						<string key="launchPanelController">BXLaunchPanelController</string>
-						<string key="loadingPanel">NSView</string>
-						<string key="loadingSpinner">YRKSpinningProgressIndicator</string>
-						<string key="programPanel">NSView</string>
-						<string key="programPanelController">BXProgramPanelController</string>
-						<string key="renderingView">NSView</string>
-						<string key="statusBar">NSView</string>
-						<string key="statusBarController">BXStatusBarController</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="documentationButton">
-							<string key="name">documentationButton</string>
-							<string key="candidateClassName">NSToolbarItem</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="inputController">
-							<string key="name">inputController</string>
-							<string key="candidateClassName">BXInputController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="inputView">
-							<string key="name">inputView</string>
-							<string key="candidateClassName">BXInputView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="launchPanel">
-							<string key="name">launchPanel</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="launchPanelController">
-							<string key="name">launchPanelController</string>
-							<string key="candidateClassName">BXLaunchPanelController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="loadingPanel">
-							<string key="name">loadingPanel</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="loadingSpinner">
-							<string key="name">loadingSpinner</string>
-							<string key="candidateClassName">YRKSpinningProgressIndicator</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="programPanel">
-							<string key="name">programPanel</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="programPanelController">
-							<string key="name">programPanelController</string>
-							<string key="candidateClassName">BXProgramPanelController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="renderingView">
-							<string key="name">renderingView</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="statusBar">
-							<string key="name">statusBar</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="statusBarController">
-							<string key="name">statusBarController</string>
-							<string key="candidateClassName">BXStatusBarController</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXDOSWindowController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXGLRenderingView</string>
-					<string key="superclassName">NSOpenGLView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXGLRenderingView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXHUDSpinningProgressIndicator</string>
-					<string key="superclassName">YRKSpinningProgressIndicator</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXHUDSpinningProgressIndicator.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXImportTipsPanelController</string>
-					<string key="superclassName">BXProgramPanelController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="finishImporting:">id</string>
-						<string key="showInstallerHelp:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="finishImporting:">
-							<string key="name">finishImporting:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="showInstallerHelp:">
-							<string key="name">showInstallerHelp:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="finishImportingPanel">NSView</string>
-						<string key="installerTipsPanel">NSView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="finishImportingPanel">
-							<string key="name">finishImportingPanel</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="installerTipsPanel">
-							<string key="name">installerTipsPanel</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXImportTipsPanelController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXIndentedSliderCell</string>
-					<string key="superclassName">BXThemedSliderCell</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXIndentedSliderCell.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXInputController</string>
-					<string key="superclassName">NSViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="sendBackslash:">id</string>
-						<string key="sendColon:">id</string>
-						<string key="sendCtrlBreak:">id</string>
-						<string key="sendDash:">id</string>
-						<string key="sendDelete:">id</string>
-						<string key="sendEnd:">id</string>
-						<string key="sendF10:">id</string>
-						<string key="sendF11:">id</string>
-						<string key="sendF12:">id</string>
-						<string key="sendF1:">id</string>
-						<string key="sendF2:">id</string>
-						<string key="sendF3:">id</string>
-						<string key="sendF4:">id</string>
-						<string key="sendF5:">id</string>
-						<string key="sendF6:">id</string>
-						<string key="sendF7:">id</string>
-						<string key="sendF8:">id</string>
-						<string key="sendF9:">id</string>
-						<string key="sendForwardSlash:">id</string>
-						<string key="sendHome:">id</string>
-						<string key="sendInsert:">id</string>
-						<string key="sendNumLock:">id</string>
-						<string key="sendPageDown:">id</string>
-						<string key="sendPageUp:">id</string>
-						<string key="sendPause:">id</string>
-						<string key="sendPrintScreen:">id</string>
-						<string key="sendScrollLock:">id</string>
-						<string key="toggleMouseLocked:">id</string>
-						<string key="toggleSimulatedNumpad:">id</string>
-						<string key="toggleTrackMouseWhileUnlocked:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="sendBackslash:">
-							<string key="name">sendBackslash:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendColon:">
-							<string key="name">sendColon:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendCtrlBreak:">
-							<string key="name">sendCtrlBreak:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendDash:">
-							<string key="name">sendDash:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendDelete:">
-							<string key="name">sendDelete:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendEnd:">
-							<string key="name">sendEnd:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendF10:">
-							<string key="name">sendF10:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendF11:">
-							<string key="name">sendF11:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendF12:">
-							<string key="name">sendF12:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendF1:">
-							<string key="name">sendF1:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendF2:">
-							<string key="name">sendF2:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendF3:">
-							<string key="name">sendF3:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendF4:">
-							<string key="name">sendF4:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendF5:">
-							<string key="name">sendF5:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendF6:">
-							<string key="name">sendF6:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendF7:">
-							<string key="name">sendF7:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendF8:">
-							<string key="name">sendF8:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendF9:">
-							<string key="name">sendF9:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendForwardSlash:">
-							<string key="name">sendForwardSlash:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendHome:">
-							<string key="name">sendHome:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendInsert:">
-							<string key="name">sendInsert:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendNumLock:">
-							<string key="name">sendNumLock:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendPageDown:">
-							<string key="name">sendPageDown:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendPageUp:">
-							<string key="name">sendPageUp:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendPause:">
-							<string key="name">sendPause:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendPrintScreen:">
-							<string key="name">sendPrintScreen:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sendScrollLock:">
-							<string key="name">sendScrollLock:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleMouseLocked:">
-							<string key="name">toggleMouseLocked:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleSimulatedNumpad:">
-							<string key="name">toggleSimulatedNumpad:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleTrackMouseWhileUnlocked:">
-							<string key="name">toggleTrackMouseWhileUnlocked:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXInputController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXInputView</string>
-					<string key="superclassName">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXInputView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXJoypadController</string>
-					<string key="superclassName">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXJoypadController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXJoystickController</string>
-					<string key="superclassName">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXJoystickController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXLaunchPanelController</string>
-					<string key="superclassName">NSViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">launchFavoriteProgram:</string>
-						<string key="NS.object.0">NSButton</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">launchFavoriteProgram:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">launchFavoriteProgram:</string>
-							<string key="candidateClassName">NSButton</string>
-						</object>
-					</object>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="allProgramsList">NSCollectionView</string>
-						<string key="favoriteProgramsList">NSCollectionView</string>
-						<string key="tabSelector">NSSegmentedControl</string>
-						<string key="tabView">NSTabView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="allProgramsList">
-							<string key="name">allProgramsList</string>
-							<string key="candidateClassName">NSCollectionView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="favoriteProgramsList">
-							<string key="name">favoriteProgramsList</string>
-							<string key="candidateClassName">NSCollectionView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="tabSelector">
-							<string key="name">tabSelector</string>
-							<string key="candidateClassName">NSSegmentedControl</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="tabView">
-							<string key="name">tabView</string>
-							<string key="candidateClassName">NSTabView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXLaunchPanelController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXProgramPanelController</string>
-					<string key="superclassName">NSViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">setCurrentProgramToDefault:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">setCurrentProgramToDefault:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">setCurrentProgramToDefault:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="defaultProgramPanel">NSView</string>
-						<string key="initialDefaultProgramPanel">NSView</string>
-						<string key="noProgramsPanel">NSView</string>
-						<string key="programChooserPanel">NSView</string>
-						<string key="programList">NSCollectionView</string>
-						<string key="programScroller">NSScrollView</string>
-						<string key="scanSpinner">NSProgressIndicator</string>
-						<string key="scanningForProgramsPanel">NSView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="defaultProgramPanel">
-							<string key="name">defaultProgramPanel</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="initialDefaultProgramPanel">
-							<string key="name">initialDefaultProgramPanel</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="noProgramsPanel">
-							<string key="name">noProgramsPanel</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="programChooserPanel">
-							<string key="name">programChooserPanel</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="programList">
-							<string key="name">programList</string>
-							<string key="candidateClassName">NSCollectionView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="programScroller">
-							<string key="name">programScroller</string>
-							<string key="candidateClassName">NSScrollView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="scanSpinner">
-							<string key="name">scanSpinner</string>
-							<string key="candidateClassName">NSProgressIndicator</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="scanningForProgramsPanel">
-							<string key="name">scanningForProgramsPanel</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXProgramPanelController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXStatusBarController</string>
-					<string key="superclassName">NSViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">performSegmentedButtonAction:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">performSegmentedButtonAction:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">performSegmentedButtonAction:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="mouseLockButton">NSButton</string>
-						<string key="notificationMessage">NSTextField</string>
-						<string key="statusBarControls">NSSegmentedControl</string>
-						<string key="volumeControls">NSView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="mouseLockButton">
-							<string key="name">mouseLockButton</string>
-							<string key="candidateClassName">NSButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="notificationMessage">
-							<string key="name">notificationMessage</string>
-							<string key="candidateClassName">NSTextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="statusBarControls">
-							<string key="name">statusBarControls</string>
-							<string key="candidateClassName">NSSegmentedControl</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="volumeControls">
-							<string key="name">volumeControls</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXStatusBarController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">BXThemedSliderCell</string>
-					<string key="superclassName">BGHUDSliderCell</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BXThemedSliderCell.h</string>
-					</object>
-				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">FirstResponder</string>
 					<object class="NSMutableDictionary" key="actions">
@@ -1494,30 +799,27 @@
 						<string key="minorKey"/>
 					</object>
 				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">YRKSpinningProgressIndicator</string>
-					<string key="superclassName">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/YRKSpinningProgressIndicator.h</string>
-					</object>
-				</object>
 			</array>
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
-		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencies">
+		<bool key="IBDocument.previouslyAttemptedUpgradeToXcode5">YES</bool>
+		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
 			<real value="1060" key="NS.object.0"/>
+		</object>
+		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.InterfaceBuilder3</string>
+			<integer value="4600" key="NS.object.0"/>
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NSLockUnlockedTemplate">{9, 12}</string>
 			<string key="NSRevealFreestandingTemplate">{14, 14}</string>
-			<string key="PanelExpandTemplate">{128, 128}</string>
-			<string key="Volume0PercentCroppedTemplate">{128, 128}</string>
-			<string key="Volume100PercentTemplate">{128, 128}</string>
+			<string key="PanelExpandTemplate">{13, 12}</string>
+			<string key="Volume0PercentCroppedTemplate">{7, 12}</string>
+			<string key="Volume100PercentTemplate">{17, 16}</string>
 		</dictionary>
 	</data>
 </archive>

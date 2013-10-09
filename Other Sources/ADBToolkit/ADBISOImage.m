@@ -190,7 +190,7 @@ int extdate_to_int(uint8_t *digits, int length)
         if (!loaded)
         {
             [self release];
-            self = nil;
+            return nil;
         }
     }
     return self;
@@ -911,7 +911,7 @@ int extdate_to_int(uint8_t *digits, int length)
     {
         errorHandler(path, error);
         [self release];
-        self = nil;
+        return nil;
     }
     return self;
 }

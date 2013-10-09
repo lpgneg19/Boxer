@@ -79,7 +79,7 @@
         if (!succeeded)
         {
             [self release];
-            self = nil;
+            return nil;
         }
     }
     return self;
@@ -96,7 +96,7 @@
         if (!succeeded)
         {
             [self release];
-            self = nil;
+            return nil;
         }
     }
     return self;
@@ -112,7 +112,7 @@
         if (!succeeded)
         {
             [self release];
-            self = nil;
+            return nil;
         }
     }
     return self;

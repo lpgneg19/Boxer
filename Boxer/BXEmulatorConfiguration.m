@@ -104,7 +104,7 @@ NSString * const BXEmulatorConfigurationEmptyFormat     = @"^\\s*$";
 	else
 	{
 		[self release];
-		self = nil;
+		return nil;
 	}
     return self;
 }

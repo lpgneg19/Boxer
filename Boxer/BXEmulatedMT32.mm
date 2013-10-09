@@ -201,7 +201,7 @@ NSString * const BXMT32PCMROMTypeKey = @"BXMT32PCMROMType";
         if (![self _prepareMT32EmulatorWithError: outError])
         {
             [self release];
-            self = nil;
+            return nil;
         }
     }
     return self;

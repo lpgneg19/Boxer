@@ -400,7 +400,7 @@ NSString * const ADBShaderUniformSizeKey = @"Size";
         if (!self.shaderProgram)
         {
             [self release];
-            self = nil;
+            return nil;
         }
     }
     

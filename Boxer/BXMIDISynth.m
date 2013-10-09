@@ -41,7 +41,7 @@
         else
         {
             [self release];
-            self = nil;
+            return nil;
         }
     }
     return self;

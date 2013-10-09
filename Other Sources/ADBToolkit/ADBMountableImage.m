@@ -82,7 +82,7 @@ NSString * const ADBMountableImageErrorDomain = @"ADBMountableImageErrorDomain";
         }
         
         [self release];
-        self = nil;
+        return nil;
     }
     return self;
 }
