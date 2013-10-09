@@ -10,7 +10,7 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeIconFile</key>
-			<string>package.icns</string>
+			<string>package</string>
 			<key>CFBundleTypeName</key>
 			<string>Gamebox</string>
 			<key>CFBundleTypeRole</key>
@@ -70,6 +70,8 @@
 				<string>com.microsoft.virtualpc-disk-image</string>
 				<string>com.apple.disk-image-ndif</string>
 			</array>
+			<key>LSTypeIsPackage</key>
+			<false/>
 			<key>NSDocumentClass</key>
 			<string>BXSession</string>
 		</dict>
@@ -84,12 +86,14 @@
 			<array>
 				<string>net.washboardabs.boxer-disk-bundle</string>
 			</array>
+			<key>LSTypeIsPackage</key>
+			<false/>
 			<key>NSDocumentClass</key>
 			<string>BXSession</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeIconFile</key>
-			<string>executable.icns</string>
+			<string>executable</string>
 			<key>CFBundleTypeName</key>
 			<string>DOS/Windows Executable</string>
 			<key>CFBundleTypeRole</key>
@@ -102,12 +106,14 @@
 				<string>com.microsoft.msdos-executable</string>
 				<string>com.microsoft.batch-file</string>
 			</array>
+			<key>LSTypeIsPackage</key>
+			<false/>
 			<key>NSDocumentClass</key>
 			<string>BXSession</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeIconFile</key>
-			<string>package.icns</string>
+			<string>package</string>
 			<key>CFBundleTypeName</key>
 			<string>Game state</string>
 			<key>CFBundleTypeRole</key>
@@ -218,7 +224,7 @@
 			<key>UTTypeDescription</key>
 			<string>Boxer gamebox</string>
 			<key>UTTypeIconFile</key>
-			<string>package.icns</string>
+			<string>package</string>
 			<key>UTTypeIdentifier</key>
 			<string>net.washboardabs.boxer-game-package</string>
 			<key>UTTypeTagSpecification</key>
@@ -307,7 +313,7 @@
 			<key>UTTypeDescription</key>
 			<string>Boxer game state</string>
 			<key>UTTypeIconFile</key>
-			<string>package.icns</string>
+			<string>package</string>
 			<key>UTTypeIdentifier</key>
 			<string>net.washboardabs.boxer-game-state</string>
 			<key>UTTypeTagSpecification</key>
@@ -330,7 +336,7 @@
 			<key>UTTypeDescription</key>
 			<string>Microsoft MS-DOS application</string>
 			<key>UTTypeIconFile</key>
-			<string>executable.icns</string>
+			<string>executable</string>
 			<key>UTTypeIdentifier</key>
 			<string>com.microsoft.msdos-executable</string>
 			<key>UTTypeTagSpecification</key>
@@ -348,7 +354,7 @@
 			<key>UTTypeDescription</key>
 			<string>Microsoft Windows/MS-DOS batch file</string>
 			<key>UTTypeIconFile</key>
-			<string>executable.icns</string>
+			<string>executable</string>
 			<key>UTTypeIdentifier</key>
 			<string>com.microsoft.batch-file</string>
 			<key>UTTypeTagSpecification</key>

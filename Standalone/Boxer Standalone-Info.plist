@@ -14,7 +14,7 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeIconFile</key>
-			<string>package.icns</string>
+			<string>package</string>
 			<key>CFBundleTypeName</key>
 			<string>Gamebox</string>
 			<key>CFBundleTypeRole</key>
@@ -30,7 +30,7 @@
 		</dict>
 		<dict>
 			<key>CFBundleTypeIconFile</key>
-			<string>package.icns</string>
+			<string>package</string>
 			<key>CFBundleTypeName</key>
 			<string>Game state</string>
 			<key>CFBundleTypeRole</key>
@@ -67,6 +67,8 @@
 	<string>20130915.1</string>
 	<key>JoypadURL</key>
 	<string>http://getjoypad.com/</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.games</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
 	<key>NSHumanReadableCopyright</key>
@@ -105,7 +107,7 @@
 			<key>UTTypeDescription</key>
 			<string>MS-DOS gamebox</string>
 			<key>UTTypeIconFile</key>
-			<string>package.icns</string>
+			<string>package</string>
 			<key>UTTypeIdentifier</key>
 			<string>net.washboardabs.boxer-game-package</string>
 			<key>UTTypeTagSpecification</key>
@@ -194,7 +196,7 @@
 			<key>UTTypeDescription</key>
 			<string>Boxer game state</string>
 			<key>UTTypeIconFile</key>
-			<string>package.icns</string>
+			<string>package</string>
 			<key>UTTypeIdentifier</key>
 			<string>net.washboardabs.boxer-game-state</string>
 			<key>UTTypeTagSpecification</key>
@@ -217,7 +219,7 @@
 			<key>UTTypeDescription</key>
 			<string>Microsoft MS-DOS application</string>
 			<key>UTTypeIconFile</key>
-			<string>executable.icns</string>
+			<string>executable</string>
 			<key>UTTypeIdentifier</key>
 			<string>com.microsoft.msdos-executable</string>
 			<key>UTTypeTagSpecification</key>
@@ -235,7 +237,7 @@
 			<key>UTTypeDescription</key>
 			<string>Microsoft Windows/MS-DOS batch file</string>
 			<key>UTTypeIconFile</key>
-			<string>executable.icns</string>
+			<string>executable</string>
 			<key>UTTypeIdentifier</key>
 			<string>com.microsoft.batch-file</string>
 			<key>UTTypeTagSpecification</key>
