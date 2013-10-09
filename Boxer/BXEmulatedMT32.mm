@@ -67,7 +67,7 @@ NSString * const BXMT32PCMROMTypeKey = @"BXMT32PCMROMType";
     }
     
     MT32Emu::FileStream *file = new MT32Emu::FileStream();
-    bool opened = file->open(URL.fileSystemRepresentation);
+    bool opened = file->open(URL.path.fileSystemRepresentation);
     if (!opened)
     {
         delete file;
@@ -348,10 +348,10 @@ NSString * const BXMT32PCMROMTypeKey = @"BXMT32PCMROMType";
     _synth = new MT32Emu::Synth(_reportHandler);
     
     _PCMROMHandle = new MT32Emu::FileStream();
-    _PCMROMHandle->open(self.PCMROMURL.fileSystemRepresentation);
+    _PCMROMHandle->open(self.PCMROMURL.path.fileSystemRepresentation);
     
     _controlROMHandle = new MT32Emu::FileStream();
-    _controlROMHandle->open(self.controlROMURL.fileSystemRepresentation);
+    _controlROMHandle->open(self.controlROMURL.path.fileSystemRepresentation);
     
     _controlROMImage = MT32Emu::ROMImage::makeROMImage(_controlROMHandle);
     _PCMROMImage = MT32Emu::ROMImage::makeROMImage(_PCMROMHandle);

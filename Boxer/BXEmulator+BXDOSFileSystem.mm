@@ -1559,7 +1559,7 @@ void MSCDEX_SetCDInterface(int intNr, int forceCD);
     if (logicalPath && [filesystem fileExistsAtPath: logicalPath isDirectory: NULL])
     {
         NSURL *resolvedURL = [filesystem fileURLForPath: logicalPath];
-        const char *filesystemPath = resolvedURL.fileSystemRepresentation;
+        const char *filesystemPath = resolvedURL.path.fileSystemRepresentation;
         
         //NSLog(@"Getting stats block for %@ (%@)", logicalPath, resolvedURL);
         if (filesystemPath)

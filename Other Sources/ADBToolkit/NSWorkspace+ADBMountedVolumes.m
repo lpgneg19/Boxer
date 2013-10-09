@@ -365,7 +365,7 @@ NSString * const ADBMountedVolumesErrorDomain = @"ADBMountedVolumesErrorDomain";
 	NSString *deviceName = nil;
 	struct statfs fs;
 	
-	if (statfs(volumeURL.fileSystemRepresentation, &fs) == ERR_SUCCESS)
+	if (statfs(volumeURL.path.fileSystemRepresentation, &fs) == ERR_SUCCESS)
 	{
 		NSFileManager *manager = [NSFileManager defaultManager];
 		deviceName = [manager stringWithFileSystemRepresentation: fs.f_mntfromname
