@@ -38,7 +38,7 @@
 		9F18133B129990D5009BC4B2 /* BXGamesFolderPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F18133A129990D5009BC4B2 /* BXGamesFolderPanelController.m */; };
 		9F18137C12999E39009BC4B2 /* GamesFolderPanelOptions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F18137A12999E39009BC4B2 /* GamesFolderPanelOptions.xib */; };
 		9F18BE9513EB07190047C217 /* BXInstallerScan.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F18BE9413EB07190047C217 /* BXInstallerScan.m */; };
-		9F19E7E112B3F48200496BCF /* SDL_sound.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCEDF3212B3DFFC00E856A4 /* SDL_sound.framework */; };
+		9F19E7E112B3F48200496BCF /* SDL_sound.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCEDF3212B3DFFC00E856A4 /* SDL_sound.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9F1CBA58120C796C00C5E926 /* BXImportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CBA57120C796C00C5E926 /* BXImportSession.m */; };
 		9F1CBA97120C7D9000C5E926 /* BXImportWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CBA96120C7D9000C5E926 /* BXImportWindowController.m */; };
 		9F1CBAAB120C830600C5E926 /* BXImportSession+BXImportPolicies.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CBAAA120C830600C5E926 /* BXImportSession+BXImportPolicies.m */; };
@@ -60,7 +60,7 @@
 		9F20ADD01702E87B007263C8 /* BXDrive+BXDriveArchiving.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F20ADCF1702E87B007263C8 /* BXDrive+BXDriveArchiving.m */; };
 		9F20C28B11E5D848005AF541 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F20C28A11E5D848005AF541 /* Sparkle.framework */; };
 		9F20C28E11E5D8B4005AF541 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F20C28D11E5D8B4005AF541 /* QTKit.framework */; };
-		9F20C29711E5DA68005AF541 /* Sparkle.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F20C28A11E5D848005AF541 /* Sparkle.framework */; };
+		9F20C29711E5DA68005AF541 /* Sparkle.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F20C28A11E5D848005AF541 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9F2120F813015653002AB1B7 /* BXShelfArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2120F713015653002AB1B7 /* BXShelfArt.m */; };
 		9F2120FE1301597E002AB1B7 /* NSImage+ADBSaveImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2120FD1301597E002AB1B7 /* NSImage+ADBSaveImages.m */; };
 		9F2122EA1301BDE1002AB1B7 /* BXShelfAppearanceOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2122E91301BDE1002AB1B7 /* BXShelfAppearanceOperation.m */; };
@@ -372,19 +372,19 @@
 		9F2D316215B8233800FAE848 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F731B51136331A9005E564F /* IOKit.framework */; };
 		9F2D316315B8233800FAE848 /* MT32Emu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F34BE5A142B76D800A69FAF /* MT32Emu.framework */; };
 		9F2D316415B8233800FAE848 /* BGHUDAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F44C75215A0A38800F6A9ED /* BGHUDAppKit.framework */; };
-		9F2D316615B8233800FAE848 /* DDHidLib.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F731AF413630820005E564F /* DDHidLib.framework */; };
-		9F2D316715B8233800FAE848 /* SDL_sound.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCEDF3212B3DFFC00E856A4 /* SDL_sound.framework */; };
-		9F2D316815B8233800FAE848 /* SDL_net.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL_net.framework */; };
-		9F2D316B15B8233800FAE848 /* SDL.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL.framework */; };
-		9F2D316C15B8233800FAE848 /* MT32Emu.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F34BE5A142B76D800A69FAF /* MT32Emu.framework */; };
-		9F2D316D15B8233800FAE848 /* BGHUDAppKit.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F44C75215A0A38800F6A9ED /* BGHUDAppKit.framework */; };
+		9F2D316615B8233800FAE848 /* DDHidLib.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F731AF413630820005E564F /* DDHidLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9F2D316715B8233800FAE848 /* SDL_sound.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCEDF3212B3DFFC00E856A4 /* SDL_sound.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9F2D316815B8233800FAE848 /* SDL_net.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL_net.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9F2D316B15B8233800FAE848 /* SDL.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9F2D316C15B8233800FAE848 /* MT32Emu.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F34BE5A142B76D800A69FAF /* MT32Emu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9F2D316D15B8233800FAE848 /* BGHUDAppKit.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F44C75215A0A38800F6A9ED /* BGHUDAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9F2D318915B826F600FAE848 /* DOSWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2D317E15B826EF00FAE848 /* DOSWindow.xib */; };
 		9F2D318B15B826FE00FAE848 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2D318215B826EF00FAE848 /* MainMenu.xib */; };
 		9F3034B914E2C3F600BC572E /* NumlockActiveTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9F3034B714E2C3F600BC572E /* NumlockActiveTemplate.pdf */; };
 		9F3034BA14E2C3F600BC572E /* NumlockInactiveTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9F3034B814E2C3F600BC572E /* NumlockInactiveTemplate.pdf */; };
 		9F34BE40142B700100A69FAF /* BXCoalfaceAudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F34BE3E142B700100A69FAF /* BXCoalfaceAudio.mm */; };
 		9F34BE5B142B76D800A69FAF /* MT32Emu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F34BE5A142B76D800A69FAF /* MT32Emu.framework */; };
-		9F34BE5C142B76F500A69FAF /* MT32Emu.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F34BE5A142B76D800A69FAF /* MT32Emu.framework */; };
+		9F34BE5C142B76F500A69FAF /* MT32Emu.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F34BE5A142B76D800A69FAF /* MT32Emu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9F34BE5F142B851800A69FAF /* BXEmulator+BXAudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F34BE5E142B851700A69FAF /* BXEmulator+BXAudio.mm */; };
 		9F34BE62142B917100A69FAF /* BXBaseAppController+BXSupportFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F34BE61142B917100A69FAF /* BXBaseAppController+BXSupportFiles.m */; };
 		9F35F3E916CFBB700093CF45 /* NSFileManager+ADBUniqueFilenames.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F35F3E816CFBB700093CF45 /* NSFileManager+ADBUniqueFilenames.m */; };
@@ -407,7 +407,7 @@
 		9F44500212AEC0FC00A2D405 /* BXSimpleDriveImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F44500112AEC0FC00A2D405 /* BXSimpleDriveImport.m */; };
 		9F44C5C515F274BE00FE0A88 /* PromptFreestandingTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9F44C5C415F274BE00FE0A88 /* PromptFreestandingTemplate.pdf */; };
 		9F44C75315A0A38800F6A9ED /* BGHUDAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F44C75215A0A38800F6A9ED /* BGHUDAppKit.framework */; };
-		9F44C75415A0A3AA00F6A9ED /* BGHUDAppKit.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F44C75215A0A38800F6A9ED /* BGHUDAppKit.framework */; };
+		9F44C75415A0A3AA00F6A9ED /* BGHUDAppKit.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F44C75215A0A38800F6A9ED /* BGHUDAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9F44E5E410D17A4C0081B8D2 /* BXEmulator+BXPaste.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F44E5E310D17A4C0081B8D2 /* BXEmulator+BXPaste.mm */; };
 		9F458D9C15D83B8800DF9102 /* BXLaunchPanelButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAEBE4E15D669AF00C9AC5F /* BXLaunchPanelButtonCell.m */; };
 		9F458D9D15D83B8C00DF9102 /* BXLaunchPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCA6D9515C85D8500E1650C /* BXLaunchPanelController.m */; };
@@ -472,7 +472,7 @@
 		9F70278413D72D8100606B4C /* BXThemedControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F70278313D72D8100606B4C /* BXThemedControls.m */; };
 		9F70C19C129036C900A3627F /* Boxer.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 9F70C19B129036C900A3627F /* Boxer.sdef */; };
 		9F731AF513630820005E564F /* DDHidLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F731AF413630820005E564F /* DDHidLib.framework */; };
-		9F731B1D13630B6D005E564F /* DDHidLib.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F731AF413630820005E564F /* DDHidLib.framework */; };
+		9F731B1D13630B6D005E564F /* DDHidLib.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9F731AF413630820005E564F /* DDHidLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9F731B2E136323D2005E564F /* ADBHIDMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F731B2D136323D2005E564F /* ADBHIDMonitor.m */; };
 		9F731B52136331A9005E564F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F731B51136331A9005E564F /* IOKit.framework */; };
 		9F73446217F8A6E90059A0CF /* LauncherListTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9F73446017F8A6E90059A0CF /* LauncherListTemplate.pdf */; };
@@ -638,6 +638,7 @@
 		9FA2C09215C8409000380261 /* BXDOSWindowBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA2C09115C8409000380261 /* BXDOSWindowBackgroundView.m */; };
 		9FA5D68311EB6CCC0012DFA5 /* ADBLineEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5D68211EB6CCC0012DFA5 /* ADBLineEnumerator.m */; };
 		9FA85CD510A357A600E6457F /* BXSession+BXFileManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA85CD410A357A600E6457F /* BXSession+BXFileManagement.m */; };
+		9FA95BA818848874009F75B3 /* ADBGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC35280F56C7B7001811F2 /* ADBGeometry.m */; };
 		9FA9E256121FD5BA006E20C4 /* DropzoneTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9FA9E255121FD5BA006E20C4 /* DropzoneTemplate.pdf */; };
 		9FA9E281121FD874006E20C4 /* PanelExpandTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9FA9E27F121FD874006E20C4 /* PanelExpandTemplate.pdf */; };
 		9FA9E282121FD874006E20C4 /* PanelCollapseTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9FA9E280121FD874006E20C4 /* PanelCollapseTemplate.pdf */; };
@@ -696,8 +697,9 @@
 		9FBC3C720F56E0AE001811F2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C710F56E0AE001811F2 /* OpenGL.framework */; };
 		9FBC3C780F56E0D7001811F2 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C760F56E0D7001811F2 /* AudioUnit.framework */; };
 		9FBC3C790F56E0D7001811F2 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C770F56E0D7001811F2 /* CoreMIDI.framework */; };
-		9FBC3D600F56EA82001811F2 /* SDL.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL.framework */; };
-		9FBC3D610F56EA82001811F2 /* SDL_net.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL_net.framework */; };
+		9FBC3D600F56EA82001811F2 /* SDL.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9FBC3D610F56EA82001811F2 /* SDL_net.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL_net.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9FBD321710E5144C00031CB6 /* Brand.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD321610E5144C00031CB6 /* Brand.png */; };
 		9FBDC591141A0E5D00171176 /* BundleFreestandingTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9FBDC590141A0E5D00171176 /* BundleFreestandingTemplate.pdf */; };
 		9FBEC4F0142CE8300016964A /* BXMT32LCDDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEC4EF142CE8300016964A /* BXMT32LCDDisplay.m */; };
 		9FBF66AF11F35ADD00DAAB9A /* ADBSingleFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF66AE11F35ADD00DAAB9A /* ADBSingleFileTransfer.m */; };
@@ -995,7 +997,6 @@
 		9F27BD1714FAA4F5008EB0A1 /* Volume0PercentTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Volume0PercentTemplate.pdf; sourceTree = "<group>"; };
 		9F2AC6E210EFFE8600CFFF72 /* BXBootlegCoverArt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXBootlegCoverArt.h; sourceTree = "<group>"; };
 		9F2AC6E310EFFE8600CFFF72 /* BXBootlegCoverArt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXBootlegCoverArt.m; sourceTree = "<group>"; };
-		9F2C28B7129D924E00B172C8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/FirstRunWindow.xib; sourceTree = "<group>"; };
 		9F2C458515DB7E77009F4477 /* ADBGLHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBGLHelpers.h; sourceTree = "<group>"; };
 		9F2C458615DB7E77009F4477 /* ADBGLHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBGLHelpers.m; sourceTree = "<group>"; };
 		9F2D317215B8233800FAE848 /* Boxer Standalone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boxer Standalone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1710,6 +1711,7 @@
 		9FE90BF511F8D1DC003CFFFF /* ADBDelegatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBDelegatedView.h; sourceTree = "<group>"; };
 		9FE90BF611F8D1DC003CFFFF /* ADBDelegatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBDelegatedView.m; sourceTree = "<group>"; };
 		9FEA1831144BFD8F00E39ACD /* BXAudioSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXAudioSource.h; sourceTree = "<group>"; };
+		9FEA4ED6180C5C1800A745D6 /* BXBaseAppControllerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXBaseAppControllerPrivate.h; sourceTree = "<group>"; };
 		9FEAA3EA1204595B0085F008 /* ADBOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBOperation.h; sourceTree = "<group>"; };
 		9FEAA3EB1204595B0085F008 /* ADBOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBOperation.m; sourceTree = "<group>"; };
 		9FEBB70E11DF9BB50055933F /* BXEmulatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXEmulatorDelegate.h; sourceTree = "<group>"; };
@@ -2042,6 +2044,7 @@
 			isa = PBXGroup;
 			children = (
 				9FCB7B0E15B844AA00CC7CC7 /* BXBaseAppController.h */,
+				9FEA4ED6180C5C1800A745D6 /* BXBaseAppControllerPrivate.h */,
 				9FCB7B0F15B844AA00CC7CC7 /* BXBaseAppController.m */,
 				9FBC35110F56C7B7001811F2 /* BXAppController.h */,
 				9FBC351E0F56C7B7001811F2 /* BXAppController.m */,
@@ -2403,7 +2406,6 @@
 				9F631D8016947B2C00AD06C4 /* DocumentationBrowser.xib */,
 				9F6785651649A791007FE89A /* PrintStatusPanel.xib */,
 				9F18137A12999E39009BC4B2 /* GamesFolderPanelOptions.xib */,
-				9F2C28B6129D924E00B172C8 /* FirstRunWindow.xib */,
 				9F45A1CB109C3D3400593456 /* MainMenu.xib */,
 				9F45A1C7109C3D1100593456 /* DOSWindow.xib */,
 				9FED09FC17ED95CA009C4155 /* LaunchPanel.xib */,
@@ -3513,7 +3515,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Alun Bestor and contributors";
 				TargetAttributes = {
 					8D1107260486CEB800E47090 = {
@@ -4385,6 +4387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA95BA818848874009F75B3 /* ADBGeometry.m in Sources */,
 				9FB4539716442CDD00BCF63B /* main.m in Sources */,
 				9FB4539E16442CDD00BCF63B /* BBAppDelegate.m in Sources */,
 				9FB453B816442ECE00BCF63B /* NSURL+ADBFilesystemHelpers.m in Sources */,
@@ -4446,15 +4449,6 @@
 				9F1CBB5D120CABBB00C5E926 /* English */,
 			);
 			name = ImportWindow.xib;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		9F2C28B6129D924E00B172C8 /* FirstRunWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9F2C28B7129D924E00B172C8 /* English */,
-			);
-			name = FirstRunWindow.xib;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -4730,6 +4724,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
+				COMBINE_HIDPI_IMAGES = NO;
+				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_SHORT_VERSION_STRING = 1.0;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4759,6 +4755,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
+				COMBINE_HIDPI_IMAGES = NO;
+				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_SHORT_VERSION_STRING = 1.0;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4800,6 +4798,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Bundler/Boxer Bundler-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4822,6 +4821,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bundler/Boxer Bundler-Prefix.pch";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Bundler/Boxer Bundler-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4853,7 +4853,6 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -4937,7 +4936,6 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};

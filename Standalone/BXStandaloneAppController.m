@@ -5,11 +5,13 @@
  online at [http://www.gnu.org/licenses/gpl-2.0.txt].
  */
 
+#import "BXBaseAppControllerPrivate.h"
 #import "BXStandaloneAppController.h"
 #import "BXSession.h"
 #import "BXEmulator.h"
 #import "BXStandaloneAboutController.h"
 #import "BXBaseAppController+BXHotKeys.h"
+#import "BXFileTypes.h"
 
 #pragma mark -
 #pragma mark App-menu replacement constants
@@ -133,24 +135,35 @@ NSString * const BXOrganizationWebsiteURLInfoPlistKey = @"BXOrganizationWebsiteU
 
 - (void) applicationDidFinishLaunching: (NSNotification *)notification
 {
+    //Display the hotkey warning if appropriate for this game.
+    //We do this modally and before starting up the game itself, because we may need to restart
+    //in order for permissions to take effect.
+    [self showHotkeyWarningIfUnavailable: self];
+    
     [NSApp activateIgnoringOtherApps: YES];
     
-    NSError *launchError = nil;
-    BXSession *session = [self openBundledGameAndDisplay: YES error: &launchError];
-    
-    if (!session)
+    //If we opened a specific gamebox during debugging, don't open the bundled game.
+    if (self.sessions.count == 0)
     {
-        if (launchError)
-        {
-            [self presentError: launchError];
-        }
+        NSError *launchError = nil;
+        BXSession *session = [self openBundledGameAndDisplay: YES error: &launchError];
         
-        [NSApp terminate: self];
+        if (session == nil)
+        {
+            if (launchError)
+            {
+                [self presentError: launchError];
+            }
+            
+            [NSApp terminate: self];
+        }
     }
-    else
-    {
-        [self showHotkeyWarningIfUnavailable];
-    }
+}
+
+- (id) openDocumentWithContentsOfURL: (NSURL *)url display: (BOOL)displayDocument error: (NSError **)outError
+{
+    NSLog(@"Opening document!");
+    return [super openDocumentWithContentsOfURL: url display: displayDocument error: outError];
 }
 
 - (id) openBundledGameAndDisplay: (BOOL)display error: (NSError **)outError
@@ -183,10 +196,9 @@ NSString * const BXOrganizationWebsiteURLInfoPlistKey = @"BXOrganizationWebsiteU
             {
                 NSString *errorTitle = @"This application does not contain a bundled gamebox.";
                 NSString *errorSuggestion = @"Ensure that the gamebox is placed in the Resources folder of the application, and that the Info.plist contains a “BXBundledGameboxName” key specifying the name of the gamebox without an extension.";
-                NSDictionary *errorInfo = [NSDictionary dictionaryWithObjectsAndKeys:
-                                           errorTitle, NSLocalizedDescriptionKey,
-                                           errorSuggestion, NSLocalizedRecoverySuggestionErrorKey,
-                                           nil];
+                NSDictionary *errorInfo = @{ NSLocalizedDescriptionKey: errorTitle,
+                                             NSLocalizedRecoverySuggestionErrorKey: errorSuggestion
+                                            };
                 
                 *outError = [NSError errorWithDomain: BXStandaloneAppErrorDomain
                                                 code: BXStandaloneAppMissingGameboxError
@@ -201,7 +213,7 @@ NSString * const BXOrganizationWebsiteURLInfoPlistKey = @"BXOrganizationWebsiteU
     else
     {
         NSString *executablePath = [[NSBundle mainBundle] executablePath];
-        [NSTask launchedTaskWithLaunchPath: executablePath arguments: [NSArray array]];
+        [NSTask launchedTaskWithLaunchPath: executablePath arguments: @[]];
         
         if (outError)
             *outError = [NSError errorWithDomain: NSCocoaErrorDomain
@@ -211,11 +223,16 @@ NSString * const BXOrganizationWebsiteURLInfoPlistKey = @"BXOrganizationWebsiteU
     }
 }
 
-- (id) makeDocumentWithContentsOfURL: (NSURL *)absoluteURL
-                              ofType: (NSString *)typeName
-                               error: (NSError **)outError
+- (Class) documentClassForType: (NSString *)UTI
 {
-    return [self makeUntitledDocumentOfType: typeName error: outError];
+    if (UTTypeConformsTo((CFStringRef)UTI, (CFStringRef)BXGameboxType))
+    {
+        return [BXSession class];
+    }
+    else
+    {
+        return nil;
+    }
 }
 
 //Suppress the automatic opening of untitled files when the user refocuses the application.
@@ -236,8 +253,16 @@ NSString * const BXOrganizationWebsiteURLInfoPlistKey = @"BXOrganizationWebsiteU
     return YES;
 }
 
-#pragma mark -
-#pragma mark UI actions
+
+#pragma mark - UI actions
+
+- (IBAction) relaunch: (id)sender
+{
+    [self terminateWithHandler: ^{
+        NSString *executablePath = [[NSBundle mainBundle] executablePath];
+        [NSTask launchedTaskWithLaunchPath: executablePath arguments: @[]];
+    }];
+}
 
 - (IBAction) orderFrontAboutPanel: (id)sender
 {

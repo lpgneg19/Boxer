@@ -71,8 +71,9 @@
 
 - (IBAction) revealGamebox: (id)sender
 {
-	NSString *gameboxPath = self.controller.document.gamebox.bundlePath;
-	[[NSApp delegate] revealInFinder: gameboxPath];
+    NSURL *gameboxURL = self.controller.document.gamebox.bundleURL;
+    if (gameboxURL)
+        [(BXBaseAppController *)[NSApp delegate] revealURLsInFinder: @[gameboxURL]];
 }
 
 - (IBAction) launchGamebox: (id)sender
@@ -90,19 +91,19 @@
 		[self.controller.document close];
 		
 		//Open the newly-minted gamebox in a DOS session.
-		[[NSApp delegate] openDocumentWithContentsOfURL: packageURL display: YES error: NULL];		
+		[(BXBaseAppController *)[NSApp delegate] openDocumentWithContentsOfURL: packageURL display: YES error: NULL];		
 	}
 }
 
 - (IBAction) showImportFinishedHelp: (id)sender
 {
-	[[NSApp delegate] showHelpAnchor: @"import-finished"];
+	[(BXBaseAppController *)[NSApp delegate] showHelpAnchor: @"import-finished"];
 }
 
 - (IBAction) searchForCoverArt: (id)sender
 {
 	NSString *search = self.controller.document.displayName;
-	[[NSApp delegate] searchURLFromKey: @"CoverArtSearchURL" withSearchString: search];
+	[(BXBaseAppController *)[NSApp delegate] searchURLFromKey: @"CoverArtSearchURL" withSearchString: search];
 }
 
 

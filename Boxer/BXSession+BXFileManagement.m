@@ -232,9 +232,9 @@ NSString * const BXGameStateEmulatorVersionKey = @"BXEmulatorVersion";
 {
     if (self.hasGamebox)
     {
-        NSURL *stateURL = [[NSApp delegate] gameStatesURLForGamebox: self.gamebox
-                                                  creatingIfMissing: NO
-                                                              error: NULL];
+        NSURL *stateURL = [(BXBaseAppController *)[NSApp delegate] gameStatesURLForGamebox: self.gamebox
+                                                                         creatingIfMissing: NO
+                                                                                     error: NULL];
         
         return [stateURL URLByAppendingPathComponent: @"Current.boxerstate"];
     }
@@ -470,7 +470,7 @@ NSString * const BXGameStateEmulatorVersionKey = @"BXEmulatorVersion";
 
 - (BOOL) allowsDriveChanges
 {
-    return !([[NSApp delegate] isStandaloneGameBundle]);
+    return !([(BXBaseAppController *)[NSApp delegate] isStandaloneGameBundle]);
 }
 
 - (NSArray *) allDrives
@@ -1710,7 +1710,7 @@ NSString * const BXGameStateEmulatorVersionKey = @"BXEmulatorVersion";
 	
     //If this drive is part of the gamebox, and we're not a standalone app,
     //scan it for executables to display in the program panel
-	if (![[NSApp delegate] isStandaloneGameBundle] && !drive.isVirtual && [self driveIsBundled: drive])
+	if (![(BXBaseAppController *)[NSApp delegate] isStandaloneGameBundle] && !drive.isVirtual && [self driveIsBundled: drive])
 	{
         [self executableScanForDrive: drive startImmediately: YES];
 	}
@@ -1788,7 +1788,7 @@ NSString * const BXGameStateEmulatorVersionKey = @"BXEmulatorVersion";
 	return YES;
 }
 
-- (BOOL) emulator: (BXEmulator *)emulator shouldAllowWriteAccessToPath: (NSString *)filePath onDrive: (BXDrive *)drive
+- (BOOL) emulator: (BXEmulator *)emulator shouldAllowWriteAccessToURL: (NSURL *)fileURL onDrive: (BXDrive *)drive
 {
 	//Don't allow write access to files on drives marked as read-only
 	if (drive.isReadOnly) return NO;
@@ -1809,14 +1809,13 @@ NSString * const BXGameStateEmulatorVersionKey = @"BXEmulatorVersion";
 	return YES;
 }
 
-- (BOOL) emulator: (BXEmulator *)theEmulator shouldMountDriveFromShell: (NSString *)drivePath
+- (BOOL) emulator: (BXEmulator *)theEmulator shouldMountDriveFromURL: (NSURL *)driveURL
 {
     //TODO: show an error message
     if (!self.allowsDriveChanges && _hasConfigured)
         return NO;
     
     NSError *validationError = nil;
-    NSURL *driveURL = [NSURL fileURLWithPath: drivePath];
     BOOL shouldMount = [self validateDriveURL: &driveURL error: &validationError];
     
     if (validationError)

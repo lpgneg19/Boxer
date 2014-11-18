@@ -19,7 +19,8 @@
 @property (retain) ADBContinuousThread *tapThread;
 
 //Overridden to be read-write.
-@property (assign, getter=isTapping) BXKeyboardEventTapStatus status;
+@property (readwrite, getter=isTapping) BXKeyboardEventTapStatus status;
+@property (readwrite) BOOL restartNeeded;
 
 ///Our CGEventTap callback. Receives the BXKeyboardEventTap instance as the userInfo parameter, and passes handling directly on to it.
 static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *userInfo);
@@ -52,6 +53,7 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
 @synthesize tapThread = _tapThread;
 @synthesize delegate = _delegate;
 @synthesize status = _status;
+@synthesize restartNeeded = _restartNeeded;
 
 - (id) init
 {
@@ -59,28 +61,8 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
     if (self)
     {
         self.usesDedicatedThread = NO;
-        
-        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-        [center addObserver: self
-                   selector: @selector(applicationDidBecomeActive:)
-                       name: NSApplicationDidBecomeActiveNotification
-                     object: NSApp];
     }
     return self;
-}
-
-- (void) applicationDidBecomeActive: (NSNotification *)notification
-{
-    //When Boxer becomes the active application again, attempt to reestablish a tap
-    //if we're currently enabled and don't already have a full-strength tap.
-    //This accounts for if the user has granted Boxer accessibility control in the meantime.
-    [self willChangeValueForKey: @"canCaptureKeyEvents"];
-    if (self.isEnabled && self.status != BXKeyboardEventTapTappingAllKeyboardEvents && self.canCaptureKeyEvents)
-    {
-        [self _stopTapping];
-        [self _startTapping];
-    }
-    [self didChangeValueForKey: @"canCaptureKeyEvents"];
 }
 
 - (void) dealloc
@@ -125,7 +107,7 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
     }
 }
 
-- (BOOL) canCaptureKeyEvents
++ (BOOL) canCaptureKeyEvents
 {
     return AXAPIEnabled() || AXIsProcessTrusted();
 }
@@ -134,6 +116,8 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
 {
     NSUInteger i, numTaps = 0;
     CGGetEventTapList(0, NULL, &numTaps);
+    
+    BXKeyboardEventTapStatus status = BXKeyboardEventTapNotTapping;
     if (numTaps > 0)
     {
         CGEventTapInformation *taps = malloc(sizeof(CGEventTapInformation) * numTaps);
@@ -153,24 +137,24 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
                 
                 if ((tap.eventsOfInterest & keyEvents) == keyEvents)
                 {
-                    return BXKeyboardEventTapTappingAllKeyboardEvents;
+                    status = BXKeyboardEventTapTappingAllKeyboardEvents;
                 }
                 else if ((tap.eventsOfInterest & systemEvents) == systemEvents)
                 {
-                    return BXKeyboardEventTapTappingSystemEventsOnly;
+                    status = BXKeyboardEventTapTappingSystemEventsOnly;
                 }
                 else
                 {
-                    return BXKeyboardEventTapNotTapping;
+                    status = BXKeyboardEventTapNotTapping;
                 }
                 
                 break;
             }
         }
+        free(taps);
     }
     
-    //If we got this far, we couldn't find our tap in the tap info and can assume that our own tap failed to install.
-    return BXKeyboardEventTapNotTapping;
+    return status;
 }
 
 - (BOOL) _installEventTapOnCurrentThread
@@ -204,14 +188,17 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
                 case BXKeyboardEventTapTappingAllKeyboardEvents:
                     NSLog(@"Event tap created and tapping all keyboard events.");
                     self.status = reportedStatus;
+                    self.restartNeeded = NO;
                     return YES;
                 case BXKeyboardEventTapTappingSystemEventsOnly:
                     NSLog(@"Event tap created but tapping system events only.");
                     self.status = reportedStatus;
                     return YES;
                 case BXKeyboardEventTapNotTapping:
+                case BXKeyboardEventTapInstalling: //Will never be returned by _reportedStatusOfEventTap, but included anyway to suppress compiler warnings.
                     NSLog(@"Event tap created but could not capture any relevant events: discarding.");
                     [self _removeEventTapFromCurrentThread];
+                    self.status = reportedStatus;
                     return NO;
             }
         }
@@ -219,7 +206,6 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
         {
             NSLog(@"Event tap could not be created");
             self.status = BXKeyboardEventTapNotTapping;
-            
             return NO;
         }
     }
@@ -229,18 +215,30 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
 {
     @synchronized(self)
     {
-        CFRunLoopRemoveSource(CFRunLoopGetCurrent(), _source, kCFRunLoopCommonModes);
-            
-        CFMachPortInvalidate(_tap);
-        CFRunLoopSourceInvalidate(_source);
-            
-        CFRelease(_source);
-        CFRelease(_tap);
-            
-        _tap = NULL;
-        _source = NULL;
+        if (_source)
+        {
+            CFRunLoopSourceInvalidate(_source);
+            CFRelease(_source);
+            _source = NULL;
+        }
+        
+        if (_tap)
+        {
+            CFMachPortInvalidate(_tap);
+            CFRelease(_tap);
+            _tap = NULL;
+        }
         
         self.status = BXKeyboardEventTapNotTapping;
+    }
+}
+
+- (void) refreshEventTap
+{
+    if (self.isEnabled)
+    {
+        [self _stopTapping];
+        [self _startTapping];
     }
 }
 
@@ -248,6 +246,7 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
 {
     if (self.status == BXKeyboardEventTapNotTapping)
     {
+        self.status = BXKeyboardEventTapInstalling;
         if (self.usesDedicatedThread)
         {
             NSLog(@"Installing event tap on dedicated thread.");
@@ -261,6 +260,7 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
         {
             NSLog(@"Installing event tap on main thread.");
             [self _installEventTapOnCurrentThread];
+            [self.delegate eventTapDidFinishAttaching: self];
         }
     }
 }
@@ -270,6 +270,8 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     
     BOOL installed = [self _installEventTapOnCurrentThread];
+    [self.delegate eventTapDidFinishAttaching: self];
+    
     if (installed)
     {
         //Run this thread's run loop until we're told to stop: processing event-tap

@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+/// The current status of the event tap.
 typedef enum {
+    /// The event tap is not installed.
     BXKeyboardEventTapNotTapping,
+    
+    /// The event tap is currently trying to install.
+    BXKeyboardEventTapInstalling,
+    
+    /// The event tap is installed but is tapping system events (media keys) only.
     BXKeyboardEventTapTappingSystemEventsOnly,
+    
+    /// The event tap is installed and is tapping both system and keyboard events.
     BXKeyboardEventTapTappingAllKeyboardEvents,
 } BXKeyboardEventTapStatus;
 
@@ -26,10 +35,18 @@ typedef enum {
     CFRunLoopSourceRef _source;
     BOOL _enabled;
     BOOL _usesDedicatedThread;
+    BOOL _restartNeeded;
     BXKeyboardEventTapStatus _status;
     
     __unsafe_unretained id <BXKeyboardEventTapDelegate> _delegate;
 }
+
+/// Whether OS X has granting the application permission to capture keyup and keydown events.
+/// In OS X 10.8 and below, this will be YES if the accessibility API is enabled: i.e. "Enable access for assistive devices" is turned on.
+/// In OS X 10.9 and above, this will be YES if Boxer has been given accessibility control in the Security & Privacy preferences pane.
+/// @note Even if this returns NO, the event tap may still be able to attach: in which case it will only catch media key events
+/// and not all keyboard events.
++ (BOOL) canCaptureKeyEvents;
 
 /// The delegate whom we will ask for event-capture decisions.
 @property (assign) id <BXKeyboardEventTapDelegate> delegate;
@@ -38,25 +55,26 @@ typedef enum {
 /// Toggling this will attach/detach the event tap.
 @property (assign, nonatomic, getter=isEnabled) BOOL enabled;
 
-/// The current status of the event tap. See BXKeyboardEventTapStatus constants.
+/// The current status of the event tap. See @c BXKeyboardEventTapStatus constants.
 @property (readonly) BXKeyboardEventTapStatus status;
-
-/// Whether our tap is able to capture keyup/keydown events, which require special accessibiity privileges.
-/// In OS X 10.8 and below, this will be YES if the accessibility API is enabled: i.e. "Enable access for assistive devices" is turned on.
-/// In OS X 10.9 and above, this will be YES if Boxer has been given accessibility control in the Security & Privacy preferences pane.
-/// @note Even if this returns NO, the event tap may still be able to attach: in which case it will only catch media key events
-/// and not all keyboard events.
-@property (readonly, nonatomic) BOOL canCaptureKeyEvents;
 
 /// Whether the event tap should run on a separate thread or the main thread.
 /// A separate thread prevents input lag in other apps when the main thread is busy.
 /// Changing this while a tap is in progress will stop and restart the tap.
 @property (assign, nonatomic) BOOL usesDedicatedThread;
 
+/// If the event tap is enabled, detaches the event tap and attempts to re-attach it.
+/// Has no effect if the tap is disabled.
+/// This is intended to be called by a parent context when the application
+/// may have been granted broader tap permissions.
+- (void) refreshEventTap;
+
 @end
 
 
 /// A protocol for responding to delegate messages sent by a BXKeyboardEventTap instance.
+/// Because event taps can operate on their own dedicated threads, the delegate must be
+/// prepared to receive delegate messages on a thread other than the main thread.
 @protocol BXKeyboardEventTapDelegate <NSObject>
 
 /// Called when a BXKeyboardEventTap instance receives a keyup or keydown event,
@@ -77,5 +95,11 @@ typedef enum {
 /// @return NO if the event tap should let the event reach the system unmolested.
 /// @note This may be called on a thread other than the main thread.
 - (BOOL) eventTap: (BXKeyboardEventTap *)tap shouldCaptureSystemDefinedEvent: (NSEvent *)event;
+
+/// Called whenever the event tap has finished trying (and possibly succeeding) to attach itself.
+/// @param tap      The BXKeyboardEventTap instance that attempted to attach itself.
+///                 If the event tap failed to attach, its @c status will be @c BXKeyboardEventTapNotTapping.
+/// @note This may be called on a thread other than the main thread.
+- (void) eventTapDidFinishAttaching: (BXKeyboardEventTap *)tap;
 
 @end

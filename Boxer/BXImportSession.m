@@ -296,13 +296,15 @@
 }
 
 
-#pragma mark -
-#pragma mark Controlling shutdown
+#pragma mark - Controlling shutdown
 
-//We are considered to have unsaved changes if we have a not-yet-finalized gamebox.
-- (BOOL) isDocumentEdited
+- (BOOL) canCloseSafely
 {
-    return (self.gamebox != nil) && (self.importStage < BXImportSessionFinished);
+    //If the gamebox is being imported and is not yet finalized, we can't close the document safely.
+    if (self.gamebox != nil && self.importStage < BXImportSessionFinished)
+        return NO;
+    
+    return YES;
 }
 
 //Overridden to display our own custom confirmation alert instead of the standard NSDocument one.
@@ -1481,10 +1483,10 @@
 	if (!gameName) gameName	= [self.class gameboxNameForGameAtURL: self.sourceURL];
 	
     
-    NSURL *gamesFolder = [[NSApp delegate] gamesFolderURL];
+    NSURL *gamesFolder = [(BXAppController *)[NSApp delegate] gamesFolderURL];
 	//If the games folder is missing or not set, then fall back on a path we know does exist (the Desktop)
     if (![gamesFolder checkResourceIsReachableAndReturnError: NULL])
-        gamesFolder = [[NSApp delegate] fallbackGamesFolderURL];
+        gamesFolder = [(BXAppController *)[NSApp delegate] fallbackGamesFolderURL];
 	
     NSString *fullGameName = [gameName stringByAppendingPathExtension: @"boxer"];
 	NSURL *baseGameboxURL = [gamesFolder URLByAppendingPathComponent: fullGameName];

@@ -120,13 +120,14 @@ enum {
 
 - (IBAction) revealGamebox: (id)sender
 {
-	[[NSApp delegate] revealPath: self.session.gamebox.bundlePath];
+    NSURL *gameboxURL = self.session.gamebox.bundleURL;
+    [(BXBaseAppController *)[NSApp delegate] revealURLsInFinder: @[gameboxURL]];
 }
 
 - (IBAction) searchForCoverArt: (id)sender
 {
 	NSString *search = self.session.displayName;
-	[[NSApp delegate] searchURLFromKey: @"CoverArtSearchURL" withSearchString: search];
+	[(BXBaseAppController *)[NSApp delegate] searchURLFromKey: @"CoverArtSearchURL" withSearchString: search];
 }
 
 - (IBAction) showProgramChooserPanel: (id)sender

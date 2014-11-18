@@ -24,45 +24,75 @@
  *	POSSIBILITY OF SUCH DAMAGE.
  */
 
-//This library contains backported implementations for APIs and constants that are not available
-//in earlier versions of Cocoa.
 
 #import <Cocoa/Cocoa.h>
 
-#pragma mark -
-#pragma mark Runtime voodoo for applying fallback methods to other classes in a category-like manner.
 
+#pragma mark - ADBFallbackProxyCategory
+/// A base class for 'category-like' classes that copy their own methods onto another class when loaded.
+/// This behaves much like a category: except that if the other class already has an implementation
+/// of the method being copied, it will not be replaced. (Regular Objective-C categories will collide
+/// in that case, issuing a compiler warning and providing undefined behaviour.)
+///
+/// This system is mostly intended for 'backporting' implementations of methods that have been
+/// added in later OS X versions.
 @interface ADBFallbackProxyCategory: NSObject
 
-//Copies the specified instance method from the proxy class onto the target class,
-//if the target class does not already respond to that selector.
+/// Copies the specified instance method from the proxy class onto the target class,
+/// if the target class does not already respond to that selector.
+/// Typically this is called from the proxy category's @c +load method.
+/// @param selector     The selector of the instance method to copy from this class.
+/// @param targetClass  The class onto which to add the instance method.
 + (void) addInstanceMethod: (SEL)selector toClass: (Class)targetClass;
 
 @end
 
 
-@interface NSFileManagerProxyCategory: ADBFallbackProxyCategory
+#pragma mark - NSFileManager
 
-//Reimplementations for OS X 10.6
+@interface NSFileManager (ADBForwardCompatibility)
+
+//Declared in OS X 10.7
 - (BOOL) createDirectoryAtURL: (NSURL *)URL
   withIntermediateDirectories: (BOOL)createIntermediates
                    attributes: (NSDictionary *)attributes
                         error: (out NSError **)error;
 
+//Declared in OS X 10.7
 - (BOOL) createSymbolicLinkAtURL: (NSURL *)URL
               withDestinationURL: (NSURL *)destURL
                            error: (out NSError **)error;
 
-//Reimplementations for OS X 10.6 and 10.7
+//Declared in OS X 10.8
 - (BOOL) trashItemAtURL: (NSURL *)url
        resultingItemURL: (out NSURL **)outResultingURL
                   error: (out NSError **)error;
+
+@end
+
+@interface NSFileManagerProxyCategory: ADBFallbackProxyCategory
 @end
 
 
-@interface NSURLProxyCategory: ADBFallbackProxyCategory
+#pragma mark - NSURL
 
-//Reimplementation for 10.8 and below
+@interface NSURL (ADBForwardCompatibility)
+
+//Declared in OS X 10.9
 - (const char *) fileSystemRepresentation;
+
+@end
+
+@interface NSURLProxyCategory: ADBFallbackProxyCategory
+@end
+
+
+#pragma mark - NSView
+@interface NSView (ADBForwardCompatibility)
+
+//Declared in OS X 10.9. Declared to avoid compilation errors, but not actually implemented by proxy:
+//instead, check for availability with respondsToSelector:.
+- (BOOL) layerUsesCoreImageFilters;
+- (void) setLayerUsesCoreImageFilters: (BOOL)flag;
 
 @end
