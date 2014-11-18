@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4510"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="BXInspectorController">
@@ -13,7 +13,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Inspector" allowsToolTipsWhenApplicationIsInactive="NO" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="47" userLabel="Inspector" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" utility="YES" nonactivatingPanel="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES"/>
@@ -31,7 +31,7 @@
                             <tabViewItem label="Gamebox Inspector" identifier="0" id="1422" userLabel="Gamebox Panel">
                                 <view key="view" id="1425">
                                     <rect key="frame" x="0.0" y="0.0" width="296" height="432"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <customView id="202">
                                             <rect key="frame" x="0.0" y="0.0" width="296" height="432"/>
@@ -95,16 +95,16 @@ to the DOS prompt instead.</string>
                                                                     <font key="font" metaFont="system"/>
                                                                 </buttonCell>
                                                                 <connections>
+                                                                    <binding destination="56" name="value" keyPath="selection.gamebox.closeOnExit" id="2234">
+                                                                        <dictionary key="options">
+                                                                            <integer key="NSNoSelectionPlaceholder" value="0"/>
+                                                                            <integer key="NSNotApplicablePlaceholder" value="0"/>
+                                                                            <integer key="NSNullPlaceholder" value="0"/>
+                                                                        </dictionary>
+                                                                    </binding>
                                                                     <binding destination="56" name="enabled" keyPath="selection.gamebox.targetPath" id="2179">
                                                                         <dictionary key="options">
                                                                             <string key="NSValueTransformerName">NSIsNotNil</string>
-                                                                        </dictionary>
-                                                                    </binding>
-                                                                    <binding destination="56" name="value" keyPath="selection.gamebox.closeOnExit" id="2234">
-                                                                        <dictionary key="options">
-                                                                            <integer key="NSNotApplicablePlaceholder" value="0"/>
-                                                                            <integer key="NSNoSelectionPlaceholder" value="0"/>
-                                                                            <integer key="NSNullPlaceholder" value="0"/>
                                                                         </dictionary>
                                                                     </binding>
                                                                     <outlet property="nextKeyView" destination="803" id="2298"/>
@@ -113,12 +113,12 @@ to the DOS prompt instead.</string>
                                                             <popUpButton verticalHuggingPriority="750" id="2155">
                                                                 <rect key="frame" x="20" y="73" width="256" height="26"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                <popUpButtonCell key="cell" type="push" title="Nothing (show a DOS prompt)" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="2156">
+                                                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="2156">
                                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                                    <font key="font" metaFont="system"/>
+                                                                    <font key="font" metaFont="menu"/>
                                                                     <menu key="menu" title="OtherViews" id="2157">
                                                                         <items>
-                                                                            <menuItem title="Nothing (show a DOS prompt)" state="on" id="2169">
+                                                                            <menuItem title="Nothing (show a DOS prompt)" id="2169">
                                                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                                                             </menuItem>
                                                                             <menuItem isSeparatorItem="YES" tag="1" id="2170"/>
@@ -220,8 +220,8 @@ sound or animation are stuttering.</string>
                                                                     <font key="font" metaFont="system"/>
                                                                 </buttonCell>
                                                                 <connections>
-                                                                    <binding destination="56" name="enabled" keyPath="selection.emulating" id="2050"/>
                                                                     <binding destination="56" name="value" keyPath="selection.dynamic" id="2037"/>
+                                                                    <binding destination="56" name="enabled" keyPath="selection.emulating" id="2050"/>
                                                                     <outlet property="nextKeyView" destination="2044" id="2286"/>
                                                                 </connections>
                                                             </button>
@@ -536,7 +536,7 @@ with the game’s own keyboard controls.</string>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <popUpButtonCell key="cell" type="push" title="⌃ Click" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" tag="262144" imageScaling="proportionallyDown" inset="2" selectedItem="2005" id="1999">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" metaFont="system"/>
+                                                        <font key="font" metaFont="menu"/>
                                                         <menu key="menu" title="OtherViews" id="2000">
                                                             <items>
                                                                 <menuItem title="--" id="2004"/>
@@ -556,7 +556,7 @@ with the game’s own keyboard controls.</string>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <popUpButtonCell key="cell" type="push" title="⌃⌥ Click" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="786432" imageScaling="proportionallyDown" inset="2" selectedItem="2023" id="2012">
                                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" metaFont="system"/>
+                                                        <font key="font" metaFont="menu"/>
                                                         <menu key="menu" title="OtherViews" id="2013">
                                                             <items>
                                                                 <menuItem title="--" id="2022"/>
@@ -613,7 +613,7 @@ to add them as DOS drives.</string>
                                                 <segmentedControl verticalHuggingPriority="750" id="2191">
                                                     <rect key="frame" x="88" y="16" width="119" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <segmentedCell key="cell" continuous="YES" alignment="left" style="texturedRounded" trackingMode="momentary" id="2192" customClass="BXDriveOptionsSegmentedCell">
+                                                    <segmentedCell key="cell" continuous="YES" borderStyle="border" alignment="left" style="texturedRounded" trackingMode="momentary" id="2192" customClass="BXDriveOptionsSegmentedCell">
                                                         <font key="font" metaFont="system"/>
                                                         <segments>
                                                             <segment toolTip="Add a new drive" image="NSAddTemplate" width="36"/>
@@ -655,11 +655,11 @@ to add them as DOS drives.</string>
                                                                     </subviews>
                                                                     <color key="backgroundColor" red="0.89803922179999995" green="0.92549020049999997" blue="0.97254902119999997" alpha="0.0" colorSpace="deviceRGB"/>
                                                                 </clipView>
-                                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.0037878789007663727" id="2207" userLabel="Horizontal Scroller">
+                                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.0037878789007663727" horizontal="YES" id="2207" userLabel="Horizontal Scroller">
                                                                     <rect key="frame" x="-100" y="-100" width="233" height="15"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </scroller>
-                                                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" arrowsPosition="none" doubleValue="1" id="2208" userLabel="Vertical Scroller">
+                                                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" arrowsPosition="none" doubleValue="1" horizontal="NO" id="2208" userLabel="Vertical Scroller">
                                                                     <rect key="frame" x="249" y="0.0" width="15" height="262"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </scroller>
@@ -717,7 +717,7 @@ to add them as DOS drives.</string>
                                                             <rect key="frame" x="20" y="179" width="256" height="44"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Connect a game controller to your Mac to begin." id="2141">
-                                                                <font key="font" size="18" name="LucidaGrande"/>
+                                                                <font key="font" metaFont="system" size="18"/>
                                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
@@ -749,9 +749,9 @@ or iPod Touch running Joypad.</string>
                                                     <connections>
                                                         <binding destination="1668" name="hidden" keyPath="selection.controllersAvailable" id="2330">
                                                             <dictionary key="options">
-                                                                <integer key="NSNotApplicablePlaceholder" value="0"/>
-                                                                <integer key="NSNoSelectionPlaceholder" value="0"/>
                                                                 <integer key="NSMultipleValuesPlaceholder" value="0"/>
+                                                                <integer key="NSNoSelectionPlaceholder" value="0"/>
+                                                                <integer key="NSNotApplicablePlaceholder" value="0"/>
                                                                 <integer key="NSNullPlaceholder" value="0"/>
                                                             </dictionary>
                                                         </binding>
@@ -822,11 +822,11 @@ if the joystick drifts or behaves erratically.</string>
                                                                             </subviews>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="calibratedWhite"/>
                                                                         </clipView>
-                                                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" id="2311" userLabel="Horizontal Scroller">
+                                                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="2311" userLabel="Horizontal Scroller">
                                                                             <rect key="frame" x="-100" y="-100" width="233" height="15"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                         </scroller>
-                                                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" arrowsPosition="none" doubleValue="1" id="2310" userLabel="Vertical Scroller">
+                                                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" arrowsPosition="none" doubleValue="1" horizontal="NO" id="2310" userLabel="Vertical Scroller">
                                                                             <rect key="frame" x="234" y="1" width="15" height="143"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                         </scroller>
@@ -843,10 +843,10 @@ if the joystick drifts or behaves erratically.</string>
                                                     <connections>
                                                         <binding destination="1668" name="hidden" keyPath="selection.controllersAvailable" id="2334">
                                                             <dictionary key="options">
-                                                                <integer key="NSNullPlaceholder" value="1"/>
-                                                                <integer key="NSNotApplicablePlaceholder" value="1"/>
-                                                                <integer key="NSNoSelectionPlaceholder" value="1"/>
                                                                 <integer key="NSMultipleValuesPlaceholder" value="1"/>
+                                                                <integer key="NSNoSelectionPlaceholder" value="1"/>
+                                                                <integer key="NSNotApplicablePlaceholder" value="1"/>
+                                                                <integer key="NSNullPlaceholder" value="1"/>
                                                                 <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                             </dictionary>
                                                         </binding>
@@ -1116,8 +1116,8 @@ if the joystick drifts or behaves erratically.</string>
         <image name="GamepadTemplate" width="128" height="80"/>
         <image name="Joystick" width="32" height="32"/>
         <image name="Mouse" width="32" height="32"/>
-        <image name="NSActionTemplate" width="15" height="15"/>
-        <image name="NSAddTemplate" width="8" height="8"/>
-        <image name="NSRemoveTemplate" width="8" height="8"/>
+        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
 </document>

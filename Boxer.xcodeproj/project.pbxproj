@@ -699,7 +699,6 @@
 		9FBC3C790F56E0D7001811F2 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C770F56E0D7001811F2 /* CoreMIDI.framework */; };
 		9FBC3D600F56EA82001811F2 /* SDL.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9FBC3D610F56EA82001811F2 /* SDL_net.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL_net.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9FBD321710E5144C00031CB6 /* Brand.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD321610E5144C00031CB6 /* Brand.png */; };
 		9FBDC591141A0E5D00171176 /* BundleFreestandingTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9FBDC590141A0E5D00171176 /* BundleFreestandingTemplate.pdf */; };
 		9FBEC4F0142CE8300016964A /* BXMT32LCDDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEC4EF142CE8300016964A /* BXMT32LCDDisplay.m */; };
 		9FBF66AF11F35ADD00DAAB9A /* ADBSingleFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF66AE11F35ADD00DAAB9A /* ADBSingleFileTransfer.m */; };
@@ -4744,6 +4743,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Other Sources/JoypadCocoaSDK\"",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-mstackrealign";
 				PRODUCT_NAME = "Boxer Standalone";
 				VALID_ARCHS = i386;
