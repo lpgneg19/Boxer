@@ -39,6 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ADBFullScreenCapableWindowDelegate;
 
+/// ADBFullScreenCapableWindow reimplements a Lion-like fullscreen API for earlier versions of OS X.
+/// It also adds helper methods (usable also in Lion) for introspecting fullscreen window state.
 @interface ADBFullscreenCapableWindow : NSWindow {
 @private
     BOOL _fullScreen;

@@ -34,11 +34,11 @@
 
 @property (readonly, nonatomic) CGFloat appNameFontSize;
 
-//Provides a singleton instance of the window controller which stays retained for the lifetime
-//of the application. BXStandaloneAboutController should always be accessed from this singleton.
-+ (id) controller;
+/// Provides a singleton instance of the window controller which stays retained for the lifetime
+/// of the application. BXStandaloneAboutController should always be accessed from this singleton.
++ (instancetype) controller;
 
-//Display the credits and acknowledgements help page
+/// Display the credits and acknowledgements help page
 - (IBAction) showAcknowledgements: (id)sender;
 
 @end

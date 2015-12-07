@@ -45,6 +45,12 @@ typedef BOOL (^ADBFilesystemFileURLErrorHandler)(NSURL *url, NSError *error);
 //- relative paths like @"path/to/file.txt" should be resolved relative to the root of the filesystem.
 
 @protocol ADBFilesystemPathEnumeration;
+/// This protocol allows filesystems to handle filesystem-relative paths: that is, paths that are
+/// relative to the root of the represented logical filesystem, instead of referring to anywhere
+/// in the actual OS X filesystem.<br>
+/// <b>IMPLEMENTATION REQUIREMENTS:</b><br>
+/// - the path @"/" should be treated as the root of the filesystem.
+/// - relative paths like @"path/to/file.txt" should be resolved relative to the root of the filesystem.
 @protocol ADBFilesystemPathAccess <NSObject>
 
 - (id <ADBFilesystemPathEnumeration>) enumeratorAtPath: (NSString *)path
@@ -160,7 +166,7 @@ typedef BOOL (^ADBFilesystemFileURLErrorHandler)(NSURL *url, NSError *error);
 ///This protocol allows a filesystem to convert its own logical paths to and from real
 ///OS X filesystem locations. Unlike the logical URL access protocol above, these locations
 ///must be actually accessible to standard OS X filesystem tools.
-///IMPLEMENTATION REQUIREMENTS:<br>
+///<b>IMPLEMENTATION REQUIREMENTS:</b><br>
 /// - URLs returned by these methods must be accessible under the standard OS X file access APIs
 ///  (NSFileManager, NSURL getPropertyValue:forKey:error: et. al.), though the files themselves
 ///  may not yet exist.<br>
@@ -185,7 +191,7 @@ typedef BOOL (^ADBFilesystemFileURLErrorHandler)(NSURL *url, NSError *error);
 /// Returns an enumerator for the specified local filesystem URL, which will return NSURL objects
 /// pointing to resources on the local filesystem.
 /// This enumerator should respect the same parameters as NSFileManager's
-/// enumeratorAtURL:includingPropertiesForKeys:options:errorHandler: method.
+/// \c enumeratorAtURL:includingPropertiesForKeys:options:errorHandler: method.
 - (id <ADBFilesystemFileURLEnumeration>) enumeratorAtFileURL: (NSURL *)URL
                                   includingPropertiesForKeys: (NSArray *)keys
                                                      options: (NSDirectoryEnumerationOptions)mask

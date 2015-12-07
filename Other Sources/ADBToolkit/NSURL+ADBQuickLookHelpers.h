@@ -28,13 +28,13 @@
 
 @interface NSURL (ADBQuickLookHelpers)
 
-//Returns a QuickLook thumbnail for the file at this URL, or nil if no thumbnail could be generated.
-//pixelSize specifies the maximum pixel dimensions for the preview, without taking into account
-//any UI scaling factors. The returned image is guaranteed to be *at most* this size;
-//a smaller image may be returned.
-//If useIconStyle is true, the thumbnail will be generated with the shadow and page-curl effects
-//as seen in Finder.
-//USAGE NOTE: this method is synchronous and can take a while to complete, so should be performed on a background thread.
-- (NSImage *) quickLookThumbnailWithMaxSize: (NSSize)pixelSize iconStyle: (BOOL)useIconStyle;
+/// Returns a QuickLook thumbnail for the file at this URL, or \c nil if no thumbnail could be generated.
+/// \c pixelSize specifies the maximum pixel dimensions for the preview, without taking into account
+/// any UI scaling factors. The returned image is guaranteed to be <i>at most</i> this size;
+/// a smaller image may be returned.<br>
+/// If \c useIconStyle is <code>true</code>, the thumbnail will be generated with the shadow and page-curl effects
+/// as seen in Finder.<br>
+/// <b>USAGE NOTE:</b> this method is synchronous and can take a while to complete, so should be performed on a background thread.
+- (nullable NSImage *) quickLookThumbnailWithMaxSize: (NSSize)pixelSize iconStyle: (BOOL)useIconStyle;
 
 @end

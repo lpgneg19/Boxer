@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark -
 #pragma mark Protocol declaration
 
+/// The BXMIDIDevice protocol defines an interface for emulated (and not-so-emulated)
+/// MIDI devices, to which BXEmulator can send MIDI output.
 @protocol BXMIDIDevice <NSObject>
 
 #pragma mark -

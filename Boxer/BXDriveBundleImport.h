@@ -11,7 +11,7 @@
 #import "ADBFileTransferSet.h"
 #import "BXDriveImport.h"
 
-//Domain and constants for errors encountered during disc-image ripping
+/// Domain and constants for errors encountered during disc-image ripping
 extern NSString * const BXDriveBundleErrorDomain;
 
 enum {
@@ -19,6 +19,8 @@ enum {
 };
 
 
+/// BXDriveBundleImport wraps BIN/CUE images and any associated audio tracks into a .cdmedia bundle,
+/// rewriting cue paths as necessary.
 @interface BXDriveBundleImport : ADBFileTransferSet <BXDriveImport>
 {
 	BXDrive *_drive;

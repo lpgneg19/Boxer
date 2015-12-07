@@ -61,20 +61,20 @@ enum {
 
 @property (readonly, getter=isUnbranded) BOOL unbranded;
 
-//Will be YES while app generation is in progress. Disables the UI.
+/// Will be \c YES while app generation is in progress. Disables the UI.
 @property (readonly, getter=isBusy) BOOL busy;
 
-//A version of the app name suitable for use as a filename.
-//This replaces or removes restricted characters like :, / and \.
+/// A version of the app name suitable for use as a filename.
+/// This replaces or removes restricted characters like :, / and \.
 @property (readonly, nonatomic) NSString *sanitisedAppName;
 
-//Whether the launch panel is available for this gamebox:
-//will be NO if the gamebox has only one launch option.
-//Used for selectively disabling launch-related options.
+/// Whether the launch panel is available for this gamebox:
+/// will be \c NO if the gamebox has only one launch option.
+/// Used for selectively disabling launch-related options.
 @property (readonly, nonatomic) BOOL launchPanelAvailable;
 
-//An editable array of help links.
-@property (strong, nonatomic) NSMutableArray *helpLinks;
+/// An editable array of help links.
+@property (strong, nonatomic) NSMutableArray<NSDictionary*> *helpLinks;
 
 
 #pragma mark -
@@ -95,5 +95,5 @@ enum {
 + (NSString *) bundleIdentifierFragmentFromString: (NSString *)inString;
 
 //Given the URL of a gamebox, returns an array of launch options found inside that gamebox.
-+ (NSArray *) launchersForGameboxAtURL: (NSURL *)gameboxURL;
++ (NSArray<NSDictionary<NSString*, id>*> *) launchersForGameboxAtURL: (NSURL *)gameboxURL;
 @end

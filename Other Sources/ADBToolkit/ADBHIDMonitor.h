@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark -
 #pragma mark Notification constants
 
-//Posted to the NSWorkspace notification center when an HID device is added or removed.
+/// Posted to the NSWorkspace notification center when an HID device is added or removed.
 extern NSString * const ADBHIDDeviceAdded;
 extern NSString * const ADBHIDDeviceRemoved;
 
@@ -49,19 +49,21 @@ extern NSString * const ADBHIDDeviceKey;
 @class DDHidDevice;
 @protocol ADBHIDMonitorDelegate;
 
+/// ADBHIDMonitor subscribes to HID input messages from DDHIDLib and IOKit and posts notifications
+/// when devices are added or removed.
 @interface ADBHIDMonitor: NSObject
 {
 	IOHIDManagerRef _ioManager;
-	NSMutableDictionary *_knownDevices;
+	NSMutableDictionary<NSNumber*,DDHidDevice*> *_knownDevices;
 	__unsafe_unretained id <ADBHIDMonitorDelegate> _delegate;
 }
 
 #pragma mark -
 #pragma mark Properties
 
-//The devices enumerated by this input manager,
-//matching the criteria specified to observeDevicesMatching:
-@property (readonly, nonatomic) NSArray *matchedDevices;
+/// The devices enumerated by this input manager,
+/// matching the criteria specified to observeDevicesMatching:
+@property (readonly, nonatomic) NSArray<DDHidDevice*> *matchedDevices;
 
 //This delegate will receive messages directly whenever devices are added or removed.
 @property (assign, nonatomic, nullable) id <ADBHIDMonitorDelegate> delegate;
@@ -70,11 +72,11 @@ extern NSString * const ADBHIDDeviceKey;
 #pragma mark -
 #pragma mark Helper class methods
 
-//Descriptors to feed to observeDevicesMatching:
-+ (NSDictionary *) joystickDescriptor;
-+ (NSDictionary *) gamepadDescriptor;
-+ (NSDictionary *) mouseDescriptor;
-+ (NSDictionary *) keyboardDescriptor;
+/// Descriptors to feed to observeDevicesMatching:
++ (NSDictionary<NSString*,NSNumber*> *) joystickDescriptor;
++ (NSDictionary<NSString*,NSNumber*> *) gamepadDescriptor;
++ (NSDictionary<NSString*,NSNumber*> *) mouseDescriptor;
++ (NSDictionary<NSString*,NSNumber*> *) keyboardDescriptor;
 
 
 #pragma mark -
@@ -87,18 +89,18 @@ extern NSString * const ADBHIDDeviceKey;
 //Descriptors should be specified as an array of NSDictionaries,
 //according the syntax of IOHIDManagerSetDeviceMatchingMultiple().
 //Pass NIL for descriptors to match all HID devices.
-- (void) observeDevicesMatching: (NSArray *)descriptors;
+- (void) observeDevicesMatching: (nullable NSArray<NSDictionary<NSString*,NSNumber*>*> *)descriptors;
 
-//Stop observing HID devices. This will empty matchedDevices.
+/// Stop observing HID devices. This will empty matchedDevices.
 - (void) stopObserving;
 
-//Called when the specified device is connected, or is already
-//connected when observeDevicesMatching: is called.
-//Intended to be overridden by subclasses.
+/// Called when the specified device is connected, or is already
+/// connected when observeDevicesMatching: is called.
+/// Intended to be overridden by subclasses.
 - (void) deviceAdded: (DDHidDevice *)device;
 
-//Called when the specified device is removed.
-//Intended to be overridden by subclasses.
+/// Called when the specified device is removed.
+/// Intended to be overridden by subclasses.
 - (void) deviceRemoved: (DDHidDevice *)device;
 
 @end

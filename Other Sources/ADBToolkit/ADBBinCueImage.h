@@ -32,6 +32,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// ADBBinCueImage is an ADBISOImage subclass for handling the minor format variations
+/// from CDRWin BIN/CUE binary images, as well as processing their accompanying cue sheets.
 @interface ADBBinCueImage : ADBISOImage
     
 #pragma mark -
@@ -52,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Returns \c YES if the specified path contains a parseable cue file, \c NO otherwise.
 /// Populates \c outError if there is a problem accessing the file.
-///FIXME: returning \NO will make Swift look for the error!
+///FIXME: returning \NO will make Swift look for an error!
 + (BOOL) isCueAtURL: (NSURL *)cueURL error: (out NSError **)outError;
 
 @end

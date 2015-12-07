@@ -38,40 +38,40 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (Class) classForHIDDeviceRef: (IOHIDDeviceRef)deviceRef;
 
-+ (id) deviceWithHIDDeviceRef: (IOHIDDeviceRef)deviceRef
-						error: (NSError **)outError;
++ (nullable instancetype) deviceWithHIDDeviceRef: (IOHIDDeviceRef)deviceRef
+                                           error: (NSError **)outError;
 
-- (id) initWithHIDDeviceRef: (IOHIDDeviceRef)deviceRef error: (NSError **)error;
+- (nullable instancetype) initWithHIDDeviceRef: (IOHIDDeviceRef)deviceRef error: (NSError **)error;
 
 - (BOOL) isEqualToDevice: (DDHidDevice *)device;
 
-//Returns an array of all elements matching the specified usage.
-//Will be empty if no such elements are present on the device.
+/// Returns an array of all elements matching the specified usage.
+/// Will be empty if no such elements are present on the device.
 - (NSArray *) elementsWithUsage: (DDHidUsage *)usage;
 
-//Returns the first element matching the specified usage,
-//or nil if no elements were found.
-- (DDHidElement *) elementWithUsage: (DDHidUsage *)usage;
+/// Returns the first element matching the specified usage,
+/// or nil if no elements were found.
+- (nullable DDHidElement *) elementWithUsage: (DDHidUsage *)usage;
 @end
 
 
 @interface DDHidJoystick (ADBJoystickExtensions)
 
-//Arrays of all axis/POV elements/sticks present on this device.
+/// Arrays of all axis/POV elements/sticks present on this device.
 @property (readonly, nonatomic) NSArray *axisElements;
 @property (readonly, nonatomic) NSArray *povElements;
 @property (readonly, nonatomic) NSArray *sticks;
 
-//Returns all axis elements conforming to the specified usage ID.
-//Will be empty if no such axis is present on this device.
+/// Returns all axis elements conforming to the specified usage ID.
+/// Will be empty if no such axis is present on this device.
 - (NSArray *) axisElementsWithUsageID: (unsigned)usageID;
 
-//Returns all button elements corresponding to the specified button usage.
-//Will be empty if no such button is present on this device.
+/// Returns all button elements corresponding to the specified button usage.
+/// Will be empty if no such button is present on this device.
 - (NSArray *) buttonElementsWithUsageID: (unsigned)usageID;
 
-//Convenience method to return the first matching axis/button element.
-//Returns nil if no matching elements were found.
+/// Convenience method to return the first matching axis/button element.
+/// Returns nil if no matching elements were found.
 - (DDHidElement *) axisElementWithUsageID: (unsigned)usageID;
 - (DDHidElement *) buttonElementWithUsageID: (unsigned)usageID;
 @end
@@ -79,17 +79,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DDHidJoystickStick (ADBJoystickStickExtensions)
 
-//Arrays of all axis/POV elements on this stick.
+/// Arrays of all axis/POV elements on this stick.
 @property (readonly, nonatomic) NSArray *axisElements;
 @property (readonly, nonatomic) NSArray *povElements;
 
-//Returns all axis elements conforming to the specified usage ID.
-//Will be empty if no such axis is present on this stick.
+/// Returns all axis elements conforming to the specified usage ID.
+/// Will be empty if no such axis is present on this stick.
 - (NSArray *) axisElementsWithUsageID: (unsigned)usageID;
 
-//Convenience method to return the first matching axis element.
-//Returns nil if no matching elements were found.
-- (DDHidElement *) axisElementWithUsageID: (unsigned)usageID;
+/// Convenience method to return the first matching axis element.
+/// Returns nil if no matching elements were found.
+- (nullable DDHidElement *) axisElementWithUsageID: (unsigned)usageID;
 
 @end
 

@@ -27,7 +27,7 @@
 //ADBTaskOperation monitors the progress of an NSTask.
 
 
-//Default to polling task progress every second
+/// Default to polling task progress every second
 #define ADBTaskOperationDefaultPollInterval 1.0
 
 
@@ -79,7 +79,7 @@ withProgressCallback: (SEL)callback
 		  atInterval: (NSTimeInterval)interval;
 
 /// Default callback for \c monitorTask:withProgressCallback:atInterval:.
-/// By default this does nothing but send ADBOperationInProgress notifications:
+/// By default this does nothing but send \c ADBOperationInProgress notifications:
 /// intended to be overridden in child classes to provide actual progress calculation.
 - (void) checkTaskProgress: (NSTimer *)timer;
 

@@ -40,16 +40,16 @@ typedef float ADBOperationProgress;
 #pragma mark -
 #pragma mark Notification constants
 
-//Sent when the operation is about to start.
+/// Sent when the operation is about to start.
 extern NSString * const ADBOperationWillStart;
 
-//Sent periodically while the operation is in progress.
+/// Sent periodically while the operation is in progress.
 extern NSString * const ADBOperationInProgress;
 
-//Sent when the operation ends (be it because of success, failure or cancellation.)
+/// Sent when the operation ends (be it because of success, failure or cancellation.)
 extern NSString * const ADBOperationDidFinish;
 
-//Sent when the operation gets cancelled.
+/// Sent when the operation gets cancelled.
 extern NSString * const ADBOperationWasCancelled;
 
 
@@ -80,6 +80,9 @@ extern NSString * const ADBOperationIndeterminateKey;
 
 @protocol ADBOperationDelegate;
 
+/// ADBOperation is an abstract base class for \c NSOperations, which can be observed by a delegate
+/// and which sends periodic progress notifications.
+/// \c ADBOperationDelegate defines the interface for delegates.
 @interface ADBOperation : NSOperation
 {
 	__unsafe_unretained id <ADBOperationDelegate> _delegate;

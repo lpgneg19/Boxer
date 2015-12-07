@@ -25,22 +25,26 @@
  */
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 //The ADBAliasHelpers category extends NSURL with methods to simplify working with legacy
 //alias records from OS X 10.5 and below and converting them to modern 10.6 bookmarks.
 
 @interface NSURL (ADBAliasHelpers)
 
-//Returns 10.6 bookmark data converted from the specified Finder alias record.
-//Returns nil and populates outError if conversion failed.
-+ (NSData *) bookmarkDataFromAliasRecord: (NSData *)aliasRecord
+/// Returns 10.6 bookmark data converted from the specified Finder alias record.
+/// Returns nil and populates outError if conversion failed.
++ (nullable NSData *) bookmarkDataFromAliasRecord: (NSData *)aliasRecord
                                    error: (out NSError **)outError;
 
-//Returns a URL resolved from the specified Finder alias record.
-//Directly equivalent to URLByResolvingBookmarkData:options:relativeToURL:bookmarkDataIsStale:error:.
-+ (id)URLByResolvingAliasRecord: (NSData *)aliasRecord
+/// Returns a URL resolved from the specified Finder alias record.
+/// Directly equivalent to URLByResolvingBookmarkData:options:relativeToURL:bookmarkDataIsStale:error:.
++ (nullable id)URLByResolvingAliasRecord: (NSData *)aliasRecord
                         options: (NSURLBookmarkResolutionOptions)options
-                  relativeToURL: (NSURL *)relativeURL
-            bookmarkDataIsStale: (out BOOL *)isStale
+                  relativeToURL: (nullable NSURL *)relativeURL
+            bookmarkDataIsStale: (nullable out BOOL *)isStale
                           error: (out NSError **)outError;
 
 @end
+
+NS_ASSUME_NONNULL_END

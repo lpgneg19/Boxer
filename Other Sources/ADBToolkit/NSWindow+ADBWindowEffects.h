@@ -47,6 +47,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// The following methods use private Core Graphics APIs that will likely fall foul
+/// of App Store private-API restrictions.
 @interface NSWindow (ADBPrivateAPIWindowEffects)
 
 /// Applies a gaussian blur filter behind the window background.

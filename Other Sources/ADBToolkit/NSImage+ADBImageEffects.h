@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSImage (ADBImageEffects)
 
-/// Returns the relative anchor point (from {0.0, 0.0} to {1.0, 1.0})
+/// Returns the relative anchor point (from <code>{0.0, 0.0}</code> to <code>{1.0, 1.0}</code>)
 /// that's equivalent to the specified image alignment constant.
 + (NSPoint) anchorForImageAlignment: (NSImageAlignment)alignment;
 

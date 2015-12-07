@@ -25,7 +25,8 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <OpenGL/OpenGL.h>
+#include <OpenGL/gltypes.h>
+#include <OpenGL/CGLTypes.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -44,19 +45,19 @@ extern NSString * const ADBGLFramebufferExtensionErrorDomain;
 #pragma mark Helper functions
 
 /// Returns a Cocoa error object representing the specified GL error code.
-/// The error will be in the ADBGLErrorDomain.
+/// The error will be in the <code>ADBGLErrorDomain</code>.
 NSError *__nullable errorForGLErrorCode(GLenum errorCode);
 
 /// Returns a Cocoa error object representing the specified status code
 /// from the \c GL_FRAMEBUFFER_EXT extension. The error will be in the
-/// \c ADBGLFramebufferExtensionErrorDomain.
-/// Will return nil if the status is \c GL_FRAMEBUFFER_COMPLETE_EXT, as this
+/// <code>ADBGLFramebufferExtensionErrorDomain</code>.
+/// Will return \c nil if the status is <code>GL_FRAMEBUFFER_COMPLETE_EXT</code>, as this
 /// indicates a successful operation.
 NSError *__nullable errorForGLFramebufferExtensionStatus(GLenum status);
 
 /// Returns a Cocoa error object representing the OpenGL error that occurred
 /// when processing the most recent GL command in the specified context.
-/// Returns nil if no error has occurred.
+/// Returns \c nil if no error has occurred.
 NSError *__nullable latestErrorInCGLContext(CGLContextObj context);
 
 NS_ASSUME_NONNULL_END

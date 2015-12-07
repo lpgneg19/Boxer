@@ -15,7 +15,7 @@
 
 @property (retain, nonatomic) IBOutlet NSCollectionView *launcherList;
 
-//An array of NSDictionaries for each item in the favorite-programs list.
-@property (retain, nonatomic) NSMutableArray *displayedRows;
+/// An array of NSDictionaries for each item in the favorite-programs list.
+@property (retain, nonatomic) NSMutableArray<NSDictionary*> *displayedRows;
 
 @end

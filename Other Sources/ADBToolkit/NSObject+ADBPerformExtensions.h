@@ -54,19 +54,19 @@
 
 @interface NSInvocation (ADBInvocationExtensions)
 
-//Helper methods to make defining invocations less painful.
-+ (NSInvocation *) invocationWithTarget: (id)target
-                               selector: (SEL)selector;
+/// Helper methods to make defining invocations less painful.
++ (instancetype) invocationWithTarget: (id)target
+                             selector: (SEL)selector;
 
-+ (NSInvocation *) invocationWithTarget: (id)target
-                               selector: (SEL)selector
-                              arguments: (void *)arg1, ...;
++ (instancetype) invocationWithTarget: (id)target
+                             selector: (SEL)selector
+                            arguments: (void *)arg1, ...;
 
-//For use with downstream variadic methods like performSelector:withValues:...).
-//args is expected to be already started with va_start(): It is the responsibility
-//of the calling context to call va_end() after this method returns.
-+ (NSInvocation *) invocationWithTarget: (id)target
-                               selector: (SEL)selector
-                          firstArgument: (void *)arg1
-                     remainingArguments: (va_list)args;
+/// For use with downstream variadic methods like performSelector:withValues:...).
+/// args is expected to be already started with <code>va_start()</code>: It is the responsibility
+/// of the calling context to call \c va_end() after this method returns.
++ (instancetype) invocationWithTarget: (id)target
+                             selector: (SEL)selector
+                        firstArgument: (void *)arg1
+                   remainingArguments: (va_list)args;
 @end

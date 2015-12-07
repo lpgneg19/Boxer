@@ -175,22 +175,22 @@ extern NSString * const BXControllerProfileDPadDown;
 @end
 
 
-//Helper methods to ease the conversion of a set of D-pad buttons to axis/POV mappings
-//(for devices that represent their D-pad as buttons instead of a POV switch.)
+/// Helper methods to ease the conversion of a set of D-pad buttons to axis/POV mappings
+/// (for devices that represent their D-pad as buttons instead of a POV switch.)
 @interface BXHIDControllerProfile (BXDPadBindings)
 
-//Returns a dictionary of the button elements making up this controller's D-pad.
-//Should return nil if the controller has no button-based D-pad.
+/// Returns a dictionary of the button elements making up this controller's D-pad.
+/// Should return nil if the controller has no button-based D-pad.
 - (NSDictionary *) DPadElementsFromButtons: (NSArray *)buttonElements;
 
-//Bind the specified set of D-pad buttons to best suit the current joystick type.
+/// Bind the specified set of D-pad buttons to best suit the current joystick type.
 - (void) bindDPadElements: (NSDictionary *)padElements;
 
-//Bind the specified set of D-pad buttons to the specified POV.
+/// Bind the specified set of D-pad buttons to the specified POV.
 - (void) bindDPadElements: (NSDictionary *)padElements
                     toPOV: (NSUInteger)POVNumber;
 
-//Bind the specified set of D-pad buttons to the specified X and Y axes.
+/// Bind the specified set of D-pad buttons to the specified X and Y axes.
 - (void) bindDPadElements: (NSDictionary *)padElements
 		 toHorizontalAxis: (NSString *)xAxis
 			 verticalAxis: (NSString *)yAxis;

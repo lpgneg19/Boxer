@@ -3394,7 +3394,6 @@
 		9FB4539116442CDD00BCF63B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9FCB87DC1C026B7800EAFE47 /* Localizable.strings */,
 				9FB4539216442CDD00BCF63B /* Boxer Bundler-Info.plist */,
 				9FB4539616442CDD00BCF63B /* main.m */,
 				9FB4539816442CDD00BCF63B /* Boxer Bundler-Prefix.pch */,
@@ -3407,6 +3406,7 @@
 			children = (
 				9FB453A716442D2900BCF63B /* app.icns */,
 				9F4199D91BD3F1CE00A2D165 /* InfoPlist.strings */,
+				9FCB87DC1C026B7800EAFE47 /* Localizable.strings */,
 				9FB453AA16442D2900BCF63B /* MainMenu.xib */,
 				9FB453AC16442D2900BCF63B /* UserDefaults.plist */,
 			);
@@ -5007,6 +5007,7 @@
 				9FCB87DB1C026B7800EAFE47 /* cs */,
 			);
 			name = Localizable.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		9FDE34111351DCDB000DCE44 /* DOSImportWindow.xib */ = {

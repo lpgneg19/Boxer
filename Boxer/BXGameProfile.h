@@ -32,6 +32,10 @@ extern NSString * const BXGenericProfileIdentifier;
 
 @class ADBScanOperation;
 @protocol ADBFilesystemPathAccess, ADBFilesystemPathEnumeration;
+/// BXGameProfile represents a detected game profile, which describes the game for gamebox creation
+/// and specifies custom DOSBox configuration and emulation behaviour.
+/// It has helper class methods for detecting a game profile from a filesystem path, and for
+/// determining the 'era' of a particular game at a filesystem path.
 @interface BXGameProfile : NSObject
 {
     NSString *_identifier;
@@ -60,15 +64,15 @@ extern NSString * const BXGenericProfileIdentifier;
 #pragma mark -
 #pragma mark Properties
 
-//Returns the relative priority of this profile, for choosing between multiple matching profiles:
-//profiles with higher priority should be considered more "canonical" than lower-priority profiles.
+/// Returns the relative priority of this profile, for choosing between multiple matching profiles:
+/// profiles with higher priority should be considered more "canonical" than lower-priority profiles.
 @property (assign, nonatomic) NSUInteger priority;
 
-//A unique identifier for this profile. Used for quick lookups via +profileWithIdentifier:.
+/// A unique identifier for this profile. Used for quick lookups via +profileWithIdentifier:.
 @property (copy, nonatomic) NSString *identifier;
 
-//The human-readable name of the game this profile represents.
-//Will be nil for shared profiles (in which case profileDescription will be available.) 
+/// The human-readable name of the game this profile represents.
+/// Will be nil for shared profiles (in which case profileDescription will be available.) 
 @property (copy, nonatomic) NSString *gameName;
 
 //The configuration file(s) to use for this game (sans path and .conf extension),

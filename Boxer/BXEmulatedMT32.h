@@ -17,7 +17,7 @@
 #ifdef __cplusplus
     #import "MT32Emu/mt32emu.h"
 
-@class BXEmulatedMT32;
+    @class BXEmulatedMT32;
 /// MT32Emu has a C++ callback class for handling emulated synth notifications.
 /// We implement a thin C++ wrapper that sends messages back to BXEmulatedMT32 for handling.
     class BXEmulatedMT32ReportHandler : public MT32Emu::ReportHandler

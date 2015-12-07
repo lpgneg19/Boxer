@@ -34,11 +34,11 @@
 
 @interface NSString (ADBStringFormattingPrivate)
 
-//Returns an array of word-wrapped lines. This doesn't handle hard linebreaks at all.
-- (NSArray *) _linesWrappedByWordAtLength: (NSUInteger)maxLength;
+/// Returns an array of word-wrapped lines. This doesn't handle hard linebreaks at all.
+- (NSArray<NSString*> *) _linesWrappedByWordAtLength: (NSUInteger)maxLength;
 
-//Returns an array of character-wrapped lines. This doesn't handle hard linebreaks at all.
-- (NSArray *) _linesWrappedByCharacterAtLength: (NSUInteger)maxLength;
+/// Returns an array of character-wrapped lines. This doesn't handle hard linebreaks at all.
+- (NSArray<NSString*> *) _linesWrappedByCharacterAtLength: (NSUInteger)maxLength;
 
 @end
 

@@ -31,17 +31,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// The ADBWindowDimensions category adds additional window sizing options to NSWindow,
+/// to resize relative to the entire screen or to a point on screen.
 @interface NSWindow (ADBWindowDimensions)
 
 /// Returns the window at the specified point (in screen coordinates) belonging
-/// to this application. Will return nil if there is no window at that point,
+/// to this application. Will return \c nil if there is no window at that point,
 /// or a window belonging to another app.
 + (nullable NSWindow *) windowAtPoint: (NSPoint)screenPoint;
 
 
 /// Resize the window relative to an anchor point.
 /// anchorPoint is expressed as a fraction of the window size:
-/// e.g. {0, 0} is bottom left, {1, 1} is top right, {0.5, 0.5} is the window's center
+/// e.g. <code>{0, 0}</code> is bottom left, <code>{1, 1}</code> is top right, <code>{0.5, 0.5}</code> is the window's center
 - (void) setFrameSize: (NSSize)newSize
            anchoredOn: (NSPoint)anchorPoint
               display: (BOOL)displayViews
@@ -53,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
                                  animate: (BOOL)performAnimation;
 
 /// Constrains the rectangle to fit within the available screen real estate,
-/// without resizing it: a more rigorous version of NSWindow contrainFrameRect:toScreen:
+/// without resizing it: a more rigorous version of \c NSWindow \ccontrainFrameRect:toScreen:
 /// Prioritises left screen edge over right and top edge over bottom,
 /// to ensure that the titlebar and window controls are visible.
 - (NSRect) fullyConstrainFrameRect: (NSRect)theRect toScreen: (NSScreen *)theScreen;

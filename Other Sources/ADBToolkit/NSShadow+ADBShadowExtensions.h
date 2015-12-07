@@ -29,6 +29,7 @@
 
 #import <Cocoa/Cocoa.h>
 
+/// The ADBShadowExtensions category adds helper methods to make <code>NSShadow</code>s easier to work with.
 @interface NSShadow (ADBShadowExtensions)
 
 /// Returns an autoreleased shadow initialized with the default settings

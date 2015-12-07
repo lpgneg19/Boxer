@@ -30,6 +30,8 @@
 
 #import <AppKit/AppKit.h>
 
+/// ADBPathEnumerator is an \c NSDirectoryEnumerator wrapper with a bunch of convenience methods
+/// for filtering out unwanted files.
 @interface ADBPathEnumerator : NSEnumerator
 {
 	NSDirectoryEnumerator *_enumerator;

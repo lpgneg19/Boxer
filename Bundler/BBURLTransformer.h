@@ -10,8 +10,8 @@
 
 @interface BBURLTransformer : NSValueTransformer
 
-//Register an instance of this transformer under the specified name.
-//If name is nil, registers under the name of the class itself.
+/// Register an instance of this transformer under the specified name.
+/// If name is nil, registers under the name of the class itself.
 + (void) registerWithName: (NSString *)name;
 
 @end

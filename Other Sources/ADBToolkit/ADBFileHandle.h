@@ -190,8 +190,8 @@ typedef NS_ENUM(int, ADBHandleSeekLocation) {
 
 #pragma mark - Abstract interface definitions
 
-//A base implementation that presents a funopen() wrapper around its own access methods.
-//This must be subclassed with concrete implementations of all data access methods.
+/// A base implementation that presents a \c funopen() wrapper around its own access methods.
+/// This must be subclassed with concrete implementations of all data access methods.
 @interface ADBAbstractHandle : NSObject <ADBFileHandleAccess>
 {
     /// A funopen() handle constructed the first time a FILE * handle is requested

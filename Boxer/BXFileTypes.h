@@ -49,17 +49,17 @@ extern NSString * const BXBatchProgramType;     //.bat
 
 + (NSSet<NSString*> *) documentationTypes;     //Document filetypes that Boxer will treat as game documentation.
 
-//A dictionary of file extension->app identifier pairs for overriding OS X's default
-//choice of application for opening a particular file extension.
-//These are looked up by file extension rather than UTI because it's common for particular
-//legacy file extensions (like .DOC) to be construed by OSX as the wrong UTI, and we don't
-//want to override the handler for files with different extensions that conform to that UTI.
-+ (NSDictionary *) fileHandlerOverrides;
+/// A dictionary of file extension->app identifier pairs for overriding OS X's default
+/// choice of application for opening a particular file extension.
+/// These are looked up by file extension rather than UTI because it's common for particular
+/// legacy file extensions (like .DOC) to be construed by OSX as the wrong UTI, and we don't
+/// want to override the handler for files with different extensions that conform to that UTI.
++ (NSDictionary<NSString*,NSString*> *) fileHandlerOverrides;
 
-//Returns a specific bundle identifier that we want to use to open the specified URL,
-//or nil if OS X's default handler should be used. This uses fileHandlerOverrides to
-//selectively override the default for files with particular extensions.
-+ (NSString *) bundleIdentifierForApplicationToOpenURL: (NSURL *)URL;
+/// Returns a specific bundle identifier that we want to use to open the specified URL,
+/// or \c nil if OS X's default handler should be used. This uses \c fileHandlerOverrides to
+/// selectively override the default for files with particular extensions.
++ (nullable NSString *) bundleIdentifierForApplicationToOpenURL: (NSURL *)URL;
 
 @end
 
@@ -85,9 +85,9 @@ typedef NS_ENUM(NSInteger, BXExecutableType) {
 @protocol ADBReadable, ADBSeekable, ADBFilesystemPathAccess;
 @interface BXFileTypes (BXExecutableTypes)
 
-//Returns the executable type of the file at the specified URL or in the specified stream.
-//If the executable type cannot be determined, these will return BXExecutableTypeUnknown
-//and populate outError with the failure reason.
+/// Returns the executable type of the file at the specified URL or in the specified stream.
+/// If the executable type cannot be determined, these will return \c BXExecutableTypeUnknown
+/// and populate \c outError with the failure reason.
 + (BXExecutableType) typeOfExecutableAtURL: (NSURL *)URL
                                      error: (out NSError **)outError;
 
@@ -98,9 +98,9 @@ typedef NS_ENUM(NSInteger, BXExecutableType) {
                                  filesystem: (id <ADBFilesystemPathAccess>)filesystem
                                       error: (out NSError **)outError;
 
-//Returns whether the file at the specified URL is a DOSBox-compatible executable.
-//If the file appears to be a .COM or .BAT file, this method will assume it is compatible;
-//If the file is an .EXE file, typeOfExecutableAtURL:error: will be used to determine the type.
+/// Returns whether the file at the specified URL is a DOSBox-compatible executable.
+/// If the file appears to be a .COM or .BAT file, this method will assume it is compatible;
+/// If the file is an .EXE file, typeOfExecutableAtURL:error: will be used to determine the type.
 + (BOOL) isCompatibleExecutableAtURL: (NSURL *)URL error: (out NSError **)outError;
 
 + (BOOL) isCompatibleExecutableAtPath: (NSString *)path
@@ -116,9 +116,9 @@ typedef NS_ENUM(NSInteger, BXExecutableType) {
 @protocol ADBFilesystemLogicalURLAccess;
 @interface BXFileTypes (BXFilesystemDetection)
 
-//Returns a filesystem suitable for traversing the specified URL. This will return an
-//image-based filesystem if it detects that the file at the target URL is a readable
-//or mountable image.
+/// Returns a filesystem suitable for traversing the specified URL. This will return an
+/// image-based filesystem if it detects that the file at the target URL is a readable
+/// or mountable image.
 + (id <ADBFilesystemPathAccess, ADBFilesystemLogicalURLAccess>) filesystemWithContentsOfURL: (NSURL *)URL
                                                                                       error: (out NSError **)outError;
 

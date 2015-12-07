@@ -48,6 +48,13 @@ extern NSString * const ADBScanLatestScannedObjectKey;
 extern NSString * const ADBScanLatestMatchKey;
 
 
+/// ADBScanOperation is a generic operation that asynchronously traverses an enumerator
+/// to generate an array of filtered objects, using a user-supplied block which can filter
+/// and/or convert the objects being enumerated.
+/// It sends out notifications when enumerating and matching, and can be cancelled midstream
+/// by the block itself, by reaching a maximum number of matches, or through the standard
+/// \c NSOperation API.
+/// This class is intended for applications like asynchronous filesystem scanning.
 @interface ADBScanOperation : ADBOperation
 {
     id <NSFastEnumeration> _enumerator;

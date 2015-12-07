@@ -36,6 +36,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// ADBMultiPanelWindowController is an NSWindowController subclass for managing windows that display
+/// one out of a set of different panels. This class provides methods for changing the current panel
+/// and animating transitions from one panel to another (resizing the window and crossfading views).
+///
+/// This is a more flexible and less structured alternative to ADBTabbedWindowController, written back
+/// when I was allergic to NSTabView. This provides better animation control (with better crossfades),
+/// but for tab-based or toolbar-based windows, \c NSTabbedWindowController is still the better choice.
 @interface ADBMultiPanelWindowController : NSWindowController
 {
     NSView *_panelContainer;

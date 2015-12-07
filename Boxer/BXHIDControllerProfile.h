@@ -59,13 +59,13 @@ typedef NS_ENUM(NSInteger, BXControllerStyle) {
 
 //Returns a BXControllerProfile that maps the specified HID controller
 //to the specified emulated joystick.
-+ (id) profileForHIDDevice: (DDHidJoystick *)device
-          emulatedJoystick: (id <BXEmulatedJoystick>)joystick
-                  keyboard: (BXEmulatedKeyboard *)keyboard;
++ (instancetype) profileForHIDDevice: (DDHidJoystick *)device
+                    emulatedJoystick: (id <BXEmulatedJoystick>)joystick
+                            keyboard: (BXEmulatedKeyboard *)keyboard;
 
-- (id) initWithHIDDevice: (DDHidJoystick *)device
-        emulatedJoystick: (id <BXEmulatedJoystick>)joystick
-                keyboard: (BXEmulatedKeyboard *)keyboard;
+- (instancetype) initWithHIDDevice: (DDHidJoystick *)device
+                  emulatedJoystick: (id <BXEmulatedJoystick>)joystick
+                          keyboard: (BXEmulatedKeyboard *)keyboard;
 
 //Set/get the specified input binding for the specified element usage
 - (id <BXHIDInputBinding>) bindingForElement: (DDHidElement *)element;

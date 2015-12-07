@@ -16,7 +16,7 @@
 #pragma mark Constants
 
 
-//How long buttonPressed: should pretend to hold the specified button down before releasing.
+/// How long buttonPressed: should pretend to hold the specified button down before releasing.
 #define BXJoystickButtonPressDefaultDuration 0.25
 
 
@@ -66,7 +66,7 @@ typedef NS_OPTIONS(NSUInteger, BXEmulatedPOVDirection) {
 
 extern NSString * const BXEmulatedJoystickErrorDomain;
 
-//Class of joystick type, as an Obj-C Class object
+/// Class of joystick type, as an Obj-C Class object
 extern NSString * const BXEmulatedJoystickClassKey;
 
 
@@ -81,52 +81,54 @@ enum {
 
 @protocol BXEmulatedJoystickUIDescriptor <NSObject>
 
-//The localized name of this joystick type, for display in the UI.
+/// The localized name of this joystick type, for display in the UI.
 + (NSString *) localizedName;
 
-//A localized extended description of this joystick type, for display in the UI along with the localized name.
+/// A localized extended description of this joystick type, for display in the UI along with the localized name.
 + (NSString *) localizedInformativeText;
 
-//An icon representation of this joystick type, for display in the UI.
+/// An icon representation of this joystick type, for display in the UI.
 + (NSImage *) icon;
 
 @end
 
+/// BXEmulatedJoystick and its subclasses represent different kinds of emulated gameport devices.
+/// They translate high-level device instructions into gameport signals.
 @protocol BXEmulatedJoystick <BXEmulatedJoystickUIDescriptor>
 
-//Returns whether this joystick class needs 4-axis, 4-button joystick support in order to function correctly.
-//Used for filtering out unsupported joysticks when running games that are known to have problems with them.
+/// Returns whether this joystick class needs 4-axis, 4-button joystick support in order to function correctly.
+/// Used for filtering out unsupported joysticks when running games that are known to have problems with them.
 + (BOOL) requiresFullJoystickSupport;
 
-//The number of buttons and axes that joysticks of this type respond to.
+/// The number of buttons and axes that joysticks of this type respond to.
 + (NSUInteger) numButtons;
 + (NSUInteger) numAxes;
 
-//Called by BXEmulator when the device is plugged/unplugged.
+/// Called by \c BXEmulator when the device is plugged/unplugged.
 - (void) didConnect;
 - (void) willDisconnect;
 
-//Release all joystick input, as if the user let go of the joystick. 
+/// Release all joystick input, as if the user let go of the joystick.
 - (void) clearInput;
 
-//Press/release the specified button.
+/// Press/release the specified button.
 - (void) buttonDown: (BXEmulatedJoystickButton)button;
 - (void) buttonUp: (BXEmulatedJoystickButton)button;
 
-//Report the current state of the specified button or axis.
+/// Report the current state of the specified button or axis.
 - (BOOL) buttonIsDown: (BXEmulatedJoystickButton)button;
 
-//Imitates the specified button being pressed and released after the default/specified delay.
+/// Imitates the specified button being pressed and released after the default/specified delay.
 - (void) buttonPressed: (BXEmulatedJoystickButton)button;
 - (void) buttonPressed: (BXEmulatedJoystickButton)button forDuration: (NSTimeInterval)duration;
 
 
-//Returns whether the joystick type supports the specified axis (as a property name).
+/// Returns whether the joystick type supports the specified axis (as a property name).
 + (BOOL) instancesSupportAxis: (NSString *)axis;
 - (BOOL) supportsAxis: (NSString *)axis;
 
-//Sets/gets the current value for the specified axis property name.
-//It is quicker and easier to use the direct axis properties where available (xAxis etc.)
+/// Sets/gets the current value for the specified axis property name.
+/// It is quicker and easier to use the direct axis properties where available (xAxis etc.)
 - (float) positionForAxis: (NSString *)axis;
 - (void) setPosition: (float)position forAxis: (NSString *)axis;
 
@@ -152,7 +154,7 @@ enum {
 
 @protocol BXEmulatedFlightstick <BXEmulatedJoystick>
 
-//The number of POV switches the joystick responds to.
+/// The number of POV switches the joystick responds to.
 + (NSUInteger) numPOVSwitches;
 
 - (void) POV: (NSUInteger)POVNumber changedTo: (BXEmulatedPOVDirection)direction;
@@ -238,7 +240,7 @@ enum {
 @end
 
 
-//Racing wheel with accelerator and brake on the Y axis
+/// Racing wheel with accelerator and brake on the Y axis
 @interface BX2AxisWheel: BXBaseEmulatedJoystick <BXEmulatedWheel>
 {
 	float acceleratorComponent;
@@ -247,8 +249,8 @@ enum {
 @end
 
 
-//Racing wheel with accelerator on X2 axis and brake on Y2 axis,
-//as well as combined input on the Y axis
+/// Racing wheel with accelerator on X2 axis and brake on Y2 axis,
+/// as well as combined input on the Y axis
 @interface BX4AxisWheel: BX2AxisWheel
 @end
 

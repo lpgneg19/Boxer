@@ -44,6 +44,9 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark Public interface
 
 @protocol ADBReadable, ADBSeekable;
+/// ADBISOImage represents the filesystem of an ISO 9660-format (.ISO, .CDR, .BIN/CUE) image.
+/// It provides information about the structure of the image and allows its contents to be
+/// iterated and extracted.
 @interface ADBISOImage : ADBFilesystemBase <ADBFilesystemPathAccess>
 {
     id <ADBReadable, ADBSeekable> _handle;

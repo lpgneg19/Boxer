@@ -10,7 +10,7 @@
 #import "BXDriveImport.h"
 #import "ADBTaskOperation.h"
 
-//Domain and constants for errors encountered during disc-image ripping
+/// Domain and constants for errors encountered during disc-image ripping
 extern NSString * const BXCDImageImportErrorDomain;
 
 enum {
@@ -20,6 +20,7 @@ enum {
 };
 
 
+/// BXCDImageImport rips physical CDs to (CDR-format) ISO disc images using OS X's hdiutil.
 @interface BXCDImageImport : ADBTaskOperation <BXDriveImport>
 {
 	BXDrive *_drive;

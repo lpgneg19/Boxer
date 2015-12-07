@@ -32,11 +32,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSError (ADBErrorHelpers)
 
-//Returns YES if the error has the specified error domain and code, NO otherwise.
+/// Returns YES if the error has the specified error domain and code, NO otherwise.
 - (BOOL) matchesDomain: (NSString *)errorDomain code: (NSInteger)errorCode;
 
-//Whether this is a standard Cocoa user-cancelled-operation error.
-- (BOOL) isUserCancelledError;
+/// Whether this is a standard Cocoa user-cancelled-operation error.
+@property (readonly, getter=isUserCancelledError) BOOL userCancelledError;
 
 @end
 
@@ -52,11 +52,11 @@ extern NSString * const ADBCallstackSymbolOffset;               //An NSNumber re
 
 @interface NSException (ADBExceptionHelpers)
 
-//Takes a mangled C++ function name produced by callstackSymbols or backtrace_symbols and returns a demangled version.
-//Returns nil if the provided string could not be resolved (which will be the case if it is a C or Objective C symbol name.)
+/// Takes a mangled C++ function name produced by callstackSymbols or backtrace_symbols and returns a demangled version.
+/// Returns nil if the provided string could not be resolved (which will be the case if it is a C or Objective C symbol name.)
 + (nullable NSString *) demangledFunctionName: (NSString *)functionName;
 
-//Returns the results of -callstackSymbols parsed into NSDictionaries with the attributes listed above.
+/// Returns the results of \c -callstackSymbols parsed into \c NSDictionaries with the attributes listed above.
 - (NSArray<NSDictionary<NSString*, id>*> *) callStackDescriptions;
 
 @end
