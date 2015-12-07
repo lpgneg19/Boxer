@@ -6,6 +6,11 @@
  */
 
 
+//BXImportDropzone is used in the game import window to draw a dashed dropzone region,
+//which animates while an importable file is dragged over the panel, and which displays
+//the file's icon after dropping. Clicking the region will reveal a file picker.
+//(BXImportDropzone does not actually handle drag-drop events itself: the panel itself does that.)
+
 #import <Cocoa/Cocoa.h>
 
 NS_ASSUME_NONNULL_BEGIN

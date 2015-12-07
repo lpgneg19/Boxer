@@ -6,6 +6,9 @@
  */
 
 
+//BXImportFinishedPanelController controls the appearance and behaviour of the final
+//your-gamebox-is-finished panel of the import process.
+
 #import <Cocoa/Cocoa.h>
 
 @class BXImportIconDropzone;
