@@ -13,6 +13,8 @@
 #import "ADBOperation.h"
 #import "ADBFileTransfer.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// The incremented filename format we should use for uniquely naming imported drives.
 /// Equivalent to baseNameForDrive (increment).driveExtension, e.g. "C DriveLabel (2).cdrom".
 /// The incremented number is ignored by BXDrive's label parsing.
@@ -33,7 +35,7 @@ extern NSString * const BXUniqueDriveNameFormat;
 
 /// The full destination path of the drive import, including the drive name.
 /// If left blank, it should be set at import time to preferredDestinationPath.
-@property (copy) NSURL *destinationURL;
+@property (copy, nullable) NSURL *destinationURL;
 
 /// This should return the preferred location to which this drive should be imported,
 /// taking into account destinationFolder and nameForDrive: and auto-incrementing as
@@ -93,3 +95,5 @@ extern NSString * const BXUniqueDriveNameFormat;
 + (NSError*) errorWithDrive: (BXDrive *)drive;
 
 @end
+
+NS_ASSUME_NONNULL_END
