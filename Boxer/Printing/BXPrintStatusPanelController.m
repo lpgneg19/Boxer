@@ -6,7 +6,7 @@
  */
 
 #import "BXPrintStatusPanelController.h"
-#import "BXPrintSession.h"
+#import SWIFT_BRIDGE_HEADER
 #import "ADBGeometry.h"
 #import "ADBForwardCompatibility.h"
 #import <QuartzCore/QuartzCore.h>

@@ -6,7 +6,7 @@
  */
 
 #import "BXSessionPrivate.h"
-#import "BXPrintSession.h"
+#import SWIFT_BRIDGE_HEADER
 #import "BXPrintStatusPanelController.h"
 #import "BXEmulator.h"
 #import "BXEmulatedPrinter.h"

@@ -9,7 +9,7 @@
 #import "BXEmulatedPrinter.h"
 #import "printer_charmaps.h"
 #import "BXCoalface.h"
-#import "BXPrintSession.h"
+#import SWIFT_BRIDGE_HEADER
 
 
 #pragma mark -
@@ -1035,7 +1035,7 @@ typedef NS_OPTIONS(uint8_t, BXEmulatedPrinterStatus) {
 - (void) _prepareCanvasForPrinting
 {
     //Create a new print session, if none is currently in progress.
-    if (!self.currentSession || self.currentSession.isFinished)
+    if (!self.currentSession || self.currentSession.finished)
     {
         [self _startNewPrintSession];
     }
