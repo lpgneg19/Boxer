@@ -26,6 +26,20 @@
 		5557480C208FA8040045E635 /* sn76496.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 555747F9208FA8030045E635 /* sn76496.cpp */; };
 		5563E57F239EF7CD007A1600 /* ADBSwiftHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5563E57E239EF7CD007A1600 /* ADBSwiftHelpers.swift */; };
 		5563E580239EF7CD007A1600 /* ADBSwiftHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5563E57E239EF7CD007A1600 /* ADBSwiftHelpers.swift */; };
+		5565903E23AB410F00987503 /* CDPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55658FF623AB410F00987503 /* CDPlayer.cpp */; };
+		5565903F23AB410F00987503 /* CDPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55658FF623AB410F00987503 /* CDPlayer.cpp */; };
+		5565904023AB410F00987503 /* AudioFileReaderThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55658FF723AB410F00987503 /* AudioFileReaderThread.cpp */; };
+		5565904123AB410F00987503 /* AudioFileReaderThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55658FF723AB410F00987503 /* AudioFileReaderThread.cpp */; };
+		5565904623AB410F00987503 /* SDLOSXCAGuard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55658FFD23AB410F00987503 /* SDLOSXCAGuard.cpp */; };
+		5565904723AB410F00987503 /* SDLOSXCAGuard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55658FFD23AB410F00987503 /* SDLOSXCAGuard.cpp */; };
+		5565904823AB410F00987503 /* AudioFilePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55658FFE23AB410F00987503 /* AudioFilePlayer.cpp */; };
+		5565904923AB410F00987503 /* AudioFilePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55658FFE23AB410F00987503 /* AudioFilePlayer.cpp */; };
+		5565904A23AB410F00987503 /* SDL_syscdrom.c in Sources */ = {isa = PBXBuildFile; fileRef = 55658FFF23AB410F00987503 /* SDL_syscdrom.c */; };
+		5565904B23AB410F00987503 /* SDL_syscdrom.c in Sources */ = {isa = PBXBuildFile; fileRef = 55658FFF23AB410F00987503 /* SDL_syscdrom.c */; };
+		5565905823AB410F00987503 /* compat_SDL_cdrom.c in Sources */ = {isa = PBXBuildFile; fileRef = 5565900823AB410F00987503 /* compat_SDL_cdrom.c */; };
+		5565905923AB410F00987503 /* compat_SDL_cdrom.c in Sources */ = {isa = PBXBuildFile; fileRef = 5565900823AB410F00987503 /* compat_SDL_cdrom.c */; };
+		5565905A23AB410F00987503 /* SDL_syscdrom_dummy.c in Sources */ = {isa = PBXBuildFile; fileRef = 5565900923AB410F00987503 /* SDL_syscdrom_dummy.c */; };
+		5565905B23AB410F00987503 /* SDL_syscdrom_dummy.c in Sources */ = {isa = PBXBuildFile; fileRef = 5565900923AB410F00987503 /* SDL_syscdrom_dummy.c */; };
 		558CE44D20F6931600319D1C /* BXXBOBluetoothControllerProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 558CE44C20F6931600319D1C /* BXXBOBluetoothControllerProfile.m */; };
 		558CE44E20F6931600319D1C /* BXXBOBluetoothControllerProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 558CE44C20F6931600319D1C /* BXXBOBluetoothControllerProfile.m */; };
 		55B22BA21A1BD9760007665E /* Bundler.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B22BA11A1BD9760007665E /* Bundler.xcassets */; };
@@ -345,8 +359,8 @@
 		9F2D315015B8233800FAE848 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC637FC13C09B10004478A3 /* CoreServices.framework */; };
 		9F2D315115B8233800FAE848 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		9F2D315215B8233800FAE848 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC32110F56C3E9001811F2 /* Carbon.framework */; };
-		9F2D315315B8233800FAE848 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL.framework */; };
-		9F2D315415B8233800FAE848 /* SDL_net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL_net.framework */; };
+		9F2D315315B8233800FAE848 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL2.framework */; };
+		9F2D315415B8233800FAE848 /* SDL2_net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL2_net.framework */; };
 		9F2D315515B8233800FAE848 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C710F56E0AE001811F2 /* OpenGL.framework */; };
 		9F2D315615B8233800FAE848 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C760F56E0D7001811F2 /* AudioUnit.framework */; };
 		9F2D315715B8233800FAE848 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C770F56E0D7001811F2 /* CoreMIDI.framework */; };
@@ -358,8 +372,8 @@
 		9F2D316015B8233800FAE848 /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBAA8F3134AFABD0092BF95 /* DiskArbitration.framework */; };
 		9F2D316215B8233800FAE848 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F731B51136331A9005E564F /* IOKit.framework */; };
 		9F2D316715B8233800FAE848 /* SDL_sound.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCEDF3212B3DFFC00E856A4 /* SDL_sound.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9F2D316815B8233800FAE848 /* SDL_net.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL_net.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9F2D316B15B8233800FAE848 /* SDL.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F2D316815B8233800FAE848 /* SDL2_net.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL2_net.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F2D316B15B8233800FAE848 /* SDL2.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F2D318915B826F600FAE848 /* DOSWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2D317E15B826EF00FAE848 /* DOSWindow.xib */; };
 		9F2D318B15B826FE00FAE848 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2D318215B826EF00FAE848 /* MainMenu.xib */; };
 		9F34BE40142B700100A69FAF /* BXCoalfaceAudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F34BE3E142B700100A69FAF /* BXCoalfaceAudio.mm */; };
@@ -670,13 +684,13 @@
 		9FBC35330F56C7B7001811F2 /* BXDOSWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC35250F56C7B7001811F2 /* BXDOSWindowController.m */; };
 		9FBC35340F56C7B7001811F2 /* NSWindow+ADBWindowDimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC35260F56C7B7001811F2 /* NSWindow+ADBWindowDimensions.m */; };
 		9FBC35360F56C7B7001811F2 /* ADBGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC35280F56C7B7001811F2 /* ADBGeometry.m */; };
-		9FBC3C160F56D6E8001811F2 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL.framework */; };
-		9FBC3C170F56D6E9001811F2 /* SDL_net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL_net.framework */; };
+		9FBC3C160F56D6E8001811F2 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL2.framework */; };
+		9FBC3C170F56D6E9001811F2 /* SDL2_net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL2_net.framework */; };
 		9FBC3C720F56E0AE001811F2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C710F56E0AE001811F2 /* OpenGL.framework */; };
 		9FBC3C780F56E0D7001811F2 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C760F56E0D7001811F2 /* AudioUnit.framework */; };
 		9FBC3C790F56E0D7001811F2 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C770F56E0D7001811F2 /* CoreMIDI.framework */; };
-		9FBC3D600F56EA82001811F2 /* SDL.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9FBC3D610F56EA82001811F2 /* SDL_net.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL_net.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FBC3D600F56EA82001811F2 /* SDL2.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FBC3D610F56EA82001811F2 /* SDL2_net.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL2_net.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FBD321710E5144C00031CB6 /* Brand.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD321610E5144C00031CB6 /* Brand.png */; };
 		9FBEC4F0142CE8300016964A /* BXMT32LCDDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEC4EF142CE8300016964A /* BXMT32LCDDisplay.m */; };
 		9FBF66AF11F35ADD00DAAB9A /* ADBSingleFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF66AE11F35ADD00DAAB9A /* ADBSingleFileTransfer.m */; };
@@ -908,10 +922,10 @@
 			files = (
 				9F2D316715B8233800FAE848 /* SDL_sound.framework in Copy Bundled Frameworks */,
 				55E6A0C71C00C88A00285593 /* DDHidLib.framework in Copy Bundled Frameworks */,
-				9F2D316815B8233800FAE848 /* SDL_net.framework in Copy Bundled Frameworks */,
+				9F2D316815B8233800FAE848 /* SDL2_net.framework in Copy Bundled Frameworks */,
 				55E6A0C31C00C88A00285593 /* MT32Emu.framework in Copy Bundled Frameworks */,
 				55E6A0CB1C00C88A00285593 /* BGHUDAppKit.framework in Copy Bundled Frameworks */,
-				9F2D316B15B8233800FAE848 /* SDL.framework in Copy Bundled Frameworks */,
+				9F2D316B15B8233800FAE848 /* SDL2.framework in Copy Bundled Frameworks */,
 			);
 			name = "Copy Bundled Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -923,10 +937,10 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9F19E7E112B3F48200496BCF /* SDL_sound.framework in Copy Bundled Frameworks */,
-				9FBC3D610F56EA82001811F2 /* SDL_net.framework in Copy Bundled Frameworks */,
+				9FBC3D610F56EA82001811F2 /* SDL2_net.framework in Copy Bundled Frameworks */,
 				55E6A0BF1C00C86200285593 /* BGHUDAppKit.framework in Copy Bundled Frameworks */,
 				9F20C29711E5DA68005AF541 /* Sparkle.framework in Copy Bundled Frameworks */,
-				9FBC3D600F56EA82001811F2 /* SDL.framework in Copy Bundled Frameworks */,
+				9FBC3D600F56EA82001811F2 /* SDL2.framework in Copy Bundled Frameworks */,
 				55E6A0BB1C00C86200285593 /* DDHidLib.framework in Copy Bundled Frameworks */,
 				55E6A0B71C00C86200285593 /* MT32Emu.framework in Copy Bundled Frameworks */,
 			);
@@ -959,6 +973,19 @@
 		555747FB208FA8030045E635 /* ymf262.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ymf262.h; sourceTree = "<group>"; };
 		5563E57E239EF7CD007A1600 /* ADBSwiftHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBSwiftHelpers.swift; sourceTree = "<group>"; };
 		5565757423568DED003489A6 /* risc_x64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = risc_x64.h; sourceTree = "<group>"; };
+		55658FED23AB410F00987503 /* SDL_syscdrom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL_syscdrom.h; sourceTree = "<group>"; };
+		55658FEE23AB410F00987503 /* compat_SDL_cdrom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compat_SDL_cdrom.h; sourceTree = "<group>"; };
+		55658FF623AB410F00987503 /* CDPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CDPlayer.cpp; sourceTree = "<group>"; };
+		55658FF723AB410F00987503 /* AudioFileReaderThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioFileReaderThread.cpp; sourceTree = "<group>"; };
+		55658FF823AB410F00987503 /* SDLOSXCAGuard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLOSXCAGuard.h; sourceTree = "<group>"; };
+		55658FF923AB410F00987503 /* CDPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPlayer.h; sourceTree = "<group>"; };
+		55658FFB23AB410F00987503 /* AudioFilePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFilePlayer.h; sourceTree = "<group>"; };
+		55658FFD23AB410F00987503 /* SDLOSXCAGuard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SDLOSXCAGuard.cpp; sourceTree = "<group>"; };
+		55658FFE23AB410F00987503 /* AudioFilePlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioFilePlayer.cpp; sourceTree = "<group>"; };
+		55658FFF23AB410F00987503 /* SDL_syscdrom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SDL_syscdrom.c; sourceTree = "<group>"; };
+		5565900623AB410F00987503 /* SDL_syscdrom_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL_syscdrom_c.h; sourceTree = "<group>"; };
+		5565900823AB410F00987503 /* compat_SDL_cdrom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compat_SDL_cdrom.c; sourceTree = "<group>"; };
+		5565900923AB410F00987503 /* SDL_syscdrom_dummy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SDL_syscdrom_dummy.c; sourceTree = "<group>"; };
 		558CE44C20F6931600319D1C /* BXXBOBluetoothControllerProfile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BXXBOBluetoothControllerProfile.m; sourceTree = "<group>"; };
 		55AEA5CB201F05010000139A /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/DocumentationPanel.strings; sourceTree = "<group>"; };
 		55AEA5CC201F05020000139A /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/DocumentationBrowser.strings; sourceTree = "<group>"; };
@@ -1682,8 +1709,8 @@
 		9FBC35260F56C7B7001811F2 /* NSWindow+ADBWindowDimensions.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = "NSWindow+ADBWindowDimensions.m"; sourceTree = "<group>"; };
 		9FBC35280F56C7B7001811F2 /* ADBGeometry.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = ADBGeometry.m; sourceTree = "<group>"; };
 		9FBC3A7F0F56CEA2001811F2 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
-		9FBC3C140F56D6E8001811F2 /* SDL.framework */ = {isa = PBXFileReference; comments = "This is the stock SDL 1.2.14 framework, downloaded from http://www.libsdl.org/"; lastKnownFileType = wrapper.framework; path = SDL.framework; sourceTree = "<group>"; };
-		9FBC3C150F56D6E8001811F2 /* SDL_net.framework */ = {isa = PBXFileReference; comments = "This is the stock SDL_Net 1.2.7 framework, downloaded from http://www.libsdl.org/projects/SDL_net/"; lastKnownFileType = wrapper.framework; path = SDL_net.framework; sourceTree = "<group>"; };
+		9FBC3C140F56D6E8001811F2 /* SDL2.framework */ = {isa = PBXFileReference; comments = "This is the stock SDL 1.2.14 framework, downloaded from http://www.libsdl.org/"; lastKnownFileType = wrapper.framework; path = SDL2.framework; sourceTree = "<group>"; };
+		9FBC3C150F56D6E8001811F2 /* SDL2_net.framework */ = {isa = PBXFileReference; comments = "This is the stock SDL_Net 1.2.7 framework, downloaded from http://www.libsdl.org/projects/SDL_net/"; lastKnownFileType = wrapper.framework; path = SDL2_net.framework; sourceTree = "<group>"; };
 		9FBC3C710F56E0AE001811F2 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		9FBC3C760F56E0D7001811F2 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		9FBC3C770F56E0D7001811F2 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
@@ -1866,8 +1893,8 @@
 				55E6A0BE1C00C86200285593 /* BGHUDAppKit.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				9FBC32120F56C3E9001811F2 /* Carbon.framework in Frameworks */,
-				9FBC3C160F56D6E8001811F2 /* SDL.framework in Frameworks */,
-				9FBC3C170F56D6E9001811F2 /* SDL_net.framework in Frameworks */,
+				9FBC3C160F56D6E8001811F2 /* SDL2.framework in Frameworks */,
+				9FBC3C170F56D6E9001811F2 /* SDL2_net.framework in Frameworks */,
 				9FBC3C720F56E0AE001811F2 /* OpenGL.framework in Frameworks */,
 				9FBC3C780F56E0D7001811F2 /* AudioUnit.framework in Frameworks */,
 				9FBC3C790F56E0D7001811F2 /* CoreMIDI.framework in Frameworks */,
@@ -1893,8 +1920,8 @@
 				9F2D315015B8233800FAE848 /* CoreServices.framework in Frameworks */,
 				9F2D315115B8233800FAE848 /* Cocoa.framework in Frameworks */,
 				9F2D315215B8233800FAE848 /* Carbon.framework in Frameworks */,
-				9F2D315315B8233800FAE848 /* SDL.framework in Frameworks */,
-				9F2D315415B8233800FAE848 /* SDL_net.framework in Frameworks */,
+				9F2D315315B8233800FAE848 /* SDL2.framework in Frameworks */,
+				9F2D315415B8233800FAE848 /* SDL2_net.framework in Frameworks */,
 				9F2D315515B8233800FAE848 /* OpenGL.framework in Frameworks */,
 				9F2D315615B8233800FAE848 /* AudioUnit.framework in Frameworks */,
 				9F2D315715B8233800FAE848 /* CoreMIDI.framework in Frameworks */,
@@ -2073,6 +2100,34 @@
 				555747FB208FA8030045E635 /* ymf262.h */,
 			);
 			path = mame;
+			sourceTree = "<group>";
+		};
+		55658FDE23AB410F00987503 /* sdl_cdrom */ = {
+			isa = PBXGroup;
+			children = (
+				5565900823AB410F00987503 /* compat_SDL_cdrom.c */,
+				55658FEE23AB410F00987503 /* compat_SDL_cdrom.h */,
+				55658FF523AB410F00987503 /* macosx */,
+				5565900923AB410F00987503 /* SDL_syscdrom_dummy.c */,
+				55658FED23AB410F00987503 /* SDL_syscdrom.h */,
+			);
+			path = sdl_cdrom;
+			sourceTree = "<group>";
+		};
+		55658FF523AB410F00987503 /* macosx */ = {
+			isa = PBXGroup;
+			children = (
+				55658FFE23AB410F00987503 /* AudioFilePlayer.cpp */,
+				55658FFB23AB410F00987503 /* AudioFilePlayer.h */,
+				55658FF723AB410F00987503 /* AudioFileReaderThread.cpp */,
+				55658FF623AB410F00987503 /* CDPlayer.cpp */,
+				55658FF923AB410F00987503 /* CDPlayer.h */,
+				5565900623AB410F00987503 /* SDL_syscdrom_c.h */,
+				55658FFF23AB410F00987503 /* SDL_syscdrom.c */,
+				55658FFD23AB410F00987503 /* SDLOSXCAGuard.cpp */,
+				55658FF823AB410F00987503 /* SDLOSXCAGuard.h */,
+			);
+			path = macosx;
 			sourceTree = "<group>";
 		};
 		55BBA4F3235FB240007AE319 /* CwlDemangle */ = {
@@ -2659,6 +2714,7 @@
 		9F77209D12B38C4400072AE8 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				55658FDE23AB410F00987503 /* sdl_cdrom */,
 				9F77209E12B38C4400072AE8 /* cpu */,
 				9F7720D812B38C4400072AE8 /* debug */,
 				9F7720DF12B38C4400072AE8 /* dos */,
@@ -3237,8 +3293,8 @@
 				55E6A0971C00C7F900285593 /* BGHUDAppKit.xcodeproj */,
 				E5CF183F128F81AF0065844A /* PhysFS.framework */,
 				9F20C28A11E5D848005AF541 /* Sparkle.framework */,
-				9FBC3C140F56D6E8001811F2 /* SDL.framework */,
-				9FBC3C150F56D6E8001811F2 /* SDL_net.framework */,
+				9FBC3C140F56D6E8001811F2 /* SDL2.framework */,
+				9FBC3C150F56D6E8001811F2 /* SDL2_net.framework */,
 				9FCEDF3212B3DFFC00E856A4 /* SDL_sound.framework */,
 			);
 			name = "Bundled Frameworks";
@@ -3743,6 +3799,7 @@
 				9FBC35310F56C7B7001811F2 /* BXEmulator+BXShell.mm in Sources */,
 				9FBC35320F56C7B7001811F2 /* BXDOSWindow.m in Sources */,
 				9FB6664F17EFB748009C0D90 /* BXRenderingLayer.m in Sources */,
+				5565904023AB410F00987503 /* AudioFileReaderThread.cpp in Sources */,
 				9FBC35330F56C7B7001811F2 /* BXDOSWindowController.m in Sources */,
 				9FBC35340F56C7B7001811F2 /* NSWindow+ADBWindowDimensions.m in Sources */,
 				9FBC35360F56C7B7001811F2 /* ADBGeometry.m in Sources */,
@@ -3785,6 +3842,7 @@
 				9F765649119403520082A06A /* BXInputController.m in Sources */,
 				9FB4F9E411957B55006C8AC9 /* BXVideoFrame.m in Sources */,
 				9FC1620E119E9AD700705EA5 /* BXCursorFadeAnimation.m in Sources */,
+				5565904823AB410F00987503 /* AudioFilePlayer.cpp in Sources */,
 				9FECE19011A31B8B00E0EBB6 /* BXBasicRenderer.m in Sources */,
 				9FECE1C211A3244500E0EBB6 /* BXGLRenderingView.m in Sources */,
 				9FF1756D11B25F4E00D0FCDC /* BXInputView.m in Sources */,
@@ -3846,6 +3904,7 @@
 				9FD1D6251364291600792011 /* DDHidDevice+ADBDeviceExtensions.m in Sources */,
 				9FD1D7011364819E00792011 /* BXJoystickController.m in Sources */,
 				9FD1D78A1364991100792011 /* ADBHIDEvent.m in Sources */,
+				5565904623AB410F00987503 /* SDLOSXCAGuard.cpp in Sources */,
 				9FE50B591365845200495EBE /* BXInputController+BXJoystickInput.m in Sources */,
 				9FCC2F9A1366EF170013F083 /* BXEmulatedKeyboard.mm in Sources */,
 				9FCC2FF41366FA820013F083 /* BXInputController+BXKeyboardInput.m in Sources */,
@@ -3986,6 +4045,7 @@
 				9F77219312B38C4400072AE8 /* dos_misc.cpp in Sources */,
 				9F77219412B38C4400072AE8 /* dos_mscdex.cpp in Sources */,
 				9F77219512B38C4400072AE8 /* dos_programs.cpp in Sources */,
+				5565905823AB410F00987503 /* compat_SDL_cdrom.c in Sources */,
 				9F77219612B38C4400072AE8 /* dos_tables.cpp in Sources */,
 				5548850E226A501000A879B3 /* drive_overlay.cpp in Sources */,
 				9F77219712B38C4400072AE8 /* drive_cache.cpp in Sources */,
@@ -4008,6 +4068,7 @@
 				9F7721A912B38C4400072AE8 /* disney.cpp in Sources */,
 				9F7721AA12B38C4400072AE8 /* dma.cpp in Sources */,
 				9F7721AB12B38C4400072AE8 /* gameblaster.cpp in Sources */,
+				5565903E23AB410F00987503 /* CDPlayer.cpp in Sources */,
 				9F7721AC12B38C4400072AE8 /* gus.cpp in Sources */,
 				9F7721AD12B38C4400072AE8 /* hardware.cpp in Sources */,
 				9F7721AE12B38C4400072AE8 /* iohandler.cpp in Sources */,
@@ -4036,6 +4097,7 @@
 				9F7721C312B38C4400072AE8 /* vga.cpp in Sources */,
 				9F7721C412B38C4400072AE8 /* vga_attr.cpp in Sources */,
 				9F7721C512B38C4400072AE8 /* vga_crtc.cpp in Sources */,
+				5565904A23AB410F00987503 /* SDL_syscdrom.c in Sources */,
 				9F7721C612B38C4400072AE8 /* vga_dac.cpp in Sources */,
 				9F7721C712B38C4400072AE8 /* vga_draw.cpp in Sources */,
 				9F7721C812B38C4400072AE8 /* vga_gfx.cpp in Sources */,
@@ -4065,6 +4127,7 @@
 				9F7721DF12B38C4400072AE8 /* mouse.cpp in Sources */,
 				9F7721E012B38C4400072AE8 /* xms.cpp in Sources */,
 				9F7721E312B38C4400072AE8 /* cross.cpp in Sources */,
+				5565905A23AB410F00987503 /* SDL_syscdrom_dummy.c in Sources */,
 				9F7721E412B38C4400072AE8 /* messages.cpp in Sources */,
 				9F7721E512B38C4400072AE8 /* programs.cpp in Sources */,
 				9F7721E612B38C4400072AE8 /* setup.cpp in Sources */,
@@ -4098,9 +4161,11 @@
 				9F2D2FA915B8233800FAE848 /* BXEmulator+BXDOSFileSystem.mm in Sources */,
 				9F2D2FAA15B8233800FAE848 /* NSString+ADBPaths.m in Sources */,
 				9F2D2FAE15B8233800FAE848 /* BXValueTransformers.m in Sources */,
+				5565904B23AB410F00987503 /* SDL_syscdrom.c in Sources */,
 				9F2D2FAF15B8233800FAE848 /* BXDrive.m in Sources */,
 				9F2D2FB415B8233800FAE848 /* BXSession+BXFileManagement.m in Sources */,
 				9F2D2FB515B8233800FAE848 /* BXThemes.m in Sources */,
+				5565904923AB410F00987503 /* AudioFilePlayer.cpp in Sources */,
 				9F2D2FB615B8233800FAE848 /* NSBezierPath+MCAdditions.m in Sources */,
 				9F2D2FB815B8233800FAE848 /* BXProgramPanel.m in Sources */,
 				9F2D2FBD15B8233800FAE848 /* NSWorkspace+ADBFileTypes.m in Sources */,
@@ -4127,6 +4192,7 @@
 				9F2D2FD715B8233800FAE848 /* ADBSingleFileTransfer.m in Sources */,
 				9F2D2FD815B8233800FAE848 /* NSFileManager+ADBTemporaryFiles.m in Sources */,
 				9F2D2FD915B8233800FAE848 /* BXThemedSegmentedCell.m in Sources */,
+				5565903F23AB410F00987503 /* CDPlayer.cpp in Sources */,
 				9F2D2FDB15B8233800FAE848 /* ADBDelegatedView.m in Sources */,
 				9F2D2FDC15B8233800FAE848 /* ADBOperation.m in Sources */,
 				9F2D2FDD15B8233800FAE848 /* NSWorkspace+BXExecutableTypes.m in Sources */,
@@ -4181,6 +4247,7 @@
 				9F2D303515B8233800FAE848 /* dos_ioctl.cpp in Sources */,
 				9F2D303615B8233800FAE848 /* dos_keyboard_layout.cpp in Sources */,
 				9F2D303715B8233800FAE848 /* dos_memory.cpp in Sources */,
+				5565905B23AB410F00987503 /* SDL_syscdrom_dummy.c in Sources */,
 				9F2D303815B8233800FAE848 /* dos_misc.cpp in Sources */,
 				55BBA4F6235FB25F007AE319 /* CwlDemangle.swift in Sources */,
 				9F2D303915B8233800FAE848 /* dos_mscdex.cpp in Sources */,
@@ -4196,6 +4263,7 @@
 				9F2D304215B8233800FAE848 /* drives.cpp in Sources */,
 				9F2D304315B8233800FAE848 /* dosbox.cpp in Sources */,
 				9F2D304415B8233800FAE848 /* fpu.cpp in Sources */,
+				5565904723AB410F00987503 /* SDLOSXCAGuard.cpp in Sources */,
 				9F2D304515B8233800FAE848 /* midi.cpp in Sources */,
 				9F2D304615B8233800FAE848 /* render.cpp in Sources */,
 				9F2D304715B8233800FAE848 /* render_scalers.cpp in Sources */,
@@ -4288,6 +4356,7 @@
 				9F2D30A215B8233800FAE848 /* ADBFileScan.m in Sources */,
 				9F2D30A415B8233800FAE848 /* BXDOSWindowControllerLion.m in Sources */,
 				9F2D30A515B8233800FAE848 /* ADBFullscreenCapableWindow.m in Sources */,
+				5565904123AB410F00987503 /* AudioFileReaderThread.cpp in Sources */,
 				9F2D30A615B8233800FAE848 /* BXPrecisionProControllerProfile.m in Sources */,
 				9F2D30A715B8233800FAE848 /* BXMOMORacingControllerProfile.m in Sources */,
 				9F2D30AA15B8233800FAE848 /* BXEmulatorErrors.mm in Sources */,
@@ -4304,6 +4373,7 @@
 				5557480C208FA8040045E635 /* sn76496.cpp in Sources */,
 				9F2D30B515B8233800FAE848 /* BXExternalMIDIDevice.m in Sources */,
 				9F2D30B615B8233800FAE848 /* BXMIDIDeviceMonitor.m in Sources */,
+				5565905923AB410F00987503 /* compat_SDL_cdrom.c in Sources */,
 				9F2D30B715B8233800FAE848 /* BXSession+BXAudioControls.m in Sources */,
 				9F2D30B815B8233800FAE848 /* BXExternalMT32.m in Sources */,
 				9F2D30B915B8233800FAE848 /* BXDummyMIDIDevice.m in Sources */,
@@ -4847,7 +4917,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Frameworks/SDL.framework/Headers\"",
+					"\"$(SRCROOT)/Frameworks/SDL2.framework/Headers\"",
 				);
 				INFOPLIST_FILE = "Standalone/Boxer Standalone-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
@@ -4886,7 +4956,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Frameworks/SDL.framework/Headers\"",
+					"\"$(SRCROOT)/Frameworks/SDL2.framework/Headers\"",
 				);
 				INFOPLIST_FILE = "Standalone/Boxer Standalone-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
@@ -5043,7 +5113,7 @@
 				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Frameworks/SDL.framework/Headers\"",
+					"\"$(SRCROOT)/Frameworks/SDL2.framework/Headers\"",
 				);
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
@@ -5069,7 +5139,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = "2.0.0-alpha+20191017";
@@ -5083,7 +5153,7 @@
 				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Frameworks/SDL.framework/Headers\"",
+					"\"$(SRCROOT)/Frameworks/SDL2.framework/Headers\"",
 				);
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
