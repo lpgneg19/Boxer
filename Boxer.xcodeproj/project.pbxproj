@@ -2129,6 +2129,7 @@
 			);
 			path = macosx;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		55BBA4F3235FB240007AE319 /* CwlDemangle */ = {
 			isa = PBXGroup;
