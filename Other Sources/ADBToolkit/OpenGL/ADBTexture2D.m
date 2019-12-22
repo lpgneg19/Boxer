@@ -137,6 +137,22 @@
         glTexParameteri(_type, GL_TEXTURE_WRAP_T, _verticalWrapping);
         glTexParameteri(_type, GL_TEXTURE_MIN_FILTER, _minFilter);
         glTexParameteri(_type, GL_TEXTURE_MAG_FILTER, _magFilter);
+        if (glIsList(_displayList)) glDeleteLists(_displayList, 1);
+        _displayList = glGenLists(1);
+        glNewList(_displayList, GL_COMPILE);
+        glClear(GL_COLOR_BUFFER_BIT);
+        glBindTexture(GL_TEXTURE_2D, _texture);
+        
+        glBegin(GL_TRIANGLES);
+        // upper left
+        glTexCoord2f(0,0); glVertex2f(-1.0f, 1.0f);
+        // lower left
+        glTexCoord2f(0,contentSize.height*2); glVertex2f(-1.0f,-3.0f);
+        // upper right
+        glTexCoord2f(contentSize.width*2,0); glVertex2f(3.0f, 1.0f);
+        glEnd();
+
+        glEndList();
         
         
         
@@ -209,6 +225,15 @@
         
         glDeleteTextures(1, &_texture);
         _texture = 0;
+    }
+    
+    if (_displayList) {
+        CGLContextObj cgl_ctx = _context;
+        
+        if (glIsList(_displayList)) {
+            glDeleteLists(_displayList, 1);
+        }
+        _displayList = 0;
     }
 }
 
@@ -504,8 +529,14 @@
     glEnableClientState(GL_VERTEX_ARRAY);
     glVertexPointer(2, GL_FLOAT, 0, vertices);
     
-    //TODO: glCallList
-    glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
+    glUnmapBufferARB(GL_PIXEL_UNPACK_BUFFER_ARB);
+    glBindTexture(GL_TEXTURE_2D, _texture);
+    glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0,
+            NSWidth(region), NSHeight(region), GL_BGRA_EXT,
+            GL_UNSIGNED_INT_8_8_8_8_REV, 0);
+    glBindBufferARB(GL_PIXEL_UNPACK_BUFFER_ARB, 0);
+
+    glCallList(_displayList);
     
     glDisableClientState(GL_TEXTURE_COORD_ARRAY);
     glDisableClientState(GL_VERTEX_ARRAY);

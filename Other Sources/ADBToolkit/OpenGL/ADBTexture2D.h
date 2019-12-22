@@ -49,6 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
     GLenum _verticalWrapping;
     GLenum _minFilter;
     GLenum _magFilter;
+    GLuint _displayList;
 }
 
 /// The context in which this texture was created.

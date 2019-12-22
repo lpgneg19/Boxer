@@ -79,7 +79,6 @@
 		9F1812BF12996340009BC4B2 /* YRKSpinningProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1812BD12996337009BC4B2 /* YRKSpinningProgressIndicator.m */; };
 		9F18133B129990D5009BC4B2 /* BXGamesFolderPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F18133A129990D5009BC4B2 /* BXGamesFolderPanelController.m */; };
 		9F18BE9513EB07190047C217 /* BXInstallerScan.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F18BE9413EB07190047C217 /* BXInstallerScan.m */; };
-		9F19E7E112B3F48200496BCF /* SDL_sound.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCEDF3212B3DFFC00E856A4 /* SDL_sound.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F1CBA58120C796C00C5E926 /* BXImportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CBA57120C796C00C5E926 /* BXImportSession.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9F1CBA97120C7D9000C5E926 /* BXImportWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CBA96120C7D9000C5E926 /* BXImportWindowController.m */; };
 		9F1CBAAB120C830600C5E926 /* BXImportSession+BXImportPolicies.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CBAAA120C830600C5E926 /* BXImportSession+BXImportPolicies.m */; };
@@ -368,10 +367,8 @@
 		9F2D315915B8233800FAE848 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4E042B0F67E72300427D50 /* AudioToolbox.framework */; };
 		9F2D315A15B8233800FAE848 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8A975F10E7EDDE00A4B72A /* libicucore.dylib */; };
 		9F2D315D15B8233800FAE848 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F61942312340F5400F35AB4 /* ScriptingBridge.framework */; };
-		9F2D315F15B8233800FAE848 /* SDL_sound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCEDF3212B3DFFC00E856A4 /* SDL_sound.framework */; };
 		9F2D316015B8233800FAE848 /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBAA8F3134AFABD0092BF95 /* DiskArbitration.framework */; };
 		9F2D316215B8233800FAE848 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F731B51136331A9005E564F /* IOKit.framework */; };
-		9F2D316715B8233800FAE848 /* SDL_sound.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCEDF3212B3DFFC00E856A4 /* SDL_sound.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F2D316815B8233800FAE848 /* SDL2_net.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C150F56D6E8001811F2 /* SDL2_net.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F2D316B15B8233800FAE848 /* SDL2.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C140F56D6E8001811F2 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F2D318915B826F600FAE848 /* DOSWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2D317E15B826EF00FAE848 /* DOSWindow.xib */; };
@@ -728,7 +725,6 @@
 		9FCC2F9A1366EF170013F083 /* BXEmulatedKeyboard.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC2F991366EF170013F083 /* BXEmulatedKeyboard.mm */; };
 		9FCC2FF41366FA820013F083 /* BXInputController+BXKeyboardInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC2FF31366FA820013F083 /* BXInputController+BXKeyboardInput.m */; };
 		9FCC303C13670F680013F083 /* KeyboardLayouts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC303B13670F680013F083 /* KeyboardLayouts.plist */; };
-		9FCEDF3312B3DFFC00E856A4 /* SDL_sound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCEDF3212B3DFFC00E856A4 /* SDL_sound.framework */; };
 		9FD011BD10C2A02F00670CE1 /* BXGameboxPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD011BC10C2A02F00670CE1 /* BXGameboxPanelController.m */; };
 		9FD012FB13AB87E500AF6FE8 /* BXThemedImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD012FA13AB87E500AF6FE8 /* BXThemedImageCell.m */; };
 		9FD1D6251364291600792011 /* DDHidDevice+ADBDeviceExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD1D6241364291600792011 /* DDHidDevice+ADBDeviceExtensions.m */; };
@@ -920,7 +916,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9F2D316715B8233800FAE848 /* SDL_sound.framework in Copy Bundled Frameworks */,
 				55E6A0C71C00C88A00285593 /* DDHidLib.framework in Copy Bundled Frameworks */,
 				9F2D316815B8233800FAE848 /* SDL2_net.framework in Copy Bundled Frameworks */,
 				55E6A0C31C00C88A00285593 /* MT32Emu.framework in Copy Bundled Frameworks */,
@@ -936,7 +931,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9F19E7E112B3F48200496BCF /* SDL_sound.framework in Copy Bundled Frameworks */,
 				9FBC3D610F56EA82001811F2 /* SDL2_net.framework in Copy Bundled Frameworks */,
 				55E6A0BF1C00C86200285593 /* BGHUDAppKit.framework in Copy Bundled Frameworks */,
 				9F20C29711E5DA68005AF541 /* Sparkle.framework in Copy Bundled Frameworks */,
@@ -1906,7 +1900,6 @@
 				9F20C28B11E5D848005AF541 /* Sparkle.framework in Frameworks */,
 				9F61942412340F5400F35AB4 /* ScriptingBridge.framework in Frameworks */,
 				55E6A0BA1C00C86200285593 /* DDHidLib.framework in Frameworks */,
-				9FCEDF3312B3DFFC00E856A4 /* SDL_sound.framework in Frameworks */,
 				9FBAA8F4134AFABD0092BF95 /* DiskArbitration.framework in Frameworks */,
 				9F731B52136331A9005E564F /* IOKit.framework in Frameworks */,
 			);
@@ -1932,7 +1925,6 @@
 				9F2D315A15B8233800FAE848 /* libicucore.dylib in Frameworks */,
 				55E6A0C21C00C88A00285593 /* MT32Emu.framework in Frameworks */,
 				9F2D315D15B8233800FAE848 /* ScriptingBridge.framework in Frameworks */,
-				9F2D315F15B8233800FAE848 /* SDL_sound.framework in Frameworks */,
 				9F2D316015B8233800FAE848 /* DiskArbitration.framework in Frameworks */,
 				55E6A0C61C00C88A00285593 /* DDHidLib.framework in Frameworks */,
 				9F2D316215B8233800FAE848 /* IOKit.framework in Frameworks */,
