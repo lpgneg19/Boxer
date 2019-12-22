@@ -530,7 +530,6 @@
     glVertexPointer(2, GL_FLOAT, 0, vertices);
     
     glUnmapBufferARB(GL_PIXEL_UNPACK_BUFFER_ARB);
-    glBindTexture(GL_TEXTURE_2D, _texture);
     glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0,
             NSWidth(region), NSHeight(region), GL_BGRA_EXT,
             GL_UNSIGNED_INT_8_8_8_8_REV, 0);
