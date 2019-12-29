@@ -86,7 +86,29 @@
                           inGLContext: context
                                 error: outError];
 }
-            
+         
+- (void)_regenDisplayListWithContentSize:(CGSize)contentSize
+{
+    CGLContextObj cgl_ctx = _context;
+
+    if (glIsList(_displayList)) glDeleteLists(_displayList, 1);
+    _displayList = glGenLists(1);
+    glNewList(_displayList, GL_COMPILE);
+    glClear(GL_COLOR_BUFFER_BIT);
+    glBindTexture(_type, _texture);
+    
+    glBegin(GL_TRIANGLES);
+    // upper left
+    glTexCoord2f(0,0); glVertex2f(-1.0f, 1.0f);
+    // lower left
+    glTexCoord2f(0,contentSize.height*2); glVertex2f(-1.0f,-3.0f);
+    // upper right
+    glTexCoord2f(contentSize.width*2,0); glVertex2f(3.0f, 1.0f);
+    glEnd();
+
+    glEndList();
+}
+
 - (id) initWithType: (GLenum)type
         contentSize: (CGSize)contentSize
               bytes: (const GLvoid *)bytes
@@ -137,23 +159,8 @@
         glTexParameteri(_type, GL_TEXTURE_WRAP_T, _verticalWrapping);
         glTexParameteri(_type, GL_TEXTURE_MIN_FILTER, _minFilter);
         glTexParameteri(_type, GL_TEXTURE_MAG_FILTER, _magFilter);
-        if (glIsList(_displayList)) glDeleteLists(_displayList, 1);
-        _displayList = glGenLists(1);
-        glNewList(_displayList, GL_COMPILE);
-        glClear(GL_COLOR_BUFFER_BIT);
-        glBindTexture(GL_TEXTURE_2D, _texture);
         
-        glBegin(GL_TRIANGLES);
-        // upper left
-        glTexCoord2f(0,0); glVertex2f(-1.0f, 1.0f);
-        // lower left
-        glTexCoord2f(0,contentSize.height*2); glVertex2f(-1.0f,-3.0f);
-        // upper right
-        glTexCoord2f(contentSize.width*2,0); glVertex2f(3.0f, 1.0f);
-        glEnd();
-
-        glEndList();
-        
+        [self _regenDisplayListWithContentSize:contentSize];
         
         
         //If the texture size is the same as the content size, then we can provide the texture
