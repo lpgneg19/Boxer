@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -47,6 +47,8 @@
 		5514503A24BE8DE60002CE28 /* envelope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5514503824BE8DE50002CE28 /* envelope.cpp */; };
 		5514503D24BE8FB90002CE28 /* program_autotype.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5514503B24BE8FB90002CE28 /* program_autotype.cpp */; };
 		5514503E24BE8FB90002CE28 /* program_autotype.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5514503B24BE8FB90002CE28 /* program_autotype.cpp */; };
+		55215F452AD22FD8007C7C68 /* MT32LCDDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55215F442AD22FD8007C7C68 /* MT32LCDDisplay.swift */; };
+		55215F462AD22FD8007C7C68 /* MT32LCDDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55215F442AD22FD8007C7C68 /* MT32LCDDisplay.swift */; };
 		55220E3824CFFF8C00A6736A /* BXShaderParametersWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058BC52324C27B790078C244 /* BXShaderParametersWindowController.m */; };
 		55220E3924CFFF8C00A6736A /* BXShadersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058BC51F24C27B770078C244 /* BXShadersModel.swift */; };
 		55220E3A24CFFF8C00A6736A /* BXShadersModel+OpenEmu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058BC52124C27B780078C244 /* BXShadersModel+OpenEmu.swift */; };
@@ -425,7 +427,6 @@
 		9F2D30AF15B8233800FAE848 /* BXCoalfaceAudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F34BE3E142B700100A69FAF /* BXCoalfaceAudio.mm */; };
 		9F2D30B015B8233800FAE848 /* BXEmulator+BXAudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F34BE5E142B851700A69FAF /* BXEmulator+BXAudio.mm */; };
 		9F2D30B115B8233800FAE848 /* BXBaseAppController+BXSupportFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F34BE61142B917100A69FAF /* BXBaseAppController+BXSupportFiles.m */; };
-		9F2D30B215B8233800FAE848 /* BXMT32LCDDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEC4EF142CE8300016964A /* BXMT32LCDDisplay.m */; };
 		9F2D30B315B8233800FAE848 /* BXMIDISynth.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F902C23142E183500843B01 /* BXMIDISynth.m */; };
 		9F2D30B415B8233800FAE848 /* BXEmulatedMT32.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F902C26142E198100843B01 /* BXEmulatedMT32.mm */; };
 		9F2D30B515B8233800FAE848 /* BXExternalMIDIDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F902C29142E199100843B01 /* BXExternalMIDIDevice.m */; };
@@ -763,7 +764,6 @@
 		9FBC3C780F56E0D7001811F2 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C760F56E0D7001811F2 /* AudioUnit.framework */; };
 		9FBC3C790F56E0D7001811F2 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBC3C770F56E0D7001811F2 /* CoreMIDI.framework */; };
 		9FBD321710E5144C00031CB6 /* Brand.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD321610E5144C00031CB6 /* Brand.png */; };
-		9FBEC4F0142CE8300016964A /* BXMT32LCDDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEC4EF142CE8300016964A /* BXMT32LCDDisplay.m */; };
 		9FBF66AF11F35ADD00DAAB9A /* ADBSingleFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF66AE11F35ADD00DAAB9A /* ADBSingleFileTransfer.m */; };
 		9FC1620E119E9AD700705EA5 /* BXCursorFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC1620D119E9AD700705EA5 /* BXCursorFadeAnimation.m */; };
 		9FC2F84013D60FBD00BD4F6B /* BXDualActionControllerProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2F83F13D60FBD00BD4F6B /* BXDualActionControllerProfile.m */; };
@@ -1092,6 +1092,7 @@
 		5514503B24BE8FB90002CE28 /* program_autotype.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program_autotype.cpp; sourceTree = "<group>"; };
 		5514503C24BE8FB90002CE28 /* program_autotype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = program_autotype.h; sourceTree = "<group>"; };
 		551B793625593573006C57CE /* URL+ADBFilesystemHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ADBFilesystemHelpers.swift"; sourceTree = "<group>"; };
+		55215F442AD22FD8007C7C68 /* MT32LCDDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MT32LCDDisplay.swift; sourceTree = "<group>"; };
 		5529311E252AF0DA0069EB35 /* soft_limiter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = soft_limiter.h; sourceTree = "<group>"; };
 		55419B67255A2F1400A779B2 /* URL+ADBQuickLookHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ADBQuickLookHelpers.swift"; sourceTree = "<group>"; };
 		55419B73255A7FFA00A779B2 /* URL+ADBAliasHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ADBAliasHelpers.swift"; sourceTree = "<group>"; };
@@ -1898,8 +1899,6 @@
 		9FBC3C770F56E0D7001811F2 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		9FBC3CB10F56E32C001811F2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		9FBD321610E5144C00031CB6 /* Brand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Brand.png; sourceTree = "<group>"; };
-		9FBEC4EE142CE8300016964A /* BXMT32LCDDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXMT32LCDDisplay.h; sourceTree = "<group>"; };
-		9FBEC4EF142CE8300016964A /* BXMT32LCDDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXMT32LCDDisplay.m; sourceTree = "<group>"; };
 		9FBF66AD11F35ADD00DAAB9A /* ADBSingleFileTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBSingleFileTransfer.h; sourceTree = "<group>"; };
 		9FBF66AE11F35ADD00DAAB9A /* ADBSingleFileTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBSingleFileTransfer.m; sourceTree = "<group>"; usesTabs = 1; };
 		9FBF66FC11F376B900DAAB9A /* ADBOperationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBOperationDelegate.h; sourceTree = "<group>"; };
@@ -2910,8 +2909,7 @@
 				9F57684815DA27A300B50500 /* BXHUDSpinningProgressIndicator.m */,
 				9F60B0DA13AA418300F06BB1 /* BXCollectionItemView.h */,
 				9F60B0DB13AA418300F06BB1 /* BXCollectionItemView.m */,
-				9FBEC4EE142CE8300016964A /* BXMT32LCDDisplay.h */,
-				9FBEC4EF142CE8300016964A /* BXMT32LCDDisplay.m */,
+				55215F442AD22FD8007C7C68 /* MT32LCDDisplay.swift */,
 				9FC1620C119E9AD700705EA5 /* BXCursorFadeAnimation.h */,
 				9FC1620D119E9AD700705EA5 /* BXCursorFadeAnimation.m */,
 			);
@@ -4305,6 +4303,7 @@
 				9F0F2B9512AD3C8500CD7078 /* ADBFileTransferSet.m in Sources */,
 				9F444FCC12AEA28700A2D405 /* ADBOperationSet.m in Sources */,
 				9F444FFF12AEBE5200A2D405 /* BXDriveBundleImport.m in Sources */,
+				55215F452AD22FD8007C7C68 /* MT32LCDDisplay.swift in Sources */,
 				9F44500212AEC0FC00A2D405 /* BXSimpleDriveImport.m in Sources */,
 				5514502224BE81E00002CE28 /* ppscale.c in Sources */,
 				9F2120F813015653002AB1B7 /* BXShelfArt.m in Sources */,
@@ -4363,7 +4362,6 @@
 				9F34BE40142B700100A69FAF /* BXCoalfaceAudio.mm in Sources */,
 				9F34BE5F142B851800A69FAF /* BXEmulator+BXAudio.mm in Sources */,
 				9F34BE62142B917100A69FAF /* BXBaseAppController+BXSupportFiles.m in Sources */,
-				9FBEC4F0142CE8300016964A /* BXMT32LCDDisplay.m in Sources */,
 				9F902C24142E183500843B01 /* BXMIDISynth.m in Sources */,
 				55DB150427EDA2C70024AE9E /* program_boot.cpp in Sources */,
 				9F902C27142E198100843B01 /* BXEmulatedMT32.mm in Sources */,
@@ -4589,6 +4587,7 @@
 				9F2D2FA415B8233800FAE848 /* BXCloseAlert.m in Sources */,
 				9F2D2FA515B8233800FAE848 /* NSAlert+BXAlert.m in Sources */,
 				9F2D2FA615B8233800FAE848 /* BXHelpMenuController.m in Sources */,
+				55215F462AD22FD8007C7C68 /* MT32LCDDisplay.swift in Sources */,
 				9F2D2FA715B8233800FAE848 /* NSWorkspace+ADBMountedVolumes.m in Sources */,
 				9F2D2FA815B8233800FAE848 /* BXGamebox.m in Sources */,
 				9F2D2FA915B8233800FAE848 /* BXEmulator+BXDOSFileSystem.mm in Sources */,
@@ -4823,7 +4822,6 @@
 				9F2D30AF15B8233800FAE848 /* BXCoalfaceAudio.mm in Sources */,
 				9F2D30B015B8233800FAE848 /* BXEmulator+BXAudio.mm in Sources */,
 				9F2D30B115B8233800FAE848 /* BXBaseAppController+BXSupportFiles.m in Sources */,
-				9F2D30B215B8233800FAE848 /* BXMT32LCDDisplay.m in Sources */,
 				9F2D30B315B8233800FAE848 /* BXMIDISynth.m in Sources */,
 				9F2D30B415B8233800FAE848 /* BXEmulatedMT32.mm in Sources */,
 				5557480C208FA8040045E635 /* sn76496.cpp in Sources */,
