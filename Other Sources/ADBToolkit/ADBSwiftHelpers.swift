@@ -43,8 +43,8 @@ extension BXFileTypes {
         var err: NSError?
         let toRet = __typeOfExecutable(inStream: handle, error: &err)
         
-        if toRet == .unknown, let err2 = err {
-            throw err2
+        if toRet == .unknown, let err {
+            throw err
         }
         return toRet
     }

@@ -43,6 +43,7 @@ typedef BOOL (^ADBFilesystemFileURLErrorHandler)(NSURL *_Nullable url, NSError *
 /// This protocol allows filesystems to handle filesystem-relative paths: that is, paths that are
 /// relative to the root of the represented logical filesystem, instead of referring to anywhere
 /// in the actual OS X filesystem.
+///
 /// IMPLEMENTATION REQUIREMENTS:
 /// - the path @"/" should be treated as the root of the filesystem.
 /// - relative paths like @"path/to/file.txt" should be resolved relative to the root of the filesystem.

@@ -8,6 +8,7 @@
 
 import Foundation
 import CwlDemangle
+import RegexBuilder
 
 private enum MangledFunctionType {
     /// No detected mangling
@@ -22,6 +23,8 @@ private let swiftPrefixes = ["_T", "$s", "_$S", "_T0"]
 private let cxxPrefixes = ["_Z"]
 
 private let ADBCallstackSymbolPattern = #"^\d+\s+(\S+)\s+(0x[a-fA-F0-9]+)\s+(.+)\s+\+\s+(\d+)$"#
+@available(macOS 13.0, *)
+private let ADBCallstackSymbolPatternNew = /^\d+\s+(\S+)\s+0x([a-fA-F0-9]+)\s+(.+)\s+\+\s+(\d+)$/
 
 extension NSException {
     private static func possibleMangledType(from: String) -> MangledFunctionType {
@@ -64,6 +67,47 @@ extension NSException {
         let symbols = callStackSymbols
         
         return symbols.map { symbol -> [ADBCallstackKeys: Any] in
+            if #available(macOS 13.0, *) {
+                guard let captures = (try? ADBCallstackSymbolPatternNew.wholeMatch(in: symbol))?.output else {
+                    //If the string couldn't be parsed, make an effort to provide *something* back
+                    return [.rawSymbol: symbol]
+                }
+                let libraryName = String(captures.1)
+                let hexAddress = captures.2
+                let rawSymbolName = String(captures.3)
+                let offsetString = captures.4
+                
+                guard let address = UInt64(hexAddress, radix: 16),
+                      let offset = Int64(offsetString) else {
+                    //If the string couldn't be parsed, make an effort to provide *something* back
+                    //this should not happen!
+                    return [.rawSymbol: symbol]
+                }
+                
+                let symbolType = NSException.possibleMangledType(from: rawSymbolName)
+                var demangledSymbolName: String?
+                switch symbolType {
+                case .none:
+                    demangledSymbolName = rawSymbolName
+                    
+                case .cPlusPlus:
+                    demangledSymbolName = NSException.demangledCPlusPlusFunctionName(rawSymbolName)
+                    
+                case .swift:
+                    demangledSymbolName = NSException.demangledSwiftFunctionName(rawSymbolName)
+                }
+                if demangledSymbolName == nil {
+                    demangledSymbolName = rawSymbolName
+                }
+                
+                return [
+                    .rawSymbol:                    symbol,
+                    .libraryName:                  libraryName,
+                    .functionName:                 rawSymbolName,
+                    .humanReadableFunctionName:    demangledSymbolName!,
+                    .address:                      address,
+                    .symbolOffset:                 offset]
+            }
             if let captures = (symbol as NSString).captureComponentsMatched(byRegex: ADBCallstackSymbolPattern), captures.count == 5 {
                 // FIXME: reimplement this using NSScanner or NSRegularExpression so that we don't have dependencies on RegexKitLite.
                 let libraryName = captures[1]

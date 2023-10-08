@@ -46,7 +46,7 @@ static void CGPathCallback(void *info, const CGPathElement *element)
 
 @implementation NSBezierPath (MCAdditions)
 
-+ (NSBezierPath *)bezierPathWithCGPath:(CGPathRef)pathRef
++ (NSBezierPath *)ourBezierPathWithCGPath:(CGPathRef)pathRef
 {
 	NSBezierPath *path = [NSBezierPath bezierPath];
 	CGPathApply(pathRef, (void *)path, CGPathCallback);
@@ -97,7 +97,14 @@ static void CGPathCallback(void *info, const CGPathElement *element)
 {
 	NSBezierPath *path = [self copy];
 	CGContextRef context = [[NSGraphicsContext currentContext] CGContext];
-	CGPathRef pathRef = [path createCGPath];
+	CGPathRef pathRef;
+	if (@available(macOS 14.0, *)) @autoreleasepool {
+		pathRef = path.CGPath;
+		// match the old memory management.
+		CFRetain(pathRef);
+	} else {
+		pathRef = [path createCGPath];
+	}
 	
 	CGContextSaveGState(context);
 		
@@ -107,7 +114,12 @@ static void CGPathCallback(void *info, const CGPathElement *element)
 	CGContextReplacePathWithStrokedPath(context);
 	CGPathRef strokedPathRef = CGContextCopyPath(context);
 	CGContextBeginPath(context);
-	NSBezierPath *strokedPath = [NSBezierPath bezierPathWithCGPath:strokedPathRef];
+	NSBezierPath *strokedPath;
+	if (@available(macOS 14.0, *)) {
+		strokedPath = [NSBezierPath bezierPathWithCGPath:strokedPathRef];
+	} else {
+		strokedPath = [NSBezierPath ourBezierPathWithCGPath:strokedPathRef];
+	}
 	
 	CGContextRestoreGState(context);
 	

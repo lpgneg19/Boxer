@@ -28,25 +28,25 @@
 #import "ADBAppKitVersionHelpers.h"
 
 
-BOOL isRunningOnLeopard()
+BOOL isRunningOnLeopard(void)
 {
 	double appKitVersion = floor(NSAppKitVersionNumber);
 	return (appKitVersion <= NSAppKitVersionNumber10_5);	
 }
 
-BOOL isRunningOnSnowLeopard()
+BOOL isRunningOnSnowLeopard(void)
 {
 	double appKitVersion = floor(NSAppKitVersionNumber);
 	return (appKitVersion <= NSAppKitVersionNumber10_6 && appKitVersion > NSAppKitVersionNumber10_5);	
 }
 
-BOOL isRunningOnLion()
+BOOL isRunningOnLion(void)
 {
 	double appKitVersion = floor(NSAppKitVersionNumber);
 	return (appKitVersion <= NSAppKitVersionNumber10_7 && appKitVersion > NSAppKitVersionNumber10_6);
 }
 
-BOOL isRunningOnMountainLion()
+BOOL isRunningOnMountainLion(void)
 {
 	double appKitVersion = floor(NSAppKitVersionNumber);
 	return (appKitVersion <= NSAppKitVersionNumber10_8 && appKitVersion > NSAppKitVersionNumber10_7);
@@ -59,25 +59,25 @@ BOOL isRunningOnMavericks()
 }
 */
 
-BOOL isRunningOnSnowLeopardOrAbove()
+BOOL isRunningOnSnowLeopardOrAbove(void)
 {
 	double appKitVersion = floor(NSAppKitVersionNumber);
 	return (appKitVersion > NSAppKitVersionNumber10_5);
 }
 
-BOOL isRunningOnLionOrAbove()
+BOOL isRunningOnLionOrAbove(void)
 {
 	double appKitVersion = floor(NSAppKitVersionNumber);
 	return (appKitVersion > NSAppKitVersionNumber10_6);
 }
 
-BOOL isRunningOnMountainLionOrAbove()
+BOOL isRunningOnMountainLionOrAbove(void)
 {
 	double appKitVersion = floor(NSAppKitVersionNumber);
 	return (appKitVersion > NSAppKitVersionNumber10_7);
 }
 
-BOOL isRunningOnMavericksOrAbove()
+BOOL isRunningOnMavericksOrAbove(void)
 {
 	double appKitVersion = floor(NSAppKitVersionNumber);
 	return (appKitVersion > NSAppKitVersionNumber10_8);
