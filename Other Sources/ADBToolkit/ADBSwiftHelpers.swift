@@ -24,12 +24,13 @@ extension ADBBinCueImage {
 extension BXFileTypes {
     /// Returns the executable type of the file at the specified URL.
     /// If the executable type cannot be determined, this method will throw.
-    static func typeOfExecutable(at URL: URL) throws -> BXExecutableType {
+    static func typeOfExecutable(at url: URL) throws -> BXExecutableType {
         let handle: ADBFileHandle
         do {
-            handle = try ADBFileHandle(url: URL, options: .openForReading)
+            handle = try ADBFileHandle(url: url, options: .openForReading)
         } catch {
-            throw BXExecutableTypesErrors(.couldNotReadExecutable, userInfo: [NSUnderlyingErrorKey: error])
+            throw BXExecutableTypesErrors(.couldNotReadExecutable, userInfo: [NSUnderlyingErrorKey: error,
+                                                                                     NSURLErrorKey: url])
         }
         defer {
             handle.close()

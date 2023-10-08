@@ -24,7 +24,38 @@ private let cxxPrefixes = ["_Z"]
 
 private let ADBCallstackSymbolPattern = #"^\d+\s+(\S+)\s+(0x[a-fA-F0-9]+)\s+(.+)\s+\+\s+(\d+)$"#
 @available(macOS 13.0, *)
-private let ADBCallstackSymbolPatternNew = /^\d+\s+(\S+)\s+0x([a-fA-F0-9]+)\s+(.+)\s+\+\s+(\d+)$/
+private let ADBCallstackSymbolPatternNew = Regex {
+    /^/
+    OneOrMore(.digit)
+    OneOrMore(.whitespace)
+    Capture {
+        OneOrMore(.whitespace.inverted)
+    }
+    OneOrMore(.whitespace)
+    "0x"
+    Capture {
+        OneOrMore {
+            CharacterClass(
+                ("a"..."f"),
+                ("A"..."F"),
+                ("0"..."9")
+            )
+        }
+    }
+    OneOrMore(.whitespace)
+    Capture {
+        OneOrMore {
+            /./
+        }
+    }
+    OneOrMore(.whitespace)
+    "+"
+    OneOrMore(.whitespace)
+    Capture {
+        OneOrMore(.digit)
+    }
+    /$/
+}
 
 extension NSException {
     private static func possibleMangledType(from: String) -> MangledFunctionType {
