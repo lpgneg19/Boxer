@@ -76,12 +76,12 @@ class MT32LCDDisplay : NSTextField {
         let glyphColor = self.pixelColor
         
         let characterSize = gridTemplate.size
-        let characterSpacing = 3
+        let characterSpacing: CGFloat = 3
         
         let glyphSize = NSSize(width: 5, height: 9)
         let firstGlyph: Character = "!"
         
-        var gridRect = NSRect(origin: .zero, size: CGSize(width: (characterSize.width + CGFloat(characterSpacing)) * 19 + characterSize.width, height: characterSize.height))
+        var gridRect = NSRect(origin: .zero, size: CGSize(width: (characterSize.width + characterSpacing) * 19 + characterSize.width, height: characterSize.height))
         
         gridRect = centerInRect(gridRect, bounds)
         gridRect.origin = integralPoint(gridRect.origin)
@@ -93,7 +93,11 @@ class MT32LCDDisplay : NSTextField {
         
         let grid = gridTemplate.imageFilled(with: gridColor, at: characterSize)
         
-        for c in charsToDisplay {
+        for (i, c) in charsToDisplay.enumerated() {
+            if i >= 20 {
+                break
+            }
+            
             //First, draw the background grid for this character
             grid.draw(in: characterRect, from: .zero, operation: .sourceOver, fraction: 1, respectFlipped: true, hints: nil)
             
@@ -122,7 +126,7 @@ class MT32LCDDisplay : NSTextField {
                 tintedGlyph.draw(in: characterRect, from: .zero, operation: .sourceOver, fraction: 1, respectFlipped: true, hints: nil)
             }
             
-            characterRect.origin.x += characterSize.width + CGFloat(characterSpacing)
+            characterRect.origin.x += characterSize.width + characterSpacing
         }
         
         //Finally, draw the shadowing and lighting effects and the frame
