@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17132.0.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17132.0.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22154"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,7 +25,7 @@
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="1" customClass="BXDOSWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="400" y="200" width="640" height="570"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
             <view key="contentView" id="2">
                 <rect key="frame" x="0.0" y="0.0" width="640" height="570"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -41,7 +41,7 @@
                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="986">
                                         <rect key="frame" x="0.0" y="4" width="19" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="Volume0PercentCroppedTemplate" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" inset="2" id="991">
+                                        <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="speaker.fill" catalog="system" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" inset="2" id="991">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="systemBold" size="12"/>
                                         </buttonCell>
@@ -52,7 +52,7 @@
                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="987">
                                         <rect key="frame" x="95" y="4" width="27" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="Volume100PercentTemplate" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" inset="2" id="990">
+                                        <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="speaker.wave.3.fill" catalog="system" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" inset="2" id="990">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="systemBold" size="12"/>
                                         </buttonCell>
@@ -91,7 +91,7 @@
                                     <action selector="performSegmentedButtonAction:" target="926" id="929"/>
                                 </connections>
                             </segmentedControl>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="909">
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="909">
                                 <rect key="frame" x="185" y="6" width="270" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Cmd-click to lock the mouse to the window." id="910">
@@ -167,10 +167,10 @@
         </viewController>
     </objects>
     <resources>
-        <image name="NSLockUnlockedTemplate" width="18" height="13"/>
-        <image name="NSRevealFreestandingTemplate" width="15" height="13"/>
+        <image name="NSLockUnlockedTemplate" width="21" height="19"/>
+        <image name="NSRevealFreestandingTemplate" width="20" height="20"/>
         <image name="PanelExpandTemplate" width="13" height="12"/>
-        <image name="Volume0PercentCroppedTemplate" width="7" height="12"/>
-        <image name="Volume100PercentTemplate" width="17" height="16"/>
+        <image name="speaker.fill" catalog="system" width="14" height="14"/>
+        <image name="speaker.wave.3.fill" catalog="system" width="22" height="15"/>
     </resources>
 </document>

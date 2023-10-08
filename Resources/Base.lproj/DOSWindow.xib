@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22154"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -36,7 +36,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="640" height="26"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="909">
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="909">
                                 <rect key="frame" x="33" y="6" width="321" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Cmd-click to lock the mouse pointer to the window." id="910">
@@ -98,8 +98,8 @@
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="1272"/>
                     <toolbarItem implicitItemIdentifier="540E2882-15E5-4FCD-8C52-8FA004C0A9D6" label="Programs" paletteLabel="Programs" toolTip="Show or hide the game’s launch options" image="LauncherListTemplate" sizingBehavior="auto" id="1285">
                         <button key="view" verticalHuggingPriority="750" id="1283">
-                            <rect key="frame" x="9" y="14" width="40" height="25"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <rect key="frame" x="15" y="14" width="28" height="23"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="LauncherListTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1284">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -113,11 +113,11 @@
                             <binding destination="-2" name="enabled" keyPath="canToggleLaunchPanel" id="1350"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="185DE03D-DF27-49BC-BF8F-E23D90836DB1" label="Manuals" paletteLabel="Manuals" toolTip="Show the documentation bundled with this game" image="DocumentationTemplate" sizingBehavior="auto" id="1348">
+                    <toolbarItem implicitItemIdentifier="185DE03D-DF27-49BC-BF8F-E23D90836DB1" label="Manuals" paletteLabel="Manuals" toolTip="Show the documentation bundled with this game" image="book" catalog="system" sizingBehavior="auto" id="1348">
                         <button key="view" verticalHuggingPriority="750" id="1346">
-                            <rect key="frame" x="6" y="14" width="40" height="25"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="DocumentationTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1347">
+                            <rect key="frame" x="11" y="14" width="30" height="23"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="book" catalog="system" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1347">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
@@ -129,8 +129,8 @@
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="4672537F-2C7C-4BDA-A2AF-F120A743EE98" label="Inspector" paletteLabel="Inspector" toolTip="Show or hide the inspector panel" image="NSRevealFreestandingTemplate" sizingBehavior="auto" id="1279">
                         <button key="view" verticalHuggingPriority="750" id="1277">
-                            <rect key="frame" x="9" y="14" width="40" height="25"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <rect key="frame" x="15" y="14" width="27" height="23"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRevealFreestandingTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1278">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -144,7 +144,7 @@
                         <nil key="toolTip"/>
                         <box key="view" autoresizesSubviews="NO" boxType="custom" borderType="none" borderWidth="0.0" titlePosition="noTitle" transparent="YES" id="MWA-k3-MA8">
                             <rect key="frame" x="0.0" y="14" width="130" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <view key="contentView" id="hp2-yr-guj">
                                 <rect key="frame" x="0.0" y="0.0" width="130" height="22"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,7 +164,7 @@
                                     <button toolTip="Set the volume to maximum" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ktK-fd-rsN">
                                         <rect key="frame" x="102" y="5" width="27" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="Volume100PercentTemplate" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" inset="2" id="w0L-iR-Af7">
+                                        <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="speaker.wave.3.fill" catalog="system" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" inset="2" id="w0L-iR-Af7">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="systemBold" size="12"/>
                                         </buttonCell>
@@ -175,7 +175,7 @@
                                     <button toolTip="Mute the volume" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32N-s1-9hf">
                                         <rect key="frame" x="6" y="5" width="22" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="Volume0PercentCroppedTemplate" imagePosition="overlaps" alignment="center" controlSize="small" borderStyle="border" inset="2" id="bVp-0Y-J3v">
+                                        <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="speaker.fill" catalog="system" imagePosition="overlaps" alignment="center" controlSize="small" borderStyle="border" inset="2" id="bVp-0Y-J3v">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="systemBold" size="12"/>
                                         </buttonCell>
@@ -192,7 +192,7 @@
                         <nil key="toolTip"/>
                         <box key="view" autoresizesSubviews="NO" boxType="custom" borderType="none" borderWidth="0.0" titlePosition="noTitle" transparent="YES" id="1417">
                             <rect key="frame" x="0.0" y="14" width="130" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <view key="contentView" id="hly-7J-Aom">
                                 <rect key="frame" x="0.0" y="0.0" width="130" height="22"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +200,7 @@
                                     <button toolTip="Decrease the CPU speed" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1420">
                                         <rect key="frame" x="0.0" y="5" width="29" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="TurtleTemplate" imagePosition="only" alignment="center" controlSize="small" continuous="YES" state="on" borderStyle="border" inset="2" id="1421">
+                                        <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="tortoise.fill" catalog="system" imagePosition="only" alignment="center" controlSize="small" continuous="YES" state="on" borderStyle="border" inset="2" id="1421">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="systemBold" size="12"/>
                                         </buttonCell>
@@ -211,7 +211,7 @@
                                     <button toolTip="Increase the CPU speed" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1419">
                                         <rect key="frame" x="101" y="5" width="29" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="BunnyTemplate" imagePosition="only" alignment="center" controlSize="small" continuous="YES" state="on" borderStyle="border" inset="2" id="1422">
+                                        <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="hare.fill" catalog="system" imagePosition="only" alignment="center" controlSize="small" continuous="YES" state="on" borderStyle="border" inset="2" id="1422">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="systemBold" size="12"/>
                                         </buttonCell>
@@ -241,14 +241,14 @@
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="D375FB40-9A93-4A78-8CD9-124F3047BB9B" label="Playback" paletteLabel="Playback" toolTip="Pause, resume or fast-forward the game" sizingBehavior="auto" id="1345">
                         <segmentedControl key="view" verticalHuggingPriority="750" id="1343">
-                            <rect key="frame" x="0.0" y="14" width="104" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <rect key="frame" x="0.0" y="14" width="108" height="24"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedRounded" trackingMode="selectOne" id="1344">
                                 <font key="font" metaFont="system"/>
                                 <segments>
-                                    <segment toolTip="Pause the game" image="PauseTemplate" width="32"/>
-                                    <segment toolTip="Resume the game at normal speed" image="PlayTemplate" width="32" tag="1"/>
-                                    <segment toolTip="Fast-forward the game" image="FastForwardTemplate" width="32" tag="2">
+                                    <segment toolTip="Pause the game" image="pause.fill" catalog="system" width="32"/>
+                                    <segment toolTip="Resume the game at normal speed" image="play.fill" catalog="system" width="32" tag="1"/>
+                                    <segment toolTip="Fast-forward the game" image="forward.fill" catalog="system" width="32" tag="2">
                                         <nil key="label"/>
                                     </segment>
                                 </segments>
@@ -270,8 +270,8 @@
                     <toolbarItem implicitItemIdentifier="80692E84-A4DD-40BE-A1AA-F76F98262117" label="Restart" paletteLabel="Restart" image="NSRefreshTemplate" sizingBehavior="auto" id="1355">
                         <nil key="toolTip"/>
                         <button key="view" verticalHuggingPriority="750" id="1353">
-                            <rect key="frame" x="3" y="14" width="40" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <rect key="frame" x="10" y="14" width="26" height="23"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRefreshTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1354">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -281,12 +281,12 @@
                             <action selector="performRestart:" target="-1" id="1357"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="48349D51-8E91-43B9-9559-1D80B7BFAF7E" label="Screenshot" paletteLabel="Screenshot" image="ScreenshotTemplate" sizingBehavior="auto" id="1379">
+                    <toolbarItem implicitItemIdentifier="48349D51-8E91-43B9-9559-1D80B7BFAF7E" label="Screenshot" paletteLabel="Screenshot" image="camera.fill" catalog="system" sizingBehavior="auto" id="1379">
                         <nil key="toolTip"/>
                         <button key="view" verticalHuggingPriority="750" id="1377">
-                            <rect key="frame" x="14" y="14" width="40" height="25"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ScreenshotTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1378">
+                            <rect key="frame" x="18" y="14" width="31" height="23"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="camera.fill" catalog="system" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1378">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
@@ -299,8 +299,8 @@
                     <toolbarItem implicitItemIdentifier="09AC3A20-E5A3-450E-B97C-B30E2F9938C9" label="Change Discs" paletteLabel="Change Discs" image="DiscSwapTemplate" sizingBehavior="auto" id="1402">
                         <nil key="toolTip"/>
                         <button key="view" verticalHuggingPriority="750" id="1400">
-                            <rect key="frame" x="20" y="14" width="40" height="25"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <rect key="frame" x="22" y="14" width="36" height="23"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="DiscSwapTemplate" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1401">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -368,20 +368,20 @@
         </menu>
     </objects>
     <resources>
-        <image name="BunnyTemplate" width="13" height="14"/>
         <image name="DiscSwapTemplate" width="24" height="16"/>
-        <image name="DocumentationTemplate" width="16" height="16"/>
-        <image name="FastForwardTemplate" width="19" height="13"/>
         <image name="LauncherListTemplate" width="16" height="13"/>
-        <image name="NSLockLockedTemplate" width="14" height="15"/>
-        <image name="NSLockUnlockedTemplate" width="17" height="15"/>
-        <image name="NSRefreshTemplate" width="14" height="16"/>
-        <image name="NSRevealFreestandingTemplate" width="15" height="15"/>
-        <image name="PauseTemplate" width="10" height="13"/>
-        <image name="PlayTemplate" width="10" height="13"/>
-        <image name="ScreenshotTemplate" width="16" height="12"/>
-        <image name="TurtleTemplate" width="18" height="10"/>
-        <image name="Volume0PercentCroppedTemplate" width="7" height="12"/>
-        <image name="Volume100PercentTemplate" width="17" height="16"/>
+        <image name="NSLockLockedTemplate" width="19" height="19"/>
+        <image name="NSLockUnlockedTemplate" width="21" height="19"/>
+        <image name="NSRefreshTemplate" width="18" height="21"/>
+        <image name="NSRevealFreestandingTemplate" width="20" height="20"/>
+        <image name="book" catalog="system" width="18" height="14"/>
+        <image name="camera.fill" catalog="system" width="19" height="15"/>
+        <image name="forward.fill" catalog="system" width="19" height="12"/>
+        <image name="hare.fill" catalog="system" width="23" height="16"/>
+        <image name="pause.fill" catalog="system" width="11" height="13"/>
+        <image name="play.fill" catalog="system" width="12" height="13"/>
+        <image name="speaker.fill" catalog="system" width="14" height="14"/>
+        <image name="speaker.wave.3.fill" catalog="system" width="22" height="15"/>
+        <image name="tortoise.fill" catalog="system" width="24" height="13"/>
     </resources>
 </document>

@@ -337,17 +337,33 @@
     
     level.floatValue = volume;
     
-    NSString *iconName;
-    if      (volume > 0.66f)
-        iconName = @"Volume100PercentTemplate";
-    else if (volume > 0.33f)
-        iconName = @"Volume66PercentTemplate";
-    else if (volume > 0.0f)
-        iconName = @"Volume33PercentTemplate";
-    else
-        iconName = @"Volume0PercentTemplate";
-    
-    icon.image = [NSImage imageNamed: iconName];
+    if (@available(macOS 13.0, *)) {
+        icon.image = [NSImage imageWithSymbolName: @"speaker.wave.3.fill" variableValue: volume];
+    } else if (@available(macOS 11.0, *)) {
+        NSImage *image;
+        if      (volume > 0.66f)
+            image = [NSImage imageWithSystemSymbolName: @"speaker.wave.3.fill" accessibilityDescription:@"full volume"];
+        else if (volume > 0.33f)
+            image = [NSImage imageWithSystemSymbolName: @"speaker.wave.2.fill" accessibilityDescription:@"66% volume"];
+        else if (volume > 0.0f)
+            image = [NSImage imageWithSystemSymbolName: @"speaker.wave.1.fill" accessibilityDescription:@"33% volume"];
+        else
+            image = [NSImage imageWithSystemSymbolName: @"speaker.fill" accessibilityDescription:@"no volume"];
+
+        icon.image = image;
+    } else {
+        NSString *iconName;
+        if      (volume > 0.66f)
+            iconName = @"speaker.wave.3.fill";
+        else if (volume > 0.33f)
+            iconName = @"Volume66PercentTemplate";
+        else if (volume > 0.0f)
+            iconName = @"Volume33PercentTemplate";
+        else
+            iconName = @"Volume0PercentTemplate";
+        
+        icon.image = [NSImage imageNamed: iconName];
+    }
     
     [self showBezel: bezel
         forDuration: BXVolumeBezelDuration
@@ -455,7 +471,11 @@
     
     actionLabel.stringValue = [NSString stringWithFormat: actionFormat, drive.letter];
     titleLabel.stringValue = drive.title;
-    icon.image = [NSImage imageNamed: @"EjectTemplate"];
+    if (@available(macOS 11.0, *)) {
+        icon.image = [NSImage imageWithSystemSymbolName: @"eject.fill" accessibilityDescription: nil];
+    } else {
+        icon.image = [NSImage imageNamed: @"eject.fill"];
+    }
     
     [self showBezel: bezel
         forDuration: BXDriveBezelDuration

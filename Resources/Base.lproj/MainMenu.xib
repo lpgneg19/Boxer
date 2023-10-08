@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17132.0.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17132.0.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22154"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -939,6 +939,7 @@
         </menu>
         <userDefaultsController representsSharedInstance="YES" id="1841"/>
         <objectController objectClassName="BXSession" editable="NO" id="2207" userLabel="Session mediator">
+            <classReference key="objectClass" className="BXSession"/>
             <connections>
                 <binding destination="401" name="contentObject" keyPath="currentSession" id="2209"/>
             </connections>
@@ -976,7 +977,7 @@
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2230">
                     <rect key="frame" x="3" y="1" width="19" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="Volume0PercentCroppedTemplate" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" inset="2" id="2233">
+                    <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="speaker.fill" catalog="system" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" inset="2" id="2233">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="systemBold" size="12"/>
                     </buttonCell>
@@ -987,7 +988,7 @@
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2231">
                     <rect key="frame" x="174" y="0.0" width="27" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="Volume100PercentTemplate" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" inset="2" id="2232">
+                    <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="speaker.wave.3.fill" catalog="system" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" inset="2" id="2232">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="systemBold" size="12"/>
                     </buttonCell>
@@ -996,10 +997,11 @@
                     </connections>
                 </button>
             </subviews>
+            <point key="canvasLocation" x="14" y="135"/>
         </customView>
     </objects>
     <resources>
-        <image name="Volume0PercentCroppedTemplate" width="7" height="12"/>
-        <image name="Volume100PercentTemplate" width="17" height="16"/>
+        <image name="speaker.fill" catalog="system" width="14" height="14"/>
+        <image name="speaker.wave.3.fill" catalog="system" width="22" height="15"/>
     </resources>
 </document>

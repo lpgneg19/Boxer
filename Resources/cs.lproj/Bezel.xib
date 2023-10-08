@@ -71,16 +71,17 @@ Kombinací Cmd+kliknutí získáte přístup k řádku nabídek.</string>
                     </levelIndicatorCell>
                 </levelIndicator>
                 <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="15">
-                    <rect key="frame" x="16" y="40" width="24" height="24"/>
+                    <rect key="frame" x="16" y="40.5" width="24" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="TurtleTemplate" id="16" customClass="BXHUDImageCell"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="tortoise.fill" catalog="system" id="16" customClass="BXHUDImageCell"/>
                 </imageView>
                 <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17">
-                    <rect key="frame" x="260" y="41" width="24" height="24"/>
+                    <rect key="frame" x="260" y="41" width="24.5" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="BunnyTemplate" id="18" customClass="BXHUDImageCell"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hare.fill" catalog="system" id="18" customClass="BXHUDImageCell"/>
                 </imageView>
             </subviews>
+            <point key="canvasLocation" x="14" y="135"/>
         </customView>
         <customView id="19" userLabel="Throttle Bezel" customClass="BXBezelView">
             <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
@@ -147,9 +148,9 @@ Kombinací Cmd+kliknutí získáte přístup k řádku nabídek.</string>
                     </textFieldCell>
                 </textField>
                 <imageView fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="39">
-                    <rect key="frame" x="83" y="75" width="102" height="102"/>
+                    <rect key="frame" x="83" y="72.5" width="102.5" height="107"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="EjectTemplate" id="42" customClass="BXHUDImageCell"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="eject.fill" catalog="system" id="42" customClass="BXHUDImageCell"/>
                 </imageView>
                 <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="69" customClass="BXHUDLabel">
                     <rect key="frame" x="17" y="24" width="234" height="18"/>
@@ -161,6 +162,7 @@ Kombinací Cmd+kliknutí získáte přístup k řádku nabídek.</string>
                     </textFieldCell>
                 </textField>
             </subviews>
+            <point key="canvasLocation" x="-121" y="-70"/>
         </customView>
         <customView id="44" userLabel="Drive Imported Bezel" customClass="BXBezelView">
             <rect key="frame" x="0.0" y="0.0" width="268" height="200"/>
@@ -414,9 +416,10 @@ v nastavení zvuku Boxeru.</string>
                 <imageView fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="126">
                     <rect key="frame" x="29" y="29" width="102" height="102"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="ScreenshotTemplate" id="127" customClass="BXHUDImageCell"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="camera.fill" catalog="system" id="127" customClass="BXHUDImageCell"/>
                 </imageView>
             </subviews>
+            <point key="canvasLocation" x="14" y="135"/>
         </customView>
         <customView id="129" userLabel="Fast Forward Bezel" customClass="BXBezelView">
             <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
@@ -442,11 +445,12 @@ v nastavení zvuku Boxeru.</string>
                     </levelIndicatorCell>
                 </levelIndicator>
                 <imageView fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="142">
-                    <rect key="frame" x="69" y="50" width="102" height="102"/>
+                    <rect key="frame" x="69" y="48" width="102.5" height="107"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Volume0PercentTemplate" id="143" customClass="BXHUDImageCell"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="speaker.fill" catalog="system" id="143" customClass="BXHUDImageCell"/>
                 </imageView>
             </subviews>
+            <point key="canvasLocation" x="14" y="135"/>
         </customView>
         <customView id="145" userLabel="Mouse Locked bezel" customClass="BXBezelView">
             <rect key="frame" x="0.0" y="0.0" width="452" height="65"/>
@@ -471,8 +475,6 @@ v nastavení zvuku Boxeru.</string>
         </customView>
     </objects>
     <resources>
-        <image name="BunnyTemplate" width="13" height="14"/>
-        <image name="EjectTemplate" width="15" height="13"/>
         <image name="FastForwardBezelTemplate" width="102" height="70"/>
         <image name="NSLockLockedTemplate" width="19" height="19"/>
         <image name="NSRightFacingTriangleTemplate" width="12" height="17"/>
@@ -482,8 +484,10 @@ v nastavení zvuku Boxeru.</string>
         <image name="NumpadInactiveTemplate" width="112" height="112"/>
         <image name="PauseBezelTemplate" width="79" height="102"/>
         <image name="PlayBezelTemplate" width="79" height="102"/>
-        <image name="ScreenshotTemplate" width="16" height="12"/>
-        <image name="TurtleTemplate" width="18" height="10"/>
-        <image name="Volume0PercentTemplate" width="17" height="16"/>
+        <image name="camera.fill" catalog="system" width="19" height="15"/>
+        <image name="eject.fill" catalog="system" width="16" height="14"/>
+        <image name="hare.fill" catalog="system" width="23" height="16"/>
+        <image name="speaker.fill" catalog="system" width="14" height="14"/>
+        <image name="tortoise.fill" catalog="system" width="24" height="13"/>
     </resources>
 </document>

@@ -14,8 +14,8 @@ extension ADBBinCueImage {
     static func isCue(at cueURL: URL) throws -> Bool {
         var outError: NSError? = nil
         let isACue = __isCue(at: cueURL, error: &outError)
-        if !isACue, let err = outError {
-            throw err
+        if !isACue, let outError {
+            throw outError
         }
         return isACue
     }
