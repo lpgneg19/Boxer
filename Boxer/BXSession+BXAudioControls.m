@@ -16,7 +16,7 @@
 #import "BXMIDISynth.h"
 #import "BXExternalMIDIDevice.h"
 #import "BXExternalMT32.h"
-#import "BXDummyMIDIDevice.h"
+#import "Boxer-Swift.h"
 
 
 @implementation BXSession (BXAudioControls)
@@ -67,7 +67,7 @@
     //Use a dummy MIDI device if MIDI music is disabled.
     if (musicType == BXMIDIMusicDisabled)
     {
-        return [[BXDummyMIDIDevice alloc] init];
+        return [[DummyMIDIDevice alloc] init];
     }
     
     //If the emulator wants an external MIDI device if available, try and find the one
@@ -194,7 +194,7 @@
     
     
     if (musicType == BXMIDIMusicDisabled)
-        return ([device isKindOfClass: [BXDummyMIDIDevice class]]);
+        return ([device isKindOfClass: [DummyMIDIDevice class]]);
     
     
     //Check external devices to make sure they meet external-device-specific requirements.

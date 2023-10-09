@@ -56,6 +56,8 @@
 		55220E4624CFFFC900A6736A /* CheckboxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058BC52624C27BA10078C244 /* CheckboxCell.xib */; };
 		55220E4724CFFFC900A6736A /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058BC52524C27BA10078C244 /* GroupCell.xib */; };
 		55220E4824CFFFC900A6736A /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058BC52724C27BA10078C244 /* SliderCell.xib */; };
+		55296E992AD4B86400845EB5 /* DummyMIDIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55296E982AD4B86400845EB5 /* DummyMIDIDevice.swift */; };
+		55296E9A2AD4B86400845EB5 /* DummyMIDIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55296E982AD4B86400845EB5 /* DummyMIDIDevice.swift */; };
 		5548850E226A501000A879B3 /* drive_overlay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55488508226A501000A879B3 /* drive_overlay.cpp */; };
 		5548850F226A501000A879B3 /* drive_overlay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55488508226A501000A879B3 /* drive_overlay.cpp */; };
 		554E2B6D1BFAF6720038C506 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554E2B6C1BFAF6720038C506 /* Shared.xcassets */; };
@@ -433,7 +435,6 @@
 		9F2D30B615B8233800FAE848 /* BXMIDIDeviceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F86DB3F1431EF5F00A2EFB6 /* BXMIDIDeviceMonitor.m */; };
 		9F2D30B715B8233800FAE848 /* BXSession+BXAudioControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EDA161434A6E4009BFBA2 /* BXSession+BXAudioControls.m */; };
 		9F2D30B815B8233800FAE848 /* BXExternalMT32.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EDA1A1434B48D009BFBA2 /* BXExternalMT32.m */; };
-		9F2D30B915B8233800FAE848 /* BXDummyMIDIDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C1CD914373AF600601ACB /* BXDummyMIDIDevice.m */; };
 		9F2D30BC15B8233800FAE848 /* BXExternalMT32+BXMT32Sysexes.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D9EFE1444BAA800B6AD50 /* BXExternalMT32+BXMT32Sysexes.m */; };
 		9F2D30BD15B8233800FAE848 /* BXThemedProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1562814506DBA00545317 /* BXThemedProgressIndicator.m */; };
 		9F2D30BE15B8233800FAE848 /* BXHUDLevelIndicatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1562C14506E7200545317 /* BXHUDLevelIndicatorCell.m */; };
@@ -570,7 +571,6 @@
 		9F69133310A2F62A00EA78CD /* BXDrive.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F69133210A2F62A00EA78CD /* BXDrive.m */; };
 		9F693D5E16DD40DD00CCEA7C /* ADBEnumerationHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F693D5D16DD40DD00CCEA7C /* ADBEnumerationHelpers.m */; };
 		9F693D5F16DD40DD00CCEA7C /* ADBEnumerationHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F693D5D16DD40DD00CCEA7C /* ADBEnumerationHelpers.m */; };
-		9F6C1CDA14373AF600601ACB /* BXDummyMIDIDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C1CD914373AF600601ACB /* BXDummyMIDIDevice.m */; };
 		9F70277B13D706CC00606B4C /* BXBezelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F70277A13D706CC00606B4C /* BXBezelController.m */; };
 		9F70278413D72D8100606B4C /* BXThemedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F70278313D72D8100606B4C /* BXThemedLabel.m */; };
 		9F70C19C129036C900A3627F /* Boxer.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 9F70C19B129036C900A3627F /* Boxer.sdef */; };
@@ -1094,6 +1094,7 @@
 		551B793625593573006C57CE /* URL+ADBFilesystemHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ADBFilesystemHelpers.swift"; sourceTree = "<group>"; };
 		55215F442AD22FD8007C7C68 /* MT32LCDDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MT32LCDDisplay.swift; sourceTree = "<group>"; };
 		5529311E252AF0DA0069EB35 /* soft_limiter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = soft_limiter.h; sourceTree = "<group>"; };
+		55296E982AD4B86400845EB5 /* DummyMIDIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyMIDIDevice.swift; sourceTree = "<group>"; };
 		55419B67255A2F1400A779B2 /* URL+ADBQuickLookHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ADBQuickLookHelpers.swift"; sourceTree = "<group>"; };
 		55419B73255A7FFA00A779B2 /* URL+ADBAliasHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ADBAliasHelpers.swift"; sourceTree = "<group>"; };
 		55488508226A501000A879B3 /* drive_overlay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drive_overlay.cpp; sourceTree = "<group>"; };
@@ -1512,8 +1513,6 @@
 		9F69133210A2F62A00EA78CD /* BXDrive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXDrive.m; sourceTree = "<group>"; };
 		9F693D5C16DD40DD00CCEA7C /* ADBEnumerationHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBEnumerationHelpers.h; sourceTree = "<group>"; };
 		9F693D5D16DD40DD00CCEA7C /* ADBEnumerationHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBEnumerationHelpers.m; sourceTree = "<group>"; };
-		9F6C1CD814373AF600601ACB /* BXDummyMIDIDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXDummyMIDIDevice.h; sourceTree = "<group>"; };
-		9F6C1CD914373AF600601ACB /* BXDummyMIDIDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXDummyMIDIDevice.m; sourceTree = "<group>"; };
 		9F70277913D706CC00606B4C /* BXBezelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXBezelController.h; sourceTree = "<group>"; };
 		9F70277A13D706CC00606B4C /* BXBezelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXBezelController.m; sourceTree = "<group>"; };
 		9F70278213D72D8100606B4C /* BXThemedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXThemedLabel.h; sourceTree = "<group>"; };
@@ -3516,8 +3515,7 @@
 				9F7D9EFE1444BAA800B6AD50 /* BXExternalMT32+BXMT32Sysexes.m */,
 				9FD8BEE214FFF7660073B4EC /* BXExternalMIDIDevice+BXGeneralMIDISysexes.h */,
 				9FD8BEE314FFF7660073B4EC /* BXExternalMIDIDevice+BXGeneralMIDISysexes.m */,
-				9F6C1CD814373AF600601ACB /* BXDummyMIDIDevice.h */,
-				9F6C1CD914373AF600601ACB /* BXDummyMIDIDevice.m */,
+				55296E982AD4B86400845EB5 /* DummyMIDIDevice.swift */,
 				55EA6CF525D4919E00945236 /* BXMIDIConfig.hpp */,
 				55EA6CF425D4919E00945236 /* BXMIDIConfig.cpp */,
 			);
@@ -4369,7 +4367,6 @@
 				9F86DB401431EF5F00A2EFB6 /* BXMIDIDeviceMonitor.m in Sources */,
 				9F3EDA171434A6E4009BFBA2 /* BXSession+BXAudioControls.m in Sources */,
 				9F3EDA1B1434B48D009BFBA2 /* BXExternalMT32.m in Sources */,
-				9F6C1CDA14373AF600601ACB /* BXDummyMIDIDevice.m in Sources */,
 				9F586CEB143E41C200E840C8 /* BXMT32ROMDropzone.m in Sources */,
 				9F7D9EFF1444BAA800B6AD50 /* BXExternalMT32+BXMT32Sysexes.m in Sources */,
 				9FF1562914506DBA00545317 /* BXThemedProgressIndicator.m in Sources */,
@@ -4561,6 +4558,7 @@
 				9F7721E712B38C4400072AE8 /* support.cpp in Sources */,
 				9F7721E812B38C4400072AE8 /* shell.cpp in Sources */,
 				55DB150027EDA2C70024AE9E /* program_rescan.cpp in Sources */,
+				55296E992AD4B86400845EB5 /* DummyMIDIDevice.swift in Sources */,
 				9F7721E912B38C4400072AE8 /* shell_batch.cpp in Sources */,
 				55F0B77E26ABFEE80077E58C /* Filter.cpp in Sources */,
 				9F7721EA12B38C4400072AE8 /* shell_cmds.cpp in Sources */,
@@ -4830,7 +4828,6 @@
 				9F2D30B715B8233800FAE848 /* BXSession+BXAudioControls.m in Sources */,
 				9F2D30B815B8233800FAE848 /* BXExternalMT32.m in Sources */,
 				55DB14E627EDA2020024AE9E /* iohandler_containers.cpp in Sources */,
-				9F2D30B915B8233800FAE848 /* BXDummyMIDIDevice.m in Sources */,
 				9F2D30BC15B8233800FAE848 /* BXExternalMT32+BXMT32Sysexes.m in Sources */,
 				9F2D30BD15B8233800FAE848 /* BXThemedProgressIndicator.m in Sources */,
 				9F2D30BE15B8233800FAE848 /* BXHUDLevelIndicatorCell.m in Sources */,
@@ -4850,6 +4847,7 @@
 				9F2D30CA15B8233800FAE848 /* BXExternalMIDIDevice+BXGeneralMIDISysexes.m in Sources */,
 				9F2D30CB15B8233800FAE848 /* BXKeyBuffer.mm in Sources */,
 				9F2D30CC15B8233800FAE848 /* BXFileTypes.m in Sources */,
+				55296E9A2AD4B86400845EB5 /* DummyMIDIDevice.swift in Sources */,
 				55DB150F27EDA2C70024AE9E /* program_mem.cpp in Sources */,
 				558CE44E20F6931600319D1C /* BXXBOBluetoothControllerProfile.m in Sources */,
 				9F2D30D315B8233800FAE848 /* NSKeyedArchiver+ADBArchivingAdditions.m in Sources */,

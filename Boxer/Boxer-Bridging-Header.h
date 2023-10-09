@@ -10,3 +10,4 @@
 #import "NSImage+ADBImageEffects.h"
 #import "NSBezierPath+MCAdditions.h"
 #import "ADBGeometry.h"
+#import "BXMIDIDevice.h"
