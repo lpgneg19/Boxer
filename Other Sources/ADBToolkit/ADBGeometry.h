@@ -26,12 +26,12 @@
 
 //ADBGeometry provides various functions for manipulating NSPoints, NSSizes and NSRects.
 
+#import <Foundation/Foundation.h>
+
 //The C brace is needed when including this header from an Objective C++ file
 #if __cplusplus
 extern "C" {
 #endif
-
-	#import <Foundation/Foundation.h>
 
 	/// Returns the nearest power of two that can accommodate the specified value
 	NSInteger fitToPowerOfTwo(NSInteger value);

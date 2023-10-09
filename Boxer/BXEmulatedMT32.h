@@ -66,20 +66,20 @@ typedef NS_OPTIONS(NSUInteger, BXMT32ROMType) {
     BXMT32ROMTypeUnknown    = 0,
     
     //Mutually exclusive
-    BXMT32ROMIsControl      = 1 << 0,
-    BXMT32ROMIsPCM          = 1 << 1,
+    BXMT32ROMIsControl NS_SWIFT_NAME(isControl) = 1 << 0,
+    BXMT32ROMIsPCM NS_SWIFT_NAME(isPCM)         = 1 << 1,
     
     //Mutually exclusive
-    BXMT32ROMIsMT32         = 1 << 2,
-    BXMT32ROMIsCM32L        = 1 << 3,
+    BXMT32ROMIsMT32 NS_SWIFT_NAME(isMT32)   = 1 << 2,
+    BXMT32ROMIsCM32L NS_SWIFT_NAME(isCM32)  = 1 << 3,
     
-    BXMT32Control   = BXMT32ROMIsControl | BXMT32ROMIsMT32,
-    BXMT32PCM       = BXMT32ROMIsPCM | BXMT32ROMIsMT32,
-    BXCM32LControl  = BXMT32ROMIsControl | BXMT32ROMIsCM32L,
-    BXCM32LPCM      = BXMT32ROMIsPCM | BXMT32ROMIsCM32L,
+    BXMT32Control NS_SWIFT_NAME(control)    = BXMT32ROMIsControl | BXMT32ROMIsMT32,
+    BXMT32PCM NS_SWIFT_NAME(pcm)            = BXMT32ROMIsPCM | BXMT32ROMIsMT32,
+    BXCM32LControl NS_SWIFT_NAME(lControl)  = BXMT32ROMIsControl | BXMT32ROMIsCM32L,
+    BXCM32LPCM NS_SWIFT_NAME(lPCM)          = BXMT32ROMIsPCM | BXMT32ROMIsCM32L,
     
-    BXMT32ModelMask = BXMT32ROMIsMT32 | BXMT32ROMIsCM32L,
-    BXMT32TypeMask  = BXMT32ROMIsControl | BXMT32ROMIsPCM,
+    BXMT32ModelMask NS_SWIFT_NAME(modelMask)    = BXMT32ROMIsMT32 | BXMT32ROMIsCM32L,
+    BXMT32TypeMask NS_SWIFT_NAME(typeMask)      = BXMT32ROMIsControl | BXMT32ROMIsPCM,
 };
 
 

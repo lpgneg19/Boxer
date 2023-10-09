@@ -194,7 +194,7 @@ typedef NS_ERROR_ENUM(BXDOSBoxMountErrorDomain, BXDOSBoxMountErrors) {
 
 /// Convenience method for sending a notification to both the default notification center and to a selector
 /// on the emulator's delegate. The object of the notification will be the @c BXEmulator instance.
-- (void) _postNotificationName: (NSString *)name
+- (void) _postNotificationName: (NSNotificationName)name
 			  delegateSelector: (SEL)selector
 					  userInfo: (nullable NSDictionary *)userInfo;
 
@@ -737,7 +737,7 @@ struct boxer_emulatorException: public std::exception {
 @property (copy) NSArray<NSNumber*> *callStackReturnAddresses;
 @property (copy) NSArray<NSString*> *callStackSymbols;
 
-+ (instancetype) exceptionWithName: (NSString *)name originalException: (boxer_emulatorException *)info;
++ (instancetype) exceptionWithName: (NSExceptionName)name originalException: (boxer_emulatorException *)info;
 
 @end
 
