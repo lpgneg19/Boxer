@@ -63,10 +63,13 @@ typedef NS_ENUM(NSInteger, BXRenderingStyle) {
 
 
 @optional
-/// Called to indicate to the rendering view that a view animation will be/has been
+/// Called to indicate to the rendering view that a view animation will be
 /// applied to it. This permits the view to adjust its rendering context to suit
 /// the animation.
 - (void) viewAnimationWillStart: (NSViewAnimation *)animation;
+/// Called to indicate to the rendering view that a view animation has been
+/// applied to it. This permits the view to adjust its rendering context to suit
+/// the animation.
 - (void) viewAnimationDidEnd: (NSViewAnimation *)animation;
 
 /// Called whenever the window changes color space or scaling factor.

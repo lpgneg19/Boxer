@@ -79,8 +79,8 @@ extern const CGFloat BX4by3AspectRatio;
 
 /// Read-only/mutable pointers to the frame's data.
 @property (readonly) NSMutableData *frameData;
-@property (readonly) const void *bytes;
-@property (readonly) void *mutableBytes;
+@property (readonly) const void *bytes NS_RETURNS_INNER_POINTER;
+@property (readonly) void *mutableBytes NS_RETURNS_INNER_POINTER;
 
 /// The number of ranges of dirty lines. Incremented by setNeedsDisplayInRegion:
 /// and reset to 0 by clearDirtyRegions. See the dirty region functions below.
