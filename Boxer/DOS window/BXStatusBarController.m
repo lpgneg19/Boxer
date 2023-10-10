@@ -87,12 +87,10 @@
 {
 	[self _syncSegmentedButtonStates];
 	
-	NSArray *mouseLockModifiers = [NSArray arrayWithObjects:
-                                            @"DOSViewShown",
+	NSArray *mouseLockModifiers = @[@"DOSViewShown",
                                             @"inputController.mouseActive",
                                             @"inputController.mouseLocked",
-                                            @"inputController.trackMouseWhileUnlocked",
-                                            nil];
+                                    @"inputController.trackMouseWhileUnlocked"];
 	
 	if ([mouseLockModifiers containsObject: keyPath])
 	{
@@ -160,17 +158,19 @@
 	[self.statusBarControls setEnabled:	self.controller.inputController.mouseActive     forSegment: BXStatusBarMouseLockSegment];
 	
 	NSString *panelImageName;
-	if ([self.statusBarControls isSelectedForSegment: BXStatusBarProgramPanelSegment])
+	if ([self.statusBarControls isSelectedForSegment: BXStatusBarProgramPanelSegment]) {
         panelImageName = @"PanelCollapseTemplate";
-	else
+	} else {
         panelImageName = @"PanelExpandTemplate";
+    }
 	[self.statusBarControls setImage: [NSImage imageNamed: panelImageName] forSegment: BXStatusBarProgramPanelSegment];
 	
 	NSString *lockImageName;
-	if ([self.statusBarControls isSelectedForSegment: BXStatusBarMouseLockSegment])
-        lockImageName = @"NSLockLockedTemplate";
-	else
-        lockImageName = @"NSLockUnlockedTemplate";
+	if ([self.statusBarControls isSelectedForSegment: BXStatusBarMouseLockSegment]) {
+        lockImageName = NSImageNameLockLockedTemplate;
+    } else {
+        lockImageName = NSImageNameLockUnlockedTemplate;
+    }
 	[self.statusBarControls setImage: [NSImage imageNamed: lockImageName] forSegment: BXStatusBarMouseLockSegment];
 }
 
