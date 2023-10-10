@@ -420,7 +420,7 @@ static BOOL _hasStartedEmulator = NO;
 		//Turn off automatic speed scaling
         self.autoSpeed = NO;
         
-		CPU_OldCycleMax = CPU_CycleMax = (Bit32s)newSpeed;
+		CPU_OldCycleMax = CPU_CycleMax = (int32_t)newSpeed;
 		
 		//Stop DOSBox from resetting the cycles after a program exits
 		CPU_AutoDetermineMode &= ~CPU_AUTODETERMINE_CYCLES;
@@ -653,7 +653,7 @@ static BOOL _hasStartedEmulator = NO;
 {
 	switch (joytype)
 	{
-		case JOY_NONE:
+		case JOY_DISABLED:
 			return BXNoJoystickSupport;
 			break;
 		case JOY_2AXIS:

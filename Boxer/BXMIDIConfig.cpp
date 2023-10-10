@@ -10,7 +10,7 @@
 #include "string_utils.h"
 
 
-static void mt32_init(MAYBE_UNUSED Section *secprop)
+static void mt32_init([[maybe_unused]] Section *secprop)
 {}
 
 static void init_mt32_dosbox_settings(Section_prop &sec_prop)
