@@ -83,11 +83,10 @@
 		NSPoint canvasDelta = NSMakePoint(delta.x * canvas.size.width,
 										  delta.y * canvas.size.height);
 		
-		Mouse_CursorMoved(canvasDelta.x,
+        MOUSE_EventMoved(canvasDelta.x,
 						  canvasDelta.y,
 						  point.x,
-						  point.y,
-						  locked);
+						  point.y);
 	}
 }
 
@@ -113,7 +112,7 @@
 	{
 		if (pressed)
 		{
-			Mouse_ButtonPressed(button);
+            MOUSE_EventButton(button, true);
             self.pressedButtons |= buttonMask;
             
             _lastButtonDown[button] = [NSDate timeIntervalSinceReferenceDate];
@@ -140,7 +139,7 @@
             }
             else
             {
-                Mouse_ButtonReleased(button);
+                MOUSE_EventButton(button, false);
                 self.pressedButtons &= ~buttonMask;
                 
                 _lastButtonDown[button] = 0;

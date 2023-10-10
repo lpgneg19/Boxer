@@ -306,9 +306,8 @@
 - (BXDOSKeyCode) _DOSKeyCodeForSystemKeyCode: (CGKeyCode)keyCode
 {
 	static BXDOSKeyCode map[BXMaxSystemKeyCode];
-	static BOOL mapGenerated = NO;
-	if (!mapGenerated)
-	{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         memset(&map, KBD_NONE, sizeof(map));
 		
 		map[kVK_F1] = KBD_f1;
@@ -435,14 +434,10 @@
 		map[kVK_ANSI_Period] = KBD_period;
 		map[kVK_ANSI_Slash] = KBD_slash;
         
-		map[kVK_JIS_Yen] = KBD_extra_lt_gt;
-		map[kVK_JIS_Underscore] = KBD_extra_lt_gt;
-		map[kVK_ISO_Section] = KBD_extra_lt_gt;
-		map[kVK_ISO_Section] = KBD_extra_lt_gt;
-		map[kVK_ISO_Section] = KBD_extra_lt_gt;
-		
-		mapGenerated = YES;
-	}
+		map[kVK_JIS_Yen] = KBD_abnt1;
+		map[kVK_JIS_Underscore] = KBD_abnt1;
+		map[kVK_ISO_Section] = KBD_abnt1;
+    });
     
     //Early return if key code is beyond the range of our mappings anyway.
     if (keyCode > BXMaxSystemKeyCode)
