@@ -1298,6 +1298,8 @@
 		557873DE2AD54D4B0084E5B3 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		557873DF2AD54D4B0084E5B3 /* x11_xinput2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = x11_xinput2.c; sourceTree = "<group>"; };
 		557873E02AD54D4B0084E5B3 /* linux_evdev.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = linux_evdev.c; sourceTree = "<group>"; };
+		557873F32AD556B40084E5B3 /* PrefixHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
+		557873F42AD558AA0084E5B3 /* rgb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rgb.h; sourceTree = "<group>"; };
 		55844D0626C70E4E00AA5924 /* pacer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pacer.h; sourceTree = "<group>"; };
 		55844D0F26C70E7700AA5924 /* pacer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacer.cpp; sourceTree = "<group>"; };
 		558CE44C20F6931600319D1C /* BXXBOBluetoothControllerProfile.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BXXBOBluetoothControllerProfile.mm; sourceTree = "<group>"; };
@@ -2396,6 +2398,7 @@
 				9F5114FF129055DE00BEC0B9 /* Scripting */,
 				9F160E6E1236B28900F8768E /* Application Delegate */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				557873F32AD556B40084E5B3 /* PrefixHeader.h */,
 				55BBA4E6235EE141007AE319 /* Boxer-Bridging-Header.h */,
 				9F573D370F8E69AF0089D8B7 /* BXGamebox.h */,
 				9F573D380F8E69AF0089D8B7 /* BXGamebox.m */,
@@ -3239,6 +3242,7 @@
 		9F77207312B38C4400072AE8 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				557873F42AD558AA0084E5B3 /* rgb.h */,
 				557873342AD537450084E5B3 /* ansi_code_markup.h */,
 				557873372AD537450084E5B3 /* audio_frame.h */,
 				557873362AD537450084E5B3 /* autoexec.h */,
@@ -6025,6 +6029,7 @@
 					"\"$(SRCROOT)/Frameworks\"",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				GCC_PREFIX_HEADER = Boxer/PrefixHeader.h;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					BOXER_DEBUG,
 					USE_PRIVATE_APIS,
@@ -6075,6 +6080,7 @@
 					"\"$(SRCROOT)/Frameworks\"",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				GCC_PREFIX_HEADER = Boxer/PrefixHeader.h;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					C_SRECORD,
 					HAVE_CXX11,

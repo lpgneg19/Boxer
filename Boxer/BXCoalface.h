@@ -16,6 +16,9 @@
 
 #import "config.h"
 #import "video.h"
+#include "shader_manager.h"
+#include "support.h"
+#include "bit_view.h"
 
 #if __cplusplus
 extern "C" {
@@ -66,6 +69,8 @@ extern "C" {
     void boxer_setCGAComponentMode(uint8_t newCGA);
 
     int boxer_GetDisplayRefreshRate(void);
+    FILE *boxer_openCaptureFile(const char *typeDescription, const char *fileExtension);
+
     
     
 #pragma mark - Shell
