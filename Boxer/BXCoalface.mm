@@ -566,17 +566,34 @@ bool boxer_PRINTER_isInited(Bitu port)
 
 #pragma mark - Helper functions
 
-//Return a localized string for the given DOSBox translation key
-//This is called by MSG_Get in DOSBox's misc/messages.cpp, instead of retrieving strings from its own localisation system
-const char * boxer_localizedStringForKey(char const *keyStr)
+//Generate the localized string dictionary for DOSBox's MSG_Get based on the passed-in region (then the
+// main system region if that fails).
+bool boxer_localizedStringsForKey(std::unordered_map<std::string, std::string> &vals, const char *region)
 {
-	NSString *theKey			= [NSString stringWithCString: keyStr encoding: BXDirectStringEncoding];
-	NSString *localizedString	= [[NSBundle mainBundle]
-								   localizedStringForKey: theKey
-								   value: @"" //If the key isn't found, display nothing
-								   table: @"DOSBox"];
-	
-	return [localizedString cStringUsingEncoding: BXDisplayStringEncoding];
+    NSURL *locDBStrings = nil;
+    if (region) {
+        locDBStrings = [[NSBundle mainBundle] URLForResource: @"DOSBox" withExtension: @"strings" subdirectory: nil localization: @(region)];
+    }
+    if (!locDBStrings) {
+        locDBStrings = [[NSBundle mainBundle] URLForResource: @"DOSBox" withExtension: @"strings" subdirectory: nil];
+    }
+    if (!locDBStrings) {
+        return false;
+    }
+    NSInputStream *is = [[NSInputStream alloc] initWithURL: locDBStrings];
+    if (!is) {
+        return false;
+    }
+    NSDictionary *dict = [NSPropertyListSerialization propertyListWithStream: is options: NSPropertyListImmutable format: NULL error: NULL];
+    if (!dict) {
+        return false;
+    }
+    vals.reserve(dict.count);
+    for (NSString *key in dict) {
+        NSString *value = dict[key];
+        vals.emplace(key.UTF8String, value.UTF8String);
+    }
+    return true;
 }
 
 void boxer_log(char const* format,...)

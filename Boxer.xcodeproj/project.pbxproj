@@ -68,6 +68,8 @@
 		5557480A208FA8040045E635 /* saa1099.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 555747F8208FA8030045E635 /* saa1099.cpp */; };
 		5557480B208FA8040045E635 /* sn76496.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 555747F9208FA8030045E635 /* sn76496.cpp */; };
 		5557480C208FA8040045E635 /* sn76496.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 555747F9208FA8030045E635 /* sn76496.cpp */; };
+		556839082AD92AB600FDD2CE /* translations in Resources */ = {isa = PBXBuildFile; fileRef = 556839072AD92AB600FDD2CE /* translations */; };
+		556839092AD92AB600FDD2CE /* translations in Resources */ = {isa = PBXBuildFile; fileRef = 556839072AD92AB600FDD2CE /* translations */; };
 		557872CE2AD535880084E5B3 /* virtualbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557872CB2AD535880084E5B3 /* virtualbox.cpp */; };
 		557872CF2AD535880084E5B3 /* virtualbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557872CB2AD535880084E5B3 /* virtualbox.cpp */; };
 		557872D02AD535880084E5B3 /* vmware.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557872CC2AD535880084E5B3 /* vmware.cpp */; };
@@ -1177,6 +1179,7 @@
 		555747FA208FA8030045E635 /* saa1099.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = saa1099.h; sourceTree = "<group>"; };
 		5563E57E239EF7CD007A1600 /* ADBSwiftHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBSwiftHelpers.swift; sourceTree = "<group>"; };
 		5565757423568DED003489A6 /* risc_x64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = risc_x64.h; sourceTree = "<group>"; };
+		556839072AD92AB600FDD2CE /* translations */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = translations; path = "DOSBox-Staging/contrib/resources/translations"; sourceTree = SOURCE_ROOT; };
 		557872CB2AD535880084E5B3 /* virtualbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = virtualbox.cpp; sourceTree = "<group>"; };
 		557872CC2AD535880084E5B3 /* vmware.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vmware.cpp; sourceTree = "<group>"; };
 		557872CD2AD535880084E5B3 /* voodoo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = voodoo.cpp; sourceTree = "<group>"; };
@@ -2510,6 +2513,7 @@
 				9F160BD91236952400F8768E /* Sample Games */,
 				9FFAFE2E10DE343F00728BAC /* Configurations */,
 				9FCBB5FE10A6DDBD00C28B09 /* DOS Toolkit */,
+				556839072AD92AB600FDD2CE /* translations */,
 				9FBC34390F56C5AC001811F2 /* Images */,
 				9FCBB2CB10A61C6D00C28B09 /* Sounds */,
 				9F496E4C108EEDF700282261 /* XIBs */,
@@ -4408,6 +4412,7 @@
 				9F4199F81BD416E900A2D165 /* Shell.strings in Resources */,
 				9F4199E91BD416E400A2D165 /* LauncherHeading.xib in Resources */,
 				9F160DE21236952600F8768E /* Sample Games in Resources */,
+				556839082AD92AB600FDD2CE /* translations in Resources */,
 				9F70C19C129036C900A3627F /* Boxer.sdef in Resources */,
 				9FFC2AC012A19CCC008C2B3B /* Sample Game Icons in Resources */,
 				9FCC303C13670F680013F083 /* KeyboardLayouts.plist in Resources */,
@@ -4472,6 +4477,7 @@
 				9FDFB48215DBC73D004EA615 /* Help.help in Resources */,
 				554E2B6E1BFAF6B20038C506 /* Shared.xcassets in Resources */,
 				9F794DAF15EA966E00A4CB05 /* DummyCD.iso in Resources */,
+				556839092AD92AB600FDD2CE /* translations in Resources */,
 				55220E4524CFFFC900A6736A /* ShaderParameters.xib in Resources */,
 				9FAA7EB11BE6996800F4FCA6 /* Configuration.strings in Resources */,
 				9FCA937F16FF38EC00720B81 /* DocumentationBrowser.xib in Resources */,

@@ -20,11 +20,12 @@
 #include "support.h"
 #include "bit_view.h"
 
+#include <stdio.h>
+
 #if __cplusplus
 extern "C" {
 #endif
 
-#include <stdio.h>
 	
 //Remapped replacements for DOSBox's old sdlmain functions
 #define GFX_Events boxer_processEvents
@@ -210,7 +211,7 @@ extern "C" {
 #pragma mark - Messages, logging and error handling
     
 	/// Called from messages.cpp: overrides DOSBox's translation system.
-	const char * boxer_localizedStringForKey(char const * key);
+    bool boxer_localizedStringsForKey(std::unordered_map<std::string, std::string> &vals, const char *region);
     
     void boxer_log(char const* format,...) __printflike(1, 2);
     void boxer_die(char const *functionName, char const *fileName, int lineNumber, char const* format,...) __printflike(4, 5);
