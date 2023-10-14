@@ -121,12 +121,13 @@
 
 - (NSUInteger) frameskip
 {
-	return (NSUInteger)render.frameskip.max;
+//	return (NSUInteger)render.frameskip.max;
+    return 0;
 }
 
 - (void) setFrameskip: (NSUInteger)frameskip
 {
-	render.frameskip.max = (Bitu)frameskip;
+//	render.frameskip.max = (Bitu)frameskip;
 }
 
 //Chooses the specified filter, and resets the renderer to apply the change immediately.
