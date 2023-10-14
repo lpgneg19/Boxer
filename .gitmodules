@@ -13,3 +13,6 @@
 [submodule "Vendor/iir1"]
 	path = Vendor/iir1
 	url = https://github.com/berndporr/iir1.git
+[submodule "Vendor/speexdsp"]
+	path = Vendor/speexdsp
+	url = https://github.com/xiph/speexdsp.git

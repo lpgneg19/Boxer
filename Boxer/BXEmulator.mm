@@ -1009,7 +1009,7 @@ static BOOL _hasStartedEmulator = NO;
             char const *argv[0];
             commandLine = new CommandLine(0, argv);
             configuration = new Config(commandLine);
-            control = configuration;
+//            control = configuration;
             
             //Sets up the vast swathes of DOSBox configuration file parameters,
             //and registers the shell to start up when we finish initializing.

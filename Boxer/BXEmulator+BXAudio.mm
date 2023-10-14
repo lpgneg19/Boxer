@@ -370,7 +370,7 @@ void _renderMIDIOutput(Bitu numFrames)
     //Update the DOSBox mixer with the new volume and mute settings.
     //Note that we can only do this once the mixer subsystem has initialized,
     //and won't need to do it before then anyway.
-    if (self.isInitialized) boxer_updateVolumes();
+    if (self.isInitialized) MIXER_UpdateAllChannelVolumes();
     
     //Also update the volume of our current MIDI device.
     if (self.activeMIDIDevice)

@@ -939,7 +939,7 @@ void MSCDEX_SetCDInterface(int intNr, int forceCD);
 	if (Drives[index]) return NO;
 	
 	Drives[index] = drive;
-	mem_writeb(Real2Phys(dos.tables.mediaid)+((PhysPt)index)*2, drive->GetMediaByte());
+	mem_writeb(RealToPhysical(dos.tables.mediaid)+((PhysPt)index)*2, drive->GetMediaByte());
 	
 	return YES;
 }
