@@ -10,3 +10,6 @@
 [submodule "DOSBox-Staging"]
 	path = DOSBox-Staging
 	url = https://github.com/MaddTheSane/dosbox-staging.git
+[submodule "Vendor/iir1"]
+	path = Vendor/iir1
+	url = https://github.com/berndporr/iir1.git

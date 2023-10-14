@@ -51,6 +51,12 @@
 	[self doesNotRecognizeSelector: _cmd];
 }
 
+// how did THIS happen!?
+#ifndef MAX
+#define __NSMAX_IMPL__(A,B,L) ({ __typeof__(A) __NSX_PASTE__(__a,L) = (A); __typeof__(B) __NSX_PASTE__(__b,L) = (B); (__NSX_PASTE__(__a,L) < __NSX_PASTE__(__b,L)) ? __NSX_PASTE__(__b,L) : __NSX_PASTE__(__a,L); })
+#define MAX(A,B) __NSMAX_IMPL__(A,B,__COUNTER__)
+#endif
+
 - (float) normalizedValue: (float)value
 {
     value = MIN(value, kBXOutputBindingMax);

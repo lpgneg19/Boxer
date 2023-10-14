@@ -9,10 +9,16 @@
 #ifndef PrefixHeader_h
 #define PrefixHeader_h
 
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#endif
+
 #if __cplusplus
 #include "dosbox.h"
 //--Added 2010-05-30 by Alun Bestor to ensure sdlmain function calls are replaced throughout DOSBox
+#ifndef NO_BXCOALFACE
 #include "BXCoalface.h"
+#endif
 //--End of modifications
 #endif
 

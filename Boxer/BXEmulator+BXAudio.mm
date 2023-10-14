@@ -14,6 +14,7 @@
 #import "BXDrive.h"
 
 #import <SDL2/SDL.h>
+#include "cdrom.h"
 #import "mixer.h"
 
 
@@ -178,27 +179,28 @@ void _renderMIDIOutput(Bitu numFrames)
 {
     //We need to look up the corresponding channel for this because DOSBox's
     //mixer doesn't pass any context with its callbacks.
-    MixerChannel *channel = MIXER_FindChannel(BXMIDIChannelName);
+    mixer_channel_t channel = MIXER_FindChannel(BXMIDIChannelName);
     if (channel) [[BXEmulator currentEmulator] _renderMIDIOutputToChannel: channel frames: numFrames];
 }
 
 
-- (MixerChannel *) _MIDIMixerChannel
+- (mixer_channel_t) _MIDIMixerChannel
 {
     return MIXER_FindChannel(BXMIDIChannelName);
 }
 
-- (MixerChannel *) _addMIDIMixerChannelWithSampleRate: (NSUInteger)sampleRate
+- (mixer_channel_t) _addMIDIMixerChannelWithSampleRate: (NSUInteger)sampleRate
 {
-    MixerChannel *channel = [self _MIDIMixerChannel];
+    auto channel = [self _MIDIMixerChannel];
     
     if (channel)
     {
-        channel->SetFreq(sampleRate);
+        channel->SetSampleRate(sampleRate);
     }
     else
     {
-        channel = MIXER_AddChannel(_renderMIDIOutput, sampleRate, BXMIDIChannelName);
+        std::set<ChannelFeature> features;
+        channel = MIXER_AddChannel(_renderMIDIOutput, sampleRate, BXMIDIChannelName, features);
     }
     channel->Enable(true);
     return channel;
@@ -206,15 +208,15 @@ void _renderMIDIOutput(Bitu numFrames)
 
 - (void) _removeMIDIMixerChannel
 {
-    MixerChannel *channel = [self _MIDIMixerChannel];
+    auto channel = [self _MIDIMixerChannel];
     if (channel)
     {
         channel->Enable(false);
-        MIXER_DelChannel(channel);
+        channel.reset();
     }
 }
 
-- (void) _renderMIDIOutputToChannel: (MixerChannel *)channel frames: (NSUInteger)numFrames
+- (void) _renderMIDIOutputToChannel: (std::shared_ptr<MixerChannel>)channel frames: (NSUInteger)numFrames
 {
     id <BXAudioSource> source = (id <BXAudioSource>)self.activeMIDIDevice;
     
@@ -224,7 +226,7 @@ void _renderMIDIOutput(Bitu numFrames)
 }
 
 - (void) _renderOutputFromSource: (id <BXAudioSource>)source
-                       toChannel: (MixerChannel *)channel
+                       toChannel: (std::shared_ptr<MixerChannel>)channel
                           frames: (NSUInteger)numFrames
 {
     NSUInteger sampleRate = 0;
@@ -250,7 +252,7 @@ void _renderMIDIOutput(Bitu numFrames)
 }
 
 - (void) _renderBuffer: (void *)buffer
-             toChannel: (MixerChannel *)channel
+             toChannel: (std::shared_ptr<MixerChannel>)channel
                 frames: (NSUInteger)numFrames
                 format: (BXAudioFormat)format
 {

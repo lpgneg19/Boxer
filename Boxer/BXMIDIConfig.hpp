@@ -12,6 +12,6 @@
 #include "control.h"
 #include "midi.h"
 
-extern void BXMIDIMT32_AddConfigSection(Config *conf);
+extern void BXMIDIMT32_AddConfigSection(const std::unique_ptr<Config> &conf);
 
 #endif /* BXMIDIConfig_hpp */

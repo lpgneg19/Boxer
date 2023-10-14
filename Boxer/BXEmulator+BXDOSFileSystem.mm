@@ -41,7 +41,6 @@ BXDriveGeometry BXCDROMGeometry			= {2048, 1, 65535, 0};		//~650MB, no free spac
 
 //Defined in dos_files.cpp
 extern DOS_File * Files[DOS_FILES];
-extern DOS_Drive * Drives[DOS_DRIVES];
 
 //Defined in dos_mscdex.cpp
 void MSCDEX_SetCDInterface(int intNr, int forceCD);
@@ -1107,7 +1106,7 @@ void MSCDEX_SetCDInterface(int intNr, int forceCD);
 	//If the path couldn't be encoded, don't attempt to go further
 	if (!drivePath) return nil;
 	
-	fatDrive *drive = new fatDrive(drivePath, 0, 0, 0, 0, 0);
+	fatDrive *drive = new fatDrive(drivePath, 0, 0, 0, 0, 0, false);
 	if (!drive || !drive->created_successfully)
     {
         delete drive;

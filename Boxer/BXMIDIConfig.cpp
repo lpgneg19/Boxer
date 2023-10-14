@@ -61,7 +61,7 @@ static void init_mt32_dosbox_settings(Section_prop &sec_prop)
     Pint->Set_help("MT-32 reverb level");
 }
 
-void BXMIDIMT32_AddConfigSection(Config *conf)
+void BXMIDIMT32_AddConfigSection(const std::unique_ptr<Config> &conf)
 {
     assert(conf);
     Section_prop *sec_prop = conf->AddSection_prop("mt32", &mt32_init);
