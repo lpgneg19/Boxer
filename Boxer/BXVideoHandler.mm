@@ -378,10 +378,11 @@
 	
 	
 	//Finally, apply the values to DOSBox
-	render.aspect		= NO; //We apply our own aspect correction separately
-	render.scale.forced	= YES;
+    //TODO: fix/update this!
+//	render.aspect		= NO; //We apply our own aspect correction separately
+//	render.scale.forced	= YES;
 	render.scale.size	= (Bitu)filterScale;
-	render.scale.op		= (scalerOperation_t)activeType;
+//	render.scale.op		= (scalerOperation_t)activeType;
     
     
     //While we're here, sync up the CGA and hercules color modes if appropriate

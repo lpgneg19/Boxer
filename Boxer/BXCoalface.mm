@@ -113,13 +113,19 @@ void boxer_setShader(const ShaderInfo& shader_info, const std::string& shader_so
     //TODO: implement!
 }
 
-Bitu boxer_prepareForFrameSize(Bitu width, Bitu height, Bitu gfx_flags, double scalex, double scaley, GFX_CallBack_t callback, double pixel_aspect)
+Bitu boxer_prepareForFrameSize(const int width, const int height,
+                               const Fraction& render_pixel_aspect_ratio, const uint8_t flags,
+                               const VideoMode& video_mode, GFX_CallBack_t callback)
 {
 	BXEmulator *emulator = [BXEmulator currentEmulator];
+    
+    const bool double_width  = flags & GFX_DBL_W;
+    const bool double_height = flags & GFX_DBL_H;
 	
 	NSSize outputSize	= NSMakeSize((CGFloat)width, (CGFloat)height);
-	NSSize scale		= NSMakeSize((CGFloat)scalex, (CGFloat)scaley);
+	NSSize scale		= NSMakeSize(double_width ? 2 : 1, double_height ? 2 : 1);
 	[[emulator videoHandler] prepareForOutputSize: outputSize atScale: scale withCallback: callback];
+    //TODO: store callback!
 	
 	return GFX_CAN_32;
 }
@@ -631,6 +637,97 @@ const char *DOSBOX_GetDetailedVersion() noexcept
     return "Boxer-build";
 }
 
+#pragma mark - to work on
+
+void GFX_CenterMouse()
+{
+//    assert(sdl.window);
+//
+//    int width  = 0;
+//    int height = 0;
+//
+//#if defined(WIN32) && !SDL_VERSION_ATLEAST(2, 28, 1)
+//    const auto window_canvas_size = get_canvas_size(sdl.rendering_backend);
+//
+//    width  = window_canvas_size.w;
+//    height = window_canvas_size.h;
+//#else
+//    SDL_GetWindowSize(sdl.window, &width, &height);
+//#endif
+//
+//    SDL_WarpMouseInWindow(sdl.window, width / 2, height / 2);
+}
+
+SDL_Rect GFX_CalcViewport(const int canvas_width, const int canvas_height,
+                          const int draw_width, const int draw_height,
+                          const Fraction& render_pixel_aspect_ratio)
+{
+    return SDL_Rect();
+}
+
+void GFX_RefreshTitle()
+{
+//    constexpr int8_t refresh_cycle_count = -1;
+//    GFX_SetTitle(refresh_cycle_count);
+}
+
+SDL_Rect GFX_GetCanvasSize()
+{
+//    return get_canvas_size(sdl.rendering_backend);
+    return SDL_Rect();
+}
+
+
+void GFX_SetMouseHint(const MouseHint hint_id)
+{
+    
+}
+
+void GFX_SetMouseCapture(const bool requested_capture)
+{
+    
+}
+
+void GFX_SetMouseRawInput(const bool requested_raw_input)
+{
+    
+}
+
+void GFX_SetMouseVisibility(const bool requested_visible)
+{
+    
+}
+
+RenderingBackend GFX_GetRenderingBackend()
+{
+    return RenderingBackend::Texture;
+}
+
+InterpolationMode GFX_GetInterpolationMode()
+{
+    return InterpolationMode::NearestNeighbour;
+}
+
+IntegerScalingMode GFX_GetIntegerScalingMode()
+{
+    return IntegerScalingMode::Auto;
+}
+
+void GFX_SetIntegerScalingMode(const IntegerScalingMode mode)
+{
+    
+}
+
+bool GFX_HaveDesktopEnvironment()
+{
+    return true;
+}
+
+void GFX_SetTitle(const int32_t new_num_cycles, const bool is_paused = false)
+{
+    
+}
+
 #pragma mark - No-ops
 
 //These used to be defined in sdl_mapper.cpp, which we no longer include in Boxer.
@@ -639,6 +736,7 @@ void MAPPER_AddHandler(MAPPER_Handler *handler, SDL_Scancode key, uint32_t mods,
 void MAPPER_Init(void) {}
 void MAPPER_StartUp(Section * sec) {}
 void MAPPER_Run(bool pressed) {}
+void MAPPER_AutoTypeStopImmediately() {}
 void MAPPER_RunInternal() {}
 void MAPPER_LosingFocus(void) {}
 void MAPPER_AutoType(std::vector<std::string> &sequence,
