@@ -46,6 +46,10 @@
 #define NSAppKitVersionNumber10_8 1187
 #endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 BOOL isRunningOnLeopard(void);
 BOOL isRunningOnSnowLeopard(void);
 BOOL isRunningOnLion(void);
@@ -57,3 +61,6 @@ BOOL isRunningOnLionOrAbove(void);
 BOOL isRunningOnMountainLionOrAbove(void);
 BOOL isRunningOnMavericksOrAbove(void);
 
+#ifdef __cplusplus
+}
+#endif

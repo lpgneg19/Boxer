@@ -16,3 +16,12 @@
 [submodule "Vendor/speexdsp"]
 	path = Vendor/speexdsp
 	url = https://github.com/xiph/speexdsp.git
+[submodule "Vendor/opusfile"]
+	path = Vendor/opusfile
+	url = https://github.com/xiph/opusfile.git
+[submodule "Vendor/ogg"]
+	path = Vendor/ogg
+	url = https://github.com/xiph/ogg.git
+[submodule "Vendor/opus"]
+	path = Vendor/opus
+	url = https://github.com/xiph/opus.git
