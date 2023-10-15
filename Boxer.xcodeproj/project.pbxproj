@@ -94,6 +94,8 @@
 		55B22BA21A1BD9760007665E /* Bundler.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B22BA11A1BD9760007665E /* Bundler.xcassets */; };
 		55BBA4E9235EE141007AE319 /* NSError+ADBErrorHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBA4E8235EE141007AE319 /* NSError+ADBErrorHelpers.swift */; };
 		55BBA4EA235EE141007AE319 /* NSError+ADBErrorHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBA4E8235EE141007AE319 /* NSError+ADBErrorHelpers.swift */; };
+		55D7B1952ADB821600B83750 /* BootlegCoverArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7B1942ADB821600B83750 /* BootlegCoverArt.swift */; };
+		55D7B1962ADB827B00B83750 /* BootlegCoverArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7B1942ADB821600B83750 /* BootlegCoverArt.swift */; };
 		55DB14E527EDA2020024AE9E /* iohandler_containers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55DB14DC27EDA2020024AE9E /* iohandler_containers.cpp */; };
 		55DB14E627EDA2020024AE9E /* iohandler_containers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55DB14DC27EDA2020024AE9E /* iohandler_containers.cpp */; };
 		55DB14FE27EDA2C70024AE9E /* program_mount_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55DB14E727EDA2C60024AE9E /* program_mount_common.cpp */; };
@@ -230,7 +232,6 @@
 		9F2140FF0F59F28000A5A183 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2140FE0F59F28000A5A183 /* QuartzCore.framework */; };
 		9F24D24D122439E0009C1817 /* BXWelcomeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F24D24C122439E0009C1817 /* BXWelcomeWindowController.m */; };
 		9F24D25012243C9A009C1817 /* BXWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F24D24F12243C9A009C1817 /* BXWelcomeView.m */; };
-		9F2AC6E410EFFE8600CFFF72 /* BXBootlegCoverArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2AC6E310EFFE8600CFFF72 /* BXBootlegCoverArt.m */; };
 		9F2D2F9915B8233800FAE848 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		9F2D2F9C15B8233800FAE848 /* BXSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC35210F56C7B7001811F2 /* BXSession.m */; };
 		9F2D2F9D15B8233800FAE848 /* BXEmulator+BXShell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC35230F56C7B7001811F2 /* BXEmulator+BXShell.mm */; };
@@ -784,7 +785,6 @@
 		9FCB7B0D15B842E000CC7CC7 /* BXStandaloneAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB7B0C15B842E000CC7CC7 /* BXStandaloneAppController.m */; };
 		9FCB7B1015B844AB00CC7CC7 /* BXBaseAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB7B0F15B844AA00CC7CC7 /* BXBaseAppController.m */; };
 		9FCB7B1115B844AB00CC7CC7 /* BXBaseAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB7B0F15B844AA00CC7CC7 /* BXBaseAppController.m */; };
-		9FCB7B1215B856A300CC7CC7 /* BXBootlegCoverArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2AC6E310EFFE8600CFFF72 /* BXBootlegCoverArt.m */; };
 		9FCB7B1415B856FC00CC7CC7 /* BXDriveImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBAA6E0134A21A50092BF95 /* BXDriveImport.m */; };
 		9FCB7B1515B8570700CC7CC7 /* BXSimpleDriveImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F44500112AEC0FC00A2D405 /* BXSimpleDriveImport.m */; };
 		9FCB7B1615B8570900CC7CC7 /* BXCDImageImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBAA6BC134A1A430092BF95 /* BXCDImageImport.m */; };
@@ -1186,6 +1186,7 @@
 		55BBA4E8235EE141007AE319 /* NSError+ADBErrorHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+ADBErrorHelpers.swift"; sourceTree = "<group>"; };
 		55BF6F0320210F6000F3FE59 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55C3B28D25A808D8001EE655 /* midi_handler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = midi_handler.h; sourceTree = "<group>"; };
+		55D7B1942ADB821600B83750 /* BootlegCoverArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootlegCoverArt.swift; sourceTree = "<group>"; };
 		55DB14DC27EDA2020024AE9E /* iohandler_containers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = iohandler_containers.cpp; sourceTree = "<group>"; };
 		55DB14E727EDA2C60024AE9E /* program_mount_common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program_mount_common.cpp; sourceTree = "<group>"; };
 		55DB14E827EDA2C60024AE9E /* program_rescan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program_rescan.cpp; sourceTree = "<group>"; };
@@ -1358,7 +1359,6 @@
 		9F24D24F12243C9A009C1817 /* BXWelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXWelcomeView.m; sourceTree = "<group>"; };
 		9F25C1FD1212BB450025CB2C /* BXSessionPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXSessionPrivate.h; sourceTree = "<group>"; };
 		9F2AC6E210EFFE8600CFFF72 /* BXBootlegCoverArt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXBootlegCoverArt.h; sourceTree = "<group>"; };
-		9F2AC6E310EFFE8600CFFF72 /* BXBootlegCoverArt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXBootlegCoverArt.m; sourceTree = "<group>"; usesTabs = 1; };
 		9F2D317215B8233800FAE848 /* Boxer Standalone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boxer Standalone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2D317415B8233900FAE848 /* Boxer Standalone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Boxer Standalone-Info.plist"; sourceTree = "<group>"; };
 		9F348A9D128F004A0034E780 /* BXWelcomeButtonDraggingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXWelcomeButtonDraggingDelegate.h; sourceTree = "<group>"; };
@@ -2795,7 +2795,7 @@
 				9F59DA9D10AEF9E0008DBBC1 /* BXCoverArt.h */,
 				9F59DA9E10AEF9E0008DBBC1 /* BXCoverArt.m */,
 				9F2AC6E210EFFE8600CFFF72 /* BXBootlegCoverArt.h */,
-				9F2AC6E310EFFE8600CFFF72 /* BXBootlegCoverArt.m */,
+				55D7B1942ADB821600B83750 /* BootlegCoverArt.swift */,
 				9F2120F613015653002AB1B7 /* BXShelfArt.h */,
 				9F2120F713015653002AB1B7 /* BXShelfArt.m */,
 			);
@@ -4233,6 +4233,7 @@
 				9F59DAD510AF1042008DBBC1 /* BXProgramPanel.m in Sources */,
 				9F59DEDA10B0159A008DBBC1 /* BXProgramPanelController.m in Sources */,
 				9FDB601710C0707F00C15CF4 /* BXDockTileController.m in Sources */,
+				55D7B1952ADB821600B83750 /* BootlegCoverArt.swift in Sources */,
 				9FDAD87F10C182B3004EA7D0 /* BXCoverArtWell.m in Sources */,
 				9FD011BD10C2A02F00670CE1 /* BXGameboxPanelController.m in Sources */,
 				9F76D1B910CA9DFB00C3B081 /* NSWorkspace+ADBFileTypes.m in Sources */,
@@ -4241,7 +4242,6 @@
 				9F44E5E410D17A4C0081B8D2 /* BXEmulator+BXPaste.mm in Sources */,
 				9F61FC8510DE3F7F00F3896C /* BXGameProfile.m in Sources */,
 				9F438C5810E3D8C8007D30AD /* BXScroller.m in Sources */,
-				9F2AC6E410EFFE8600CFFF72 /* BXBootlegCoverArt.m in Sources */,
 				9F9A4CA110F67D2C00E61965 /* BXPreferencesController.m in Sources */,
 				9F9A4CA910F6824B00E61965 /* BXFilterGallery.m in Sources */,
 				9FD5481411047E420041E1E7 /* BXDrivesInUseAlert.m in Sources */,
@@ -4761,6 +4761,7 @@
 				9F2D307615B8233800FAE848 /* ems.cpp in Sources */,
 				55DB14FF27EDA2C70024AE9E /* program_mount_common.cpp in Sources */,
 				9F2D307715B8233800FAE848 /* int10.cpp in Sources */,
+				55D7B1962ADB827B00B83750 /* BootlegCoverArt.swift in Sources */,
 				9F2D307815B8233800FAE848 /* int10_char.cpp in Sources */,
 				9F2D307915B8233800FAE848 /* int10_memory.cpp in Sources */,
 				9F2D307A15B8233800FAE848 /* int10_misc.cpp in Sources */,
@@ -4853,7 +4854,6 @@
 				9F2D30D315B8233800FAE848 /* NSKeyedArchiver+ADBArchivingAdditions.m in Sources */,
 				9FCB7B0D15B842E000CC7CC7 /* BXStandaloneAppController.m in Sources */,
 				9FCB7B1115B844AB00CC7CC7 /* BXBaseAppController.m in Sources */,
-				9FCB7B1215B856A300CC7CC7 /* BXBootlegCoverArt.m in Sources */,
 				9FCB7B1415B856FC00CC7CC7 /* BXDriveImport.m in Sources */,
 				9FCB7B1515B8570700CC7CC7 /* BXSimpleDriveImport.m in Sources */,
 				9FCB7B1615B8570900CC7CC7 /* BXCDImageImport.m in Sources */,
