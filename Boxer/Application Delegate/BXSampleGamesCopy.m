@@ -60,7 +60,7 @@
                 {
                     NSImage *iconForGame = [CoverArt coverArtWithImage: image];
                     
-                    [[NSWorkspace sharedWorkspace] setIcon: iconForGame forFile: destinationURL.path options: 0];
+                    [[NSWorkspace sharedWorkspace] setIcon: iconForGame forFile: destinationURL.path options: NSExcludeQuickDrawElementsIconCreationOption];
                 }
             }
         }
