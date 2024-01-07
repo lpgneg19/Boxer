@@ -124,6 +124,7 @@
 		55DB156727EDA4B10024AE9E /* loguru.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55DB153727EDA4B10024AE9E /* loguru.cpp */; };
 		55DEBB23201E875600F1092F /* pci_bus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55DEBB21201E875500F1092F /* pci_bus.cpp */; };
 		55E21B4D23FF50E600D53932 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E21B4C23FF50E500D53932 /* libz.tbd */; };
+		55E36CAC2B4A8307004E9BBE /* CoverArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E36CAB2B4A8307004E9BBE /* CoverArt.swift */; };
 		55E6A0B61C00C86200285593 /* MT32Emu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E6A0B51C00C81E00285593 /* MT32Emu.framework */; };
 		55E6A0B71C00C86200285593 /* MT32Emu.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 55E6A0B51C00C81E00285593 /* MT32Emu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		55E6A0BA1C00C86200285593 /* DDHidLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E6A0AC1C00C80A00285593 /* DDHidLib.framework */; };
@@ -551,7 +552,6 @@
 		9F596502163D8D910094FD6B /* BXSession+BXPrinting.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F596501163D8D910094FD6B /* BXSession+BXPrinting.m */; };
 		9F596503163D8D910094FD6B /* BXSession+BXPrinting.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F596501163D8D910094FD6B /* BXSession+BXPrinting.m */; };
 		9F59DA1810AE22D8008DBBC1 /* NSBezierPath+MCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F59DA1710AE22D8008DBBC1 /* NSBezierPath+MCAdditions.m */; };
-		9F59DA9F10AEF9E0008DBBC1 /* BXCoverArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F59DA9E10AEF9E0008DBBC1 /* BXCoverArt.m */; };
 		9F59DAD510AF1042008DBBC1 /* BXProgramPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F59DAD410AF1042008DBBC1 /* BXProgramPanel.m */; };
 		9F59DEDA10B0159A008DBBC1 /* BXProgramPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F59DED910B0159A008DBBC1 /* BXProgramPanelController.m */; };
 		9F5F12C615ADCE74007A070F /* NSKeyedArchiver+ADBArchivingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F12C515ADCE74007A070F /* NSKeyedArchiver+ADBArchivingAdditions.m */; };
@@ -1221,6 +1221,7 @@
 		55DEBB21201E875500F1092F /* pci_bus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pci_bus.cpp; sourceTree = "<group>"; };
 		55DEBB22201E875500F1092F /* pci_devices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pci_devices.h; sourceTree = "<group>"; };
 		55E21B4C23FF50E500D53932 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		55E36CAB2B4A8307004E9BBE /* CoverArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverArt.swift; sourceTree = "<group>"; };
 		55E6A09D1C00C80A00285593 /* DDHidLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DDHidLib.xcodeproj; path = Vendor/DDHidLib/DDHidLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		55E6A0AD1C00C81D00285593 /* Boxer-MT32Emu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Boxer-MT32Emu.xcodeproj"; path = "Vendor/MT32Emu/Boxer-MT32Emu.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		55EA6CF425D4919E00945236 /* BXMIDIConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BXMIDIConfig.cpp; sourceTree = "<group>"; };
@@ -1477,8 +1478,6 @@
 		9F596501163D8D910094FD6B /* BXSession+BXPrinting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BXSession+BXPrinting.m"; sourceTree = "<group>"; };
 		9F59DA1610AE22D8008DBBC1 /* NSBezierPath+MCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+MCAdditions.h"; sourceTree = "<group>"; };
 		9F59DA1710AE22D8008DBBC1 /* NSBezierPath+MCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+MCAdditions.m"; sourceTree = "<group>"; };
-		9F59DA9D10AEF9E0008DBBC1 /* BXCoverArt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXCoverArt.h; sourceTree = "<group>"; };
-		9F59DA9E10AEF9E0008DBBC1 /* BXCoverArt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXCoverArt.m; sourceTree = "<group>"; };
 		9F59DAD310AF1042008DBBC1 /* BXProgramPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXProgramPanel.h; sourceTree = "<group>"; };
 		9F59DAD410AF1042008DBBC1 /* BXProgramPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXProgramPanel.m; sourceTree = "<group>"; };
 		9F59DED810B0159A008DBBC1 /* BXProgramPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXProgramPanelController.h; sourceTree = "<group>"; };
@@ -2792,8 +2791,7 @@
 		9F2AC6DB10EFFE2C00CFFF72 /* Artwork */ = {
 			isa = PBXGroup;
 			children = (
-				9F59DA9D10AEF9E0008DBBC1 /* BXCoverArt.h */,
-				9F59DA9E10AEF9E0008DBBC1 /* BXCoverArt.m */,
+				55E36CAB2B4A8307004E9BBE /* CoverArt.swift */,
 				9F2AC6E210EFFE8600CFFF72 /* BXBootlegCoverArt.h */,
 				55D7B1942ADB821600B83750 /* BootlegCoverArt.swift */,
 				9F2120F613015653002AB1B7 /* BXShelfArt.h */,
@@ -4229,7 +4227,6 @@
 				9FA85CD510A357A600E6457F /* BXSession+BXFileManagement.m in Sources */,
 				9F544A8010AB44C40030FED5 /* BXThemes.m in Sources */,
 				9F59DA1810AE22D8008DBBC1 /* NSBezierPath+MCAdditions.m in Sources */,
-				9F59DA9F10AEF9E0008DBBC1 /* BXCoverArt.m in Sources */,
 				9F59DAD510AF1042008DBBC1 /* BXProgramPanel.m in Sources */,
 				9F59DEDA10B0159A008DBBC1 /* BXProgramPanelController.m in Sources */,
 				9FDB601710C0707F00C15CF4 /* BXDockTileController.m in Sources */,
@@ -4248,6 +4245,7 @@
 				8F97935824C1359B0054F84D /* BGThemeManager.m in Sources */,
 				9F42D9DF1172481800AC6F1F /* BXStatusBarController.m in Sources */,
 				55F643F925F41DF5009E1800 /* rwqueue.cpp in Sources */,
+				55E36CAC2B4A8307004E9BBE /* CoverArt.swift in Sources */,
 				9FDCA790118F2B7900E2FD74 /* BXCoalface.mm in Sources */,
 				9FEF98011191E1EF002024DF /* BXEmulatedMouse.mm in Sources */,
 				9F765649119403520082A06A /* BXInputController.m in Sources */,
