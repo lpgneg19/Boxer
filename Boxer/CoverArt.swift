@@ -197,7 +197,6 @@ private func imageHasTransparency(_ image: NSImage) -> Bool {
 	//Only bother testing transparency if the image has an alpha channel
 	if image.representations.last?.hasAlpha ?? false {
 		if let bir = image.representations.last as? NSBitmapImageRep {
-			let imageSize = bir.size
 			let imageWidth = bir.pixelsWide
 			let imageHigh = bir.pixelsHigh
 			
