@@ -62,7 +62,7 @@ class CoverArt: NSObject {
 	
 	//	@objc(drawInRect:)
 	/// Draws the source image as cover art into the specified frame in the current graphics context.
-	func draw(in frame: NSRect) {
+	private func draw(in frame: NSRect) {
 		//Switch to high-quality interpolation before we begin, and restore it once we're done
 		//(this is not stored by saveGraphicsState/restoreGraphicsState unfortunately)
 		let oldInterpolation = NSGraphicsContext.current?.imageInterpolation ?? .`default`
@@ -130,10 +130,10 @@ class CoverArt: NSObject {
 	//	@objc(representationForSize:scale:)
 	/// Returns a cover art image representation from the source image rendered at the specified size and scale.
 	private func representation(for iconSize: NSSize, scale: CGFloat = 1) -> NSImageRep! {
-		var frame = NSRect(origin: .zero, size: iconSize)
+		let frame = NSRect(origin: .zero, size: iconSize)
 		
 		//Create a new empty canvas to draw into
-		let rep = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(iconSize.width * scale), pixelsHigh: Int(iconSize.height * scale), bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: .calibratedRGB, bytesPerRow: 0, bitsPerPixel: 32)!
+		let rep = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(iconSize.width * scale), pixelsHigh: Int(iconSize.height * scale), bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: .calibratedRGB, bytesPerRow: 0, bitsPerPixel: 32)!.retagging(with: .sRGB)!
 		rep.size = iconSize
 		
 		NSGraphicsContext.saveGraphicsState()
@@ -152,7 +152,7 @@ class CoverArt: NSObject {
 	}
 
 	/// Returns a cover art image rendered from the source image to 512, 256, 128 and 32x32 sizes,
-	/// suitable for use as an OS X icon.
+	/// suitable for use as a macOS icon.
 	func coverArt() -> NSImage? {
 		//If our source image could not be read, then bail out.
 		guard let image = sourceImage, image.isValid else {
@@ -161,7 +161,7 @@ class CoverArt: NSObject {
 		
 		//If our source image already has transparency data,
 		//then assume that it already has effects of its own applied and don't process it.
-		if type(of: self).imageHasTransparency(image) {
+		if imageHasTransparency(image) {
 			return image
 		}
 		
@@ -178,7 +178,7 @@ class CoverArt: NSObject {
 	}
 	
 	/// Returns a cover art image rendered from the specified image to 512, 256, 128 and 32x32 sizes,
-	/// suitable for use as an OS X icon.
+	/// suitable for use as a macOS icon.
 	///
 	/// Note that this returns an NSImage directly, not a `CoverArt` instance.
 	@objc(coverArtWithImage:)
@@ -186,15 +186,38 @@ class CoverArt: NSObject {
 		let generator = self.init(sourceImage: image)
 		return generator.coverArt()
 	}
-	
-	/// Returns whether the specified image appears to contain actual transparent/translucent pixels.
-	/// This is distinct from whether it has an alpha channel, as the alpha channel may go unused
-	/// (e.g. in an opaque image saved as 32-bit PNG.)
-	private class func imageHasTransparency(_ image: NSImage) -> Bool {
-		var hasTranslucentPixels = false
+}
 
-		//Only bother testing transparency if the image has an alpha channel
-		if image.representations.last?.hasAlpha ?? false {
+/// Returns whether the specified image appears to contain actual transparent/translucent pixels.
+/// This is distinct from whether it has an alpha channel, as the alpha channel may go unused
+/// (e.g. in an opaque image saved as 32-bit PNG.)
+private func imageHasTransparency(_ image: NSImage) -> Bool {
+	var hasTranslucentPixels = false
+
+	//Only bother testing transparency if the image has an alpha channel
+	if image.representations.last?.hasAlpha ?? false {
+		if let bir = image.representations.last as? NSBitmapImageRep {
+			let imageSize = bir.size
+			let imageWidth = bir.pixelsWide
+			let imageHigh = bir.pixelsHigh
+			
+			//Test 5 pixels in an X pattern: each corner and right in the center of the image.
+			let testPoints: [(x: Int, y: Int)] = [
+				(0,					0),
+				(imageWidth - 1,	0),
+				(0,					imageHigh - 1),
+				(imageWidth - 1,	imageHigh - 1),
+				(imageWidth / 2,	imageHigh / 2)
+			]
+			
+			for (x, y) in testPoints {
+				//If any of the pixels appears to be translucent, then stop looking further.
+				if let pixel = bir.colorAt(x: x, y: y), pixel.alphaComponent < 0.9 {
+					hasTranslucentPixels = true
+					break
+				}
+			}
+		} else {
 			let imageSize = image.size
 			
 			//Test 5 pixels in an X pattern: each corner and right in the center of the image.
@@ -205,7 +228,7 @@ class CoverArt: NSObject {
 				NSMakePoint(imageSize.width - 1.0,	imageSize.height - 1.0),
 				NSMakePoint(imageSize.width * 0.5,	imageSize.height * 0.5)
 			]
-							
+			
 			image.lockFocus()
 			for point in testPoints {
 				//If any of the pixels appears to be translucent, then stop looking further.
@@ -216,7 +239,7 @@ class CoverArt: NSObject {
 			}
 			image.unlockFocus()
 		}
-
-		return hasTranslucentPixels
 	}
+
+	return hasTranslucentPixels
 }

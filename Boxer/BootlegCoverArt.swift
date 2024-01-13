@@ -38,7 +38,8 @@ class JewelCase : NSObject, BXBootlegCoverArt {
 		
 		if !textRegion.isEmpty {
 			let textAttributes = type(of: self).textAttributes(for: iconSize)
-			title.draw(with: textRegion, attributes: textAttributes)
+			(title as NSString).draw(in: textRegion, withAttributes: textAttributes)
+			//TODO: use title.draw(with: textRegion, attributes: textAttributes)
 		}
 		
 		if let topLayer {
@@ -50,7 +51,7 @@ class JewelCase : NSObject, BXBootlegCoverArt {
 		let frame = NSRect(origin: .zero, size: iconSize)
 		
 		//Create a new empty canvas to draw into
-		let rep = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(iconSize.width*scale), pixelsHigh: Int(iconSize.height*scale), bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: .calibratedRGB, bytesPerRow: 0, bitsPerPixel: 32)!
+		let rep = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(iconSize.width*scale), pixelsHigh: Int(iconSize.height*scale), bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: .calibratedRGB, bytesPerRow: 0, bitsPerPixel: 32)!.retagging(with: .sRGB)!
 		rep.size = iconSize
 		
 		NSGraphicsContext.saveGraphicsState()

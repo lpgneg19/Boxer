@@ -379,7 +379,7 @@ NSString * const BXGameboxErrorDomain = @"BXGameboxErrorDomain";
 
 - (void) setCoverArt: (NSImage *)image
 {
-	[[NSWorkspace sharedWorkspace] setIcon: image forFile: self.bundlePath options: 0];
+	[[NSWorkspace sharedWorkspace] setIcon: image forFile: self.bundlePath options: NSExcludeQuickDrawElementsIconCreationOption];
 }
 
 - (NSDictionary *) gameInfo
