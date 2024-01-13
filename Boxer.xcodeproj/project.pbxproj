@@ -2108,7 +2108,7 @@
 		F192BC7F28C7FE0900B8D48D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F192BC8028C7FE0A00B8D48D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F192BC8128C7FE0A00B8D48D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/DOSBox.strings; sourceTree = "<group>"; };
-		F192BC8228C7FE0A00B8D48D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Shell.strings; sourceTree = "<group>"; };
+		F192BC8228C7FE0A00B8D48D /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Shell.strings; sourceTree = "<group>"; };
 		F192BC8328C7FE0A00B8D48D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Configuration.strings; sourceTree = "<group>"; };
 		F192BC8428C7FE0A00B8D48D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
