@@ -1400,7 +1400,7 @@ NSString * const BXDOSWindowFullscreenSizeFormat = @"Fullscreen size for %@";
 - (void) windowDidChangeBackingProperties: (NSNotification *)notification
 {
     if ([self.renderingView respondsToSelector: _cmd])
-        [self.renderingView performSelector: _cmd withObject: notification];
+        [self.renderingView windowDidChangeBackingProperties: notification];
 }
 
 //Return an appropriate "standard" (zoomed) frame for the window given the currently available screen space.
