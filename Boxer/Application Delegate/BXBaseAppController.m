@@ -171,7 +171,7 @@
     
     [super closeAllDocumentsWithDelegate: self
                      didCloseAllSelector: @selector(documentController:didCloseAll:contextInfo:)
-                             contextInfo: CFBridgingRetain(closeHandler)];
+                             contextInfo: (void *)CFBridgingRetain(closeHandler)];
 }
 
 - (void) documentController: (NSDocumentController *)docController
