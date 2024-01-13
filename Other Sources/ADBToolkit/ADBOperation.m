@@ -194,16 +194,20 @@ NSString * const ADBOperationIndeterminateKey	= @"ADBOperationIndeterminateKey";
 	
 	if ([self.delegate respondsToSelector: selector])
 	{
-		if (self.notifiesOnMainThread)
+		if (self.notifiesOnMainThread) {
 			[(id)self.delegate performSelectorOnMainThread: selector withObject: notification waitUntilDone: NO];
-		else
-			[self.delegate performSelector: selector withObject: notification];
+		} else {
+			IMP imp = [(NSObject*)self.delegate methodForSelector: selector];
+			void (*func)(id, SEL, NSNotification*) = (void *)imp;
+			func(self.delegate, selector, notification);
+		}
 	}
 	
-	if (self.notifiesOnMainThread)
-		[center performSelectorOnMainThread: @selector(postNotification:) withObject: notification waitUntilDone: NO];		
-	else
+	if (self.notifiesOnMainThread) {
+		[center performSelectorOnMainThread: @selector(postNotification:) withObject: notification waitUntilDone: NO];
+	} else {
 		[center postNotification: notification];
+	}
 }
 
 @end

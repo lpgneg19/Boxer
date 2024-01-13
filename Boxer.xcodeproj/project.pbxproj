@@ -3468,7 +3468,7 @@
 			);
 			path = ADBToolkit;
 			sourceTree = "<group>";
-			usesTabs = 0;
+			usesTabs = 1;
 		};
 		9F81CFB613EEA3D7008F0265 /* Disk Images */ = {
 			isa = PBXGroup;

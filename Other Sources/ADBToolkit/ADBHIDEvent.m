@@ -257,8 +257,11 @@
 {
 	SEL selector = [self.class delegateMethodForHIDEvent: event];
 	
-	if (selector && [self respondsToSelector: selector])
-		[self performSelector: selector withObject: event];
+	if (selector && [self respondsToSelector: selector]) {
+		IMP imp = [self methodForSelector:selector];
+		void (*func)(id, SEL, ADBHIDEvent*) = (void *)imp;
+		func(self, selector, event);
+	}
 }
 
 #pragma mark - DDHidMouseDelegate methods
