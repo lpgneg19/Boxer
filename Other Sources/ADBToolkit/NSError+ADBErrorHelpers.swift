@@ -25,7 +25,7 @@ private let cxxPrefixes = ["_Z"]
 private let ADBCallstackSymbolPattern = #"^\d+\s+(\S+)\s+(0x[a-fA-F0-9]+)\s+(.+)\s+\+\s+(\d+)$"#
 @available(macOS 13.0, *)
 private let ADBCallstackSymbolPatternNew = Regex {
-    /^/
+	Anchor.startOfLine
     OneOrMore(.digit)
     OneOrMore(.whitespace)
     Capture {
@@ -34,27 +34,19 @@ private let ADBCallstackSymbolPatternNew = Regex {
     OneOrMore(.whitespace)
     "0x"
     Capture {
-        OneOrMore {
-            CharacterClass(
-                ("a"..."f"),
-                ("A"..."F"),
-                ("0"..."9")
-            )
-        }
-    }
+		OneOrMore(.hexDigit)
+	} transform: { UInt64($0, radix: 16) }
     OneOrMore(.whitespace)
     Capture {
-        OneOrMore {
-            /./
-        }
+		OneOrMore (.anyNonNewline)
     }
     OneOrMore(.whitespace)
     "+"
     OneOrMore(.whitespace)
     Capture {
         OneOrMore(.digit)
-    }
-    /$/
+	} transform: { Int64($0) }
+	Anchor.endOfLine
 }
 
 extension NSException {
@@ -105,12 +97,11 @@ extension NSException {
                     return [.rawSymbol: symbol]
                 }
                 let libraryName = String(captures.1)
-                let hexAddress = captures.2
                 let rawSymbolName = captures.3
-                let offsetString = captures.4
+				let rawSymbolNameStr = String(rawSymbolName)
                 
-                guard let address = UInt64(hexAddress, radix: 16),
-                      let offset = Int64(offsetString) else {
+                guard let address = captures.2,
+                      let offset = captures.4 else {
                     //If the string couldn't be parsed, make an effort to provide *something* back
                     //this should not happen!
                     return [.rawSymbol: symbol]
@@ -120,22 +111,22 @@ extension NSException {
                 var demangledSymbolName: String?
                 switch symbolType {
                 case .none:
-                    demangledSymbolName = String(rawSymbolName)
+                    demangledSymbolName = rawSymbolNameStr
                     
                 case .cPlusPlus:
-                    demangledSymbolName = NSException.demangledCPlusPlusFunctionName(String(rawSymbolName))
+                    demangledSymbolName = NSException.demangledCPlusPlusFunctionName(rawSymbolNameStr)
                     
                 case .swift:
                     demangledSymbolName = NSException.demangledSwiftFunctionName(rawSymbolName)
                 }
                 if demangledSymbolName == nil {
-                    demangledSymbolName = String(rawSymbolName)
+                    demangledSymbolName = rawSymbolNameStr
                 }
                 
                 return [
                     .rawSymbol:                    symbol,
                     .libraryName:                  libraryName,
-                    .functionName:                 String(rawSymbolName),
+                    .functionName:                 rawSymbolNameStr,
                     .humanReadableFunctionName:    demangledSymbolName!,
                     .address:                      address,
                     .symbolOffset:                 offset]

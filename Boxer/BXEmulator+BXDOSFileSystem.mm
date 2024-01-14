@@ -1710,7 +1710,7 @@ void MSCDEX_SetCDInterface(int intNr, int forceCD);
     NSURL *localFileURL = [NSURL URLFromFileSystemRepresentation: path];
     
     return [filesystem enumeratorAtFileURL: localFileURL
-                includingPropertiesForKeys: [NSArray arrayWithObjects: NSURLIsDirectoryKey, NSURLNameKey, nil]
+                includingPropertiesForKeys: @[NSURLIsDirectoryKey, NSURLNameKey]
                                    options: NSDirectoryEnumerationSkipsSubdirectoryDescendants
                               errorHandler: NULL];
 }
