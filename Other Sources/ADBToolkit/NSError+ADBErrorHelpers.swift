@@ -35,7 +35,7 @@ private let ADBCallstackSymbolPatternNew = Regex {
     "0x"
     Capture {
 		OneOrMore(.hexDigit)
-	} transform: { UInt64($0, radix: 16) }
+	} transform: { UInt64($0, radix: 16)! }
     OneOrMore(.whitespace)
     Capture {
 		OneOrMore (.anyNonNewline)
@@ -45,7 +45,7 @@ private let ADBCallstackSymbolPatternNew = Regex {
     OneOrMore(.whitespace)
     Capture {
         OneOrMore(.digit)
-	} transform: { Int64($0) }
+	} transform: { Int64($0)! }
 	Anchor.endOfLine
 }
 
@@ -79,6 +79,8 @@ extension NSException {
         return .none
     }
     
+	/// Takes a mangled Swift function name produced by `callstackSymbols` or `backtrace_symbols` and returns a demangled version.
+	/// Returns `nil` if the provided string could not be resolved (which will be the case if it is a C, Objective C, or C++ symbol name).
     private static func demangledSwiftFunctionName<A>(_ functionName: A) -> String? where A : StringProtocol {
         guard let parsed = try? parseMangledSwiftSymbol(functionName.unicodeScalars, isType: true) else {
             return nil
@@ -97,16 +99,11 @@ extension NSException {
                     return [.rawSymbol: symbol]
                 }
                 let libraryName = String(captures.1)
+				let address = captures.2
                 let rawSymbolName = captures.3
 				let rawSymbolNameStr = String(rawSymbolName)
-                
-                guard let address = captures.2,
-                      let offset = captures.4 else {
-                    //If the string couldn't be parsed, make an effort to provide *something* back
-                    //this should not happen!
-                    return [.rawSymbol: symbol]
-                }
-                
+				let offset = captures.4
+				
                 let symbolType = NSException.possibleMangledType(from: rawSymbolName)
                 var demangledSymbolName: String?
                 switch symbolType {
