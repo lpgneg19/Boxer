@@ -28,43 +28,6 @@
 #import "ADBAppKitVersionHelpers.h"
 
 
-BOOL isRunningOnLeopard(void)
-{
-	double appKitVersion = floor(NSAppKitVersionNumber);
-	return (appKitVersion <= NSAppKitVersionNumber10_5);	
-}
-
-BOOL isRunningOnSnowLeopard(void)
-{
-	double appKitVersion = floor(NSAppKitVersionNumber);
-	return (appKitVersion <= NSAppKitVersionNumber10_6 && appKitVersion > NSAppKitVersionNumber10_5);	
-}
-
-BOOL isRunningOnLion(void)
-{
-	double appKitVersion = floor(NSAppKitVersionNumber);
-	return (appKitVersion <= NSAppKitVersionNumber10_7 && appKitVersion > NSAppKitVersionNumber10_6);
-}
-
-BOOL isRunningOnMountainLion(void)
-{
-	double appKitVersion = floor(NSAppKitVersionNumber);
-	return (appKitVersion <= NSAppKitVersionNumber10_8 && appKitVersion > NSAppKitVersionNumber10_7);
-}
-/*
-BOOL isRunningOnMavericks()
-{
-	double appKitVersion = floor(NSAppKitVersionNumber);
-	return (appKitVersion <= NSAppKitVersionNumber10_9 && appKitVersion > NSAppKitVersionNumber10_8);
-}
-*/
-
-BOOL isRunningOnSnowLeopardOrAbove(void)
-{
-	double appKitVersion = floor(NSAppKitVersionNumber);
-	return (appKitVersion > NSAppKitVersionNumber10_5);
-}
-
 BOOL isRunningOnLionOrAbove(void)
 {
 	double appKitVersion = floor(NSAppKitVersionNumber);
