@@ -465,7 +465,7 @@
     {
         case BXDriveCDROM:
             if (@available(macOS 13.0, *)) {
-                icon = [NSImage imageWithSystemSymbolName: @"opticaldisc.fill" accessibilityDescription: nil];
+                icon = [NSImage imageWithSystemSymbolName: @"opticaldisc.fill" accessibilityDescription: @"CD-ROM"];
             } else {
                 icon = [NSImage imageNamed: @"CDROMTemplate"];
             }
@@ -475,7 +475,7 @@
             break;
         default:
             if (@available(macOS 11.0, *)) {
-                icon = [NSImage imageWithSystemSymbolName: @"internaldrive.fill" accessibilityDescription: nil];
+                icon = [NSImage imageWithSystemSymbolName: @"internaldrive.fill" accessibilityDescription: @"Hard Drive"];
             } else {
                 icon = [NSImage imageNamed: @"HardDiskTemplate"];
             }

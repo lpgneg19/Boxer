@@ -25,7 +25,7 @@ private let cxxPrefixes = ["_Z"]
 private let ADBCallstackSymbolPattern = #"^\d+\s+(\S+)\s+(0x[a-fA-F0-9]+)\s+(.+)\s+\+\s+(\d+)$"#
 @available(macOS 13.0, *)
 private let ADBCallstackSymbolPatternNew = Regex {
-    /^/
+	Anchor.startOfLine
     OneOrMore(.digit)
     OneOrMore(.whitespace)
     Capture {
@@ -34,31 +34,23 @@ private let ADBCallstackSymbolPatternNew = Regex {
     OneOrMore(.whitespace)
     "0x"
     Capture {
-        OneOrMore {
-            CharacterClass(
-                ("a"..."f"),
-                ("A"..."F"),
-                ("0"..."9")
-            )
-        }
-    }
+		OneOrMore(.hexDigit)
+	} transform: { UInt64($0, radix: 16)! }
     OneOrMore(.whitespace)
     Capture {
-        OneOrMore {
-            /./
-        }
+		OneOrMore (.anyNonNewline)
     }
     OneOrMore(.whitespace)
     "+"
     OneOrMore(.whitespace)
     Capture {
         OneOrMore(.digit)
-    }
-    /$/
+	} transform: { Int64($0)! }
+	Anchor.endOfLine
 }
 
 extension NSException {
-    private static func possibleMangledType(from: String) -> MangledFunctionType {
+    private static func possibleMangledType<A>(from: A) -> MangledFunctionType where A : StringProtocol {
         //Short-circuit if there's less than two characters.
         guard from.count > 2 else {
             return .none
@@ -78,16 +70,19 @@ extension NSException {
             }
         }
         if trimFirst {
-            var tmpFrom = from
-            tmpFrom.removeFirst()
+            let tmpInd = from.index(from.startIndex, offsetBy: 1)
+            let tmpFrom = from[tmpInd..<from.endIndex]
+//            tmpFrom.removeFirst()
             return possibleMangledType(from: tmpFrom)
         }
         
         return .none
     }
     
-    private static func demangledSwiftFunctionName(_ functionName: String) -> String? {
-        guard let parsed = try? parseMangledSwiftSymbol(functionName, isType: true) else {
+	/// Takes a mangled Swift function name produced by `callstackSymbols` or `backtrace_symbols` and returns a demangled version.
+	/// Returns `nil` if the provided string could not be resolved (which will be the case if it is a C, Objective C, or C++ symbol name).
+    private static func demangledSwiftFunctionName<A>(_ functionName: A) -> String? where A : StringProtocol {
+        guard let parsed = try? parseMangledSwiftSymbol(functionName.unicodeScalars, isType: true) else {
             return nil
         }
         return parsed.description
@@ -104,37 +99,31 @@ extension NSException {
                     return [.rawSymbol: symbol]
                 }
                 let libraryName = String(captures.1)
-                let hexAddress = captures.2
-                let rawSymbolName = String(captures.3)
-                let offsetString = captures.4
-                
-                guard let address = UInt64(hexAddress, radix: 16),
-                      let offset = Int64(offsetString) else {
-                    //If the string couldn't be parsed, make an effort to provide *something* back
-                    //this should not happen!
-                    return [.rawSymbol: symbol]
-                }
-                
+				let address = captures.2
+                let rawSymbolName = captures.3
+				let rawSymbolNameStr = String(rawSymbolName)
+				let offset = captures.4
+				
                 let symbolType = NSException.possibleMangledType(from: rawSymbolName)
                 var demangledSymbolName: String?
                 switch symbolType {
                 case .none:
-                    demangledSymbolName = rawSymbolName
+                    demangledSymbolName = rawSymbolNameStr
                     
                 case .cPlusPlus:
-                    demangledSymbolName = NSException.demangledCPlusPlusFunctionName(rawSymbolName)
+                    demangledSymbolName = NSException.demangledCPlusPlusFunctionName(rawSymbolNameStr)
                     
                 case .swift:
                     demangledSymbolName = NSException.demangledSwiftFunctionName(rawSymbolName)
                 }
                 if demangledSymbolName == nil {
-                    demangledSymbolName = rawSymbolName
+                    demangledSymbolName = rawSymbolNameStr
                 }
                 
                 return [
                     .rawSymbol:                    symbol,
                     .libraryName:                  libraryName,
-                    .functionName:                 rawSymbolName,
+                    .functionName:                 rawSymbolNameStr,
                     .humanReadableFunctionName:    demangledSymbolName!,
                     .address:                      address,
                     .symbolOffset:                 offset]

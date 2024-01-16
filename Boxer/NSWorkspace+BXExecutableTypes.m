@@ -26,7 +26,6 @@
 
 
 #import "NSWorkspace+BXExecutableTypes.h"
-#import "RegexKitLite.h"
 
 
 #pragma mark -

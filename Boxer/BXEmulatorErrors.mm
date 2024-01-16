@@ -9,7 +9,6 @@
 #import "BXEmulatorPrivate.h"
 #import "BXEmulator+BXDOSFileSystem.h"
 #import "BXDrive.h"
-#import "RegexKitLite.h"
 
 #pragma mark -
 #pragma mark Private constants

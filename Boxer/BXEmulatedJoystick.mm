@@ -202,7 +202,7 @@ NSString * const BXEmulatedJoystickClassKey = @"BXEmulatedJoystickClassKey";
 {
 	[self buttonDown: button];
 	[self performSelector: @selector(releaseButton:)
-			   withObject: [NSNumber numberWithUnsignedInteger: button]
+			   withObject: @(button)
 			   afterDelay: duration];
 }
 

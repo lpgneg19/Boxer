@@ -46,14 +46,6 @@
 #define NSAppKitVersionNumber10_8 1187
 #endif
 
-BOOL isRunningOnLeopard(void);
-BOOL isRunningOnSnowLeopard(void);
-BOOL isRunningOnLion(void);
-BOOL isRunningOnMountainLion(void);
-//BOOL isRunningOnMavericks();
-
-BOOL isRunningOnSnowLeopardOrAbove(void);
 BOOL isRunningOnLionOrAbove(void);
 BOOL isRunningOnMountainLionOrAbove(void);
 BOOL isRunningOnMavericksOrAbove(void);
-

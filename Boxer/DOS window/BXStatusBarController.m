@@ -157,13 +157,13 @@
 	[self.statusBarControls setEnabled:	session.hasGamebox                              forSegment: BXStatusBarProgramPanelSegment];
 	[self.statusBarControls setEnabled:	self.controller.inputController.mouseActive     forSegment: BXStatusBarMouseLockSegment];
 	
-	NSString *panelImageName;
+	NSImage *panelImage;
 	if ([self.statusBarControls isSelectedForSegment: BXStatusBarProgramPanelSegment]) {
-        panelImageName = @"PanelCollapseTemplate";
+        panelImage = [NSImage imageNamed: @"PanelCollapseTemplate"];
 	} else {
-        panelImageName = @"PanelExpandTemplate";
+        panelImage = [NSImage imageNamed: @"PanelExpandTemplate"];
     }
-	[self.statusBarControls setImage: [NSImage imageNamed: panelImageName] forSegment: BXStatusBarProgramPanelSegment];
+	[self.statusBarControls setImage: panelImage forSegment: BXStatusBarProgramPanelSegment];
 	
 	NSString *lockImageName;
 	if ([self.statusBarControls isSelectedForSegment: BXStatusBarMouseLockSegment]) {

@@ -1091,12 +1091,12 @@
 		5514503824BE8DE50002CE28 /* envelope.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = envelope.cpp; sourceTree = "<group>"; };
 		5514503B24BE8FB90002CE28 /* program_autotype.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program_autotype.cpp; sourceTree = "<group>"; };
 		5514503C24BE8FB90002CE28 /* program_autotype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = program_autotype.h; sourceTree = "<group>"; };
-		551B793625593573006C57CE /* URL+ADBFilesystemHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ADBFilesystemHelpers.swift"; sourceTree = "<group>"; };
+		551B793625593573006C57CE /* URL+ADBFilesystemHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+ADBFilesystemHelpers.swift"; sourceTree = "<group>"; };
 		55215F442AD22FD8007C7C68 /* MT32LCDDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MT32LCDDisplay.swift; sourceTree = "<group>"; };
 		5529311E252AF0DA0069EB35 /* soft_limiter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = soft_limiter.h; sourceTree = "<group>"; };
 		55296E982AD4B86400845EB5 /* DummyMIDIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyMIDIDevice.swift; sourceTree = "<group>"; };
-		55419B67255A2F1400A779B2 /* URL+ADBQuickLookHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ADBQuickLookHelpers.swift"; sourceTree = "<group>"; };
-		55419B73255A7FFA00A779B2 /* URL+ADBAliasHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ADBAliasHelpers.swift"; sourceTree = "<group>"; };
+		55419B67255A2F1400A779B2 /* URL+ADBQuickLookHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+ADBQuickLookHelpers.swift"; sourceTree = "<group>"; };
+		55419B73255A7FFA00A779B2 /* URL+ADBAliasHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+ADBAliasHelpers.swift"; sourceTree = "<group>"; };
 		55488508226A501000A879B3 /* drive_overlay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drive_overlay.cpp; sourceTree = "<group>"; };
 		554E2B6C1BFAF6720038C506 /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
 		554E2B6F1BFAF6D90038C506 /* Boxer only.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Boxer only.xcassets"; sourceTree = "<group>"; };
@@ -1113,7 +1113,7 @@
 		555747F9208FA8030045E635 /* sn76496.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sn76496.cpp; sourceTree = "<group>"; };
 		555747FA208FA8030045E635 /* saa1099.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = saa1099.h; sourceTree = "<group>"; };
 		555747FB208FA8030045E635 /* ymf262.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ymf262.h; sourceTree = "<group>"; };
-		5563E57E239EF7CD007A1600 /* ADBSwiftHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBSwiftHelpers.swift; sourceTree = "<group>"; };
+		5563E57E239EF7CD007A1600 /* ADBSwiftHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADBSwiftHelpers.swift; sourceTree = "<group>"; };
 		5565757423568DED003489A6 /* risc_x64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = risc_x64.h; sourceTree = "<group>"; };
 		55844D0626C70E4E00AA5924 /* pacer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pacer.h; sourceTree = "<group>"; };
 		55844D0F26C70E7700AA5924 /* pacer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacer.cpp; sourceTree = "<group>"; };
@@ -1183,7 +1183,7 @@
 		55BA63F124B051C300A53F4C /* risc_armv8le.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = risc_armv8le.h; sourceTree = "<group>"; };
 		55BBA4E6235EE141007AE319 /* Boxer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Boxer-Bridging-Header.h"; sourceTree = "<group>"; };
 		55BBA4E7235EE141007AE319 /* Boxer Standalone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Boxer Standalone-Bridging-Header.h"; sourceTree = "<group>"; };
-		55BBA4E8235EE141007AE319 /* NSError+ADBErrorHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+ADBErrorHelpers.swift"; sourceTree = "<group>"; };
+		55BBA4E8235EE141007AE319 /* NSError+ADBErrorHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+ADBErrorHelpers.swift"; sourceTree = "<group>"; };
 		55BF6F0320210F6000F3FE59 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55C3B28D25A808D8001EE655 /* midi_handler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = midi_handler.h; sourceTree = "<group>"; };
 		55D7B1942ADB821600B83750 /* BootlegCoverArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootlegCoverArt.swift; sourceTree = "<group>"; };
@@ -2108,7 +2108,7 @@
 		F192BC7F28C7FE0900B8D48D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F192BC8028C7FE0A00B8D48D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F192BC8128C7FE0A00B8D48D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/DOSBox.strings; sourceTree = "<group>"; };
-		F192BC8228C7FE0A00B8D48D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Shell.strings; sourceTree = "<group>"; };
+		F192BC8228C7FE0A00B8D48D /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Shell.strings; sourceTree = "<group>"; };
 		F192BC8328C7FE0A00B8D48D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Configuration.strings; sourceTree = "<group>"; };
 		F192BC8428C7FE0A00B8D48D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3468,7 +3468,7 @@
 			);
 			path = ADBToolkit;
 			sourceTree = "<group>";
-			usesTabs = 0;
+			usesTabs = 1;
 		};
 		9F81CFB613EEA3D7008F0265 /* Disk Images */ = {
 			isa = PBXGroup;

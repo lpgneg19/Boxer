@@ -56,8 +56,7 @@ extension BXFileTypes {
         let handle: ADBReadable & ADBSeekable
         do {
             //Should work, but just in case.
-            let preHandle = try filesystem.fileHandle(atPath: path, options: .openForReading)
-            guard let prehandle1 = preHandle as? (ADBReadable & ADBSeekable) else {
+            guard let prehandle1 = try filesystem.fileHandle(atPath: path, options: .openForReading) as? (ADBReadable & ADBSeekable) else {
                 throw CocoaError(.fileReadUnsupportedScheme)
             }
             handle = prehandle1
