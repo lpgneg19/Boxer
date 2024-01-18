@@ -52,7 +52,7 @@ extension BXFileTypes {
 
     /// Returns the executable type of the file at the specified path.
     /// If the executable type cannot be determined, this method will throw.
-    static func typeOfExecutable(atPath path: String, filesystem: ADBFilesystemPathAccess) throws -> BXExecutableType {
+    static func typeOfExecutable(atPath path: String, in filesystem: ADBFilesystemPathAccess) throws -> BXExecutableType {
         let handle: ADBReadable & ADBSeekable
         do {
             //Should work, but just in case.
