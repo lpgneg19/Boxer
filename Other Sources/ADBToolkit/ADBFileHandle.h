@@ -129,7 +129,7 @@ typedef NS_OPTIONS(NSUInteger, ADBHandleOptions) {
        bytesWritten: (nullable out NSUInteger *)bytesWritten
               error: (out NSError **)outError;
 
-/// Identical to the above, but writes the contents of the specified NSData instance
+/// Identical to the above, but writes the contents of the specified @c NSData instance
 /// instead of a buffer.
 - (BOOL) writeData: (NSData *)data
       bytesWritten: (nullable out NSUInteger *)bytesWritten
