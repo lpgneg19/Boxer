@@ -16,12 +16,11 @@
 
 #import "config.h"
 #import "video.h"
+#include <stdio.h>
 
 #if __cplusplus
 extern "C" {
 #endif
-
-#include <stdio.h>
 	
 //Remapped replacements for DOSBox's old sdlmain functions
 #define GFX_Events boxer_processEvents
