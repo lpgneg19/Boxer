@@ -34,11 +34,11 @@
 
 @interface NSString (ADBStringFormattingPrivate)
 
-//Returns an array of word-wrapped lines. This doesn't handle hard linebreaks at all.
-- (NSArray *) _linesWrappedByWordAtLength: (NSUInteger)maxLength;
+//! Returns an array of word-wrapped lines. This doesn't handle hard linebreaks at all.
+- (NSArray<NSString*> *) _linesWrappedByWordAtLength: (NSUInteger)maxLength;
 
-//Returns an array of character-wrapped lines. This doesn't handle hard linebreaks at all.
-- (NSArray *) _linesWrappedByCharacterAtLength: (NSUInteger)maxLength;
+//! Returns an array of character-wrapped lines. This doesn't handle hard linebreaks at all.
+- (NSArray<NSString*> *) _linesWrappedByCharacterAtLength: (NSUInteger)maxLength;
 
 @end
 
@@ -58,7 +58,7 @@
         NSString *capitalizedLetter = [self substringWithRange: firstLetter].uppercaseString;
         return [self stringByReplacingCharactersInRange: firstLetter withString: capitalizedLetter];
     }
-    else return self;
+    else return [self copy];
 }
 
 - (NSEnumerator *) lineEnumerator
@@ -103,14 +103,16 @@
 	return [[self componentsSplitAtLineLength: maxLength atWordBoundaries: NO] componentsJoinedByString: joiner];
 }
 
+@end
 
-#pragma mark -
-#pragma mark Private methods
+#pragma mark - Private methods
 
-- (NSArray *) _linesWrappedByWordAtLength: (NSUInteger)maxLength
+@implementation NSString (ADBStringFormattingPrivate)
+
+- (NSArray<NSString*> *) _linesWrappedByWordAtLength: (NSUInteger)maxLength
 {
 	NSUInteger length = self.length;
-	NSMutableArray *lines = [NSMutableArray arrayWithCapacity: (NSUInteger)ceil(length / (double)maxLength)];
+	NSMutableArray<NSString*> *lines = [NSMutableArray arrayWithCapacity: (NSUInteger)ceil(length / (double)maxLength)];
 	
 	//IMPLEMENTATION NOTE: we've already split on linebreaks upstream in componentsSplitAtLineLength:atWordBoundaries,
 	//so we don't check for them again here. It would probably be quicker to do it all in one go here though.
@@ -150,12 +152,12 @@
 	return lines;
 }
 
-- (NSArray *) _linesWrappedByCharacterAtLength: (NSUInteger)maxLength
+- (NSArray<NSString*> *) _linesWrappedByCharacterAtLength: (NSUInteger)maxLength
 {
 	NSUInteger length = self.length;
 	NSUInteger offset = 0;
 	
-	NSMutableArray *lines = [NSMutableArray arrayWithCapacity: (NSUInteger)ceil(length / (double)maxLength)];
+	NSMutableArray<NSString*> *lines = [NSMutableArray arrayWithCapacity: (NSUInteger)ceil(length / (double)maxLength)];
 	
 	while (offset < length)
 	{

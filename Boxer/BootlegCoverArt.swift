@@ -108,7 +108,7 @@ class JewelCase : NSObject, BXBootlegCoverArt {
 	open class func textAttributes(for size: NSSize) -> [NSAttributedString.Key : Any] {
 		let lineHeight	= lineHeight(for: size)
 		let fontSize	= fontSize(for: size)
-		let color		= self.textColor;
+		let color		= self.textColor
 		let font		= NSFont(name: self.fontName, size: fontSize)
 		
 		let style = NSMutableParagraphStyle()
