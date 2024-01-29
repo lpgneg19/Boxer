@@ -127,6 +127,14 @@ extension URL {
     }
 }
 
+extension NSURL {
+	/// An analogue for `-[NSString stringsByAppendingPaths:]`.
+	@objc(URLsByAppendingPaths:)
+	func urls(byAppendingPaths paths: [String]) -> [URL] {
+		return (self as URL).urls(byAppendingPaths: paths)
+	}
+}
+
 extension URL {
     /// Returns the value for the specified resource property.
     ///
@@ -322,7 +330,7 @@ extension URL {
     /// extension that would be suitable for the specified UTI.
     func conforms(to comparisonUTI: UTType) -> Bool {
         let reportedUTI = contentType
-        if let reportedUTI = reportedUTI,
+        if let reportedUTI,
            reportedUTI.conforms(to: comparisonUTI) {
             return true
         }
@@ -335,7 +343,7 @@ extension URL {
         let ext = pathExtension
         if ext.count != 0 {
             let utiForExt = UTType(filenameExtension: ext)
-            if let utiForExt = utiForExt,
+            if let utiForExt,
                utiForExt != reportedUTI,
                utiForExt.conforms(to: comparisonUTI) {
                 return true
@@ -344,7 +352,6 @@ extension URL {
         
         return false
     }
-
     
     /// Given a set of `UTType`s, returns the first one to which this
     /// URL conforms, or `nil` if it doesn't match any of them.

@@ -7,8 +7,8 @@
 
 #import "BXDrive+BXDriveArchiving.h"
 #import "BXDrivePrivate.h"
-#import "NSURL+ADBAliasHelpers.h"
 #import "ADBFilesystem.h"
+#import "Boxer-Swift.h"
 
 
 /// Used when decoding drive records from previous Boxer versions,

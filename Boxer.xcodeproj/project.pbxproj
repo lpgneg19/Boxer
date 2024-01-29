@@ -91,6 +91,10 @@
 		55998D3025F6EDC400581095 /* ne2000.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55998D2625F6EDC300581095 /* ne2000.cpp */; };
 		55998D3525F6EF5F00581095 /* libpcap.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 55998D3425F6EF3F00581095 /* libpcap.tbd */; };
 		55998D3725F6EF7900581095 /* libpcap.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 55998D3425F6EF3F00581095 /* libpcap.tbd */; };
+		55A76C5E2B678C0700DEF246 /* URL+ADBAliasHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55419B73255A7FFA00A779B2 /* URL+ADBAliasHelpers.swift */; };
+		55A76C5F2B678C0700DEF246 /* URL+ADBFilesystemHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B793625593573006C57CE /* URL+ADBFilesystemHelpers.swift */; };
+		55A76C602B678C0700DEF246 /* URL+ADBQuickLookHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55419B67255A2F1400A779B2 /* URL+ADBQuickLookHelpers.swift */; };
+		55A76C612B6794DB00DEF246 /* URL+ADBQuickLookHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55419B67255A2F1400A779B2 /* URL+ADBQuickLookHelpers.swift */; };
 		55B22BA21A1BD9760007665E /* Bundler.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B22BA11A1BD9760007665E /* Bundler.xcassets */; };
 		55BBA4E9235EE141007AE319 /* NSError+ADBErrorHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBA4E8235EE141007AE319 /* NSError+ADBErrorHelpers.swift */; };
 		55BBA4EA235EE141007AE319 /* NSError+ADBErrorHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBA4E8235EE141007AE319 /* NSError+ADBErrorHelpers.swift */; };
@@ -203,7 +207,6 @@
 		9F125C4016983A9D003B5B2B /* BXDocumentationPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F125C3F16983A9D003B5B2B /* BXDocumentationPanelController.m */; };
 		9F125C4116983F0C003B5B2B /* BXDocumentationBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F631D7B16947AE900AD06C4 /* BXDocumentationBrowser.m */; };
 		9F12F97C144875F400FC9645 /* DummyCD.iso in Resources */ = {isa = PBXBuildFile; fileRef = 9F12F97B144875F400FC9645 /* DummyCD.iso */; };
-		9F13768A17020B2C00B9A359 /* NSURL+ADBAliasHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F13768917020B2C00B9A359 /* NSURL+ADBAliasHelpers.m */; };
 		9F13F9D011F85E6F0069A02E /* NSFileManager+ADBTemporaryFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F13F9CF11F85E6F0069A02E /* NSFileManager+ADBTemporaryFiles.m */; };
 		9F160DE21236952600F8768E /* Sample Games in Resources */ = {isa = PBXBuildFile; fileRef = 9F160BD91236952400F8768E /* Sample Games */; };
 		9F160E711236B2A600F8768E /* BXAppController+BXGamesFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F160E701236B2A600F8768E /* BXAppController+BXGamesFolder.m */; };
@@ -714,7 +717,6 @@
 		9F9DF415153B058200233968 /* BXKeyBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DF414153B058200233968 /* BXKeyBuffer.mm */; };
 		9F9E27D611F8C173003EE8F3 /* BXDrivePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E27D511F8C173003EE8F3 /* BXDrivePanelController.m */; };
 		9FA0C9E313D24FF3000F6FCB /* DDHidUsage+ADBUsageExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0C9E213D24FF3000F6FCB /* DDHidUsage+ADBUsageExtensions.m */; };
-		9FA0D0CC1694D62100CEF2EA /* NSURL+ADBQuickLookHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0D0CB1694D62100CEF2EA /* NSURL+ADBQuickLookHelpers.m */; };
 		9FA1CF6813E5B44000416D74 /* BXMOMORacingControllerProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA1CF6713E5B43F00416D74 /* BXMOMORacingControllerProfile.m */; };
 		9FA2C09215C8409000380261 /* BXDOSWindowBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA2C09115C8409000380261 /* BXDOSWindowBackgroundView.m */; };
 		9FA5D68311EB6CCC0012DFA5 /* ADBLineEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5D68211EB6CCC0012DFA5 /* ADBLineEnumerator.m */; };
@@ -1304,8 +1306,6 @@
 		9F125C3E16983A9D003B5B2B /* BXDocumentationPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BXDocumentationPanelController.h; path = "Boxer/Documentation Panel/BXDocumentationPanelController.h"; sourceTree = SOURCE_ROOT; };
 		9F125C3F16983A9D003B5B2B /* BXDocumentationPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BXDocumentationPanelController.m; path = "Boxer/Documentation Panel/BXDocumentationPanelController.m"; sourceTree = SOURCE_ROOT; };
 		9F12F97B144875F400FC9645 /* DummyCD.iso */ = {isa = PBXFileReference; lastKnownFileType = file; path = DummyCD.iso; sourceTree = "<group>"; };
-		9F13768817020B2C00B9A359 /* NSURL+ADBAliasHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+ADBAliasHelpers.h"; sourceTree = "<group>"; };
-		9F13768917020B2C00B9A359 /* NSURL+ADBAliasHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+ADBAliasHelpers.m"; sourceTree = "<group>"; };
 		9F13F9CE11F85E6F0069A02E /* NSFileManager+ADBTemporaryFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+ADBTemporaryFiles.h"; sourceTree = "<group>"; };
 		9F13F9CF11F85E6F0069A02E /* NSFileManager+ADBTemporaryFiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+ADBTemporaryFiles.m"; sourceTree = "<group>"; };
 		9F160BD91236952400F8768E /* Sample Games */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Sample Games"; sourceTree = "<group>"; };
@@ -1829,8 +1829,6 @@
 		9F9E27D511F8C173003EE8F3 /* BXDrivePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXDrivePanelController.m; sourceTree = "<group>"; };
 		9FA0C9E113D24FF3000F6FCB /* DDHidUsage+ADBUsageExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDHidUsage+ADBUsageExtensions.h"; sourceTree = "<group>"; };
 		9FA0C9E213D24FF3000F6FCB /* DDHidUsage+ADBUsageExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDHidUsage+ADBUsageExtensions.m"; sourceTree = "<group>"; };
-		9FA0D0CA1694D62100CEF2EA /* NSURL+ADBQuickLookHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+ADBQuickLookHelpers.h"; sourceTree = "<group>"; };
-		9FA0D0CB1694D62100CEF2EA /* NSURL+ADBQuickLookHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+ADBQuickLookHelpers.m"; sourceTree = "<group>"; };
 		9FA1CF6713E5B43F00416D74 /* BXMOMORacingControllerProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXMOMORacingControllerProfile.m; sourceTree = "<group>"; };
 		9FA2C09015C8409000380261 /* BXDOSWindowBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXDOSWindowBackgroundView.h; sourceTree = "<group>"; };
 		9FA2C09115C8409000380261 /* BXDOSWindowBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXDOSWindowBackgroundView.m; sourceTree = "<group>"; };
@@ -3541,10 +3539,6 @@
 				9FC8F50B10934F3400AD6307 /* NSString+ADBPaths.m */,
 				9FB60E8C15C5552F00CD0D63 /* NSURL+ADBFilesystemHelpers.h */,
 				9FB60E8D15C5552F00CD0D63 /* NSURL+ADBFilesystemHelpers.m */,
-				9FA0D0CA1694D62100CEF2EA /* NSURL+ADBQuickLookHelpers.h */,
-				9FA0D0CB1694D62100CEF2EA /* NSURL+ADBQuickLookHelpers.m */,
-				9F13768817020B2C00B9A359 /* NSURL+ADBAliasHelpers.h */,
-				9F13768917020B2C00B9A359 /* NSURL+ADBAliasHelpers.m */,
 				9F573C580F8E18B10089D8B7 /* NSWorkspace+ADBMountedVolumes.h */,
 				9F573C590F8E18B10089D8B7 /* NSWorkspace+ADBMountedVolumes.m */,
 				9F76D1B710CA9DFB00C3B081 /* NSWorkspace+ADBFileTypes.h */,
@@ -4416,7 +4410,6 @@
 				9F201E381657DB7F0086F1BB /* ADBUserNotificationDispatcher.m in Sources */,
 				9F4B1AFA165C122F001AE063 /* BXDriveItem.m in Sources */,
 				9FFE7104165E931600F99C3D /* BXJoystickItem.m in Sources */,
-				9FA0D0CC1694D62100CEF2EA /* NSURL+ADBQuickLookHelpers.m in Sources */,
 				9F125C4016983A9D003B5B2B /* BXDocumentationPanelController.m in Sources */,
 				9F125C4116983F0C003B5B2B /* BXDocumentationBrowser.m in Sources */,
 				9F6463F716C67415008B65BF /* BXOutputBinding.m in Sources */,
@@ -4424,10 +4417,10 @@
 				9F35F3E916CFBB700093CF45 /* NSFileManager+ADBUniqueFilenames.m in Sources */,
 				9F80E7FF16DA3170001C3162 /* ADBFileHandle.m in Sources */,
 				9F693D5E16DD40DD00CCEA7C /* ADBEnumerationHelpers.m in Sources */,
+				55A76C5F2B678C0700DEF246 /* URL+ADBFilesystemHelpers.swift in Sources */,
 				9F38B38B16DFB1960050AB15 /* ADBLocalFilesystem.m in Sources */,
 				9F1E8CDA16E16C0400F1C908 /* ADBScanOperation.m in Sources */,
 				9F1E8CDE16E16EB800F1C908 /* ADBMountableImage.m in Sources */,
-				9F13768A17020B2C00B9A359 /* NSURL+ADBAliasHelpers.m in Sources */,
 				9F20ADD01702E87B007263C8 /* BXDrive+BXDriveArchiving.m in Sources */,
 				9F77217612B38C4400072AE8 /* callback.cpp in Sources */,
 				9F77217712B38C4400072AE8 /* core_dyn_x86.cpp in Sources */,
@@ -4484,6 +4477,7 @@
 				9F7721A212B38C4400072AE8 /* render_scalers.cpp in Sources */,
 				9F7721A612B38C4400072AE8 /* adlib.cpp in Sources */,
 				9F7721A712B38C4400072AE8 /* cmos.cpp in Sources */,
+				55A76C602B678C0700DEF246 /* URL+ADBQuickLookHelpers.swift in Sources */,
 				9F7721A812B38C4400072AE8 /* dbopl.cpp in Sources */,
 				9F7721A912B38C4400072AE8 /* disney.cpp in Sources */,
 				55F0B78826ABFEE80077E58C /* Integrator6581.cpp in Sources */,
@@ -4518,6 +4512,7 @@
 				9F7721C412B38C4400072AE8 /* vga_attr.cpp in Sources */,
 				9F7721C512B38C4400072AE8 /* vga_crtc.cpp in Sources */,
 				9F7721C612B38C4400072AE8 /* vga_dac.cpp in Sources */,
+				55A76C5E2B678C0700DEF246 /* URL+ADBAliasHelpers.swift in Sources */,
 				9F7721C712B38C4400072AE8 /* vga_draw.cpp in Sources */,
 				9F7721C812B38C4400072AE8 /* vga_gfx.cpp in Sources */,
 				9F7721C912B38C4400072AE8 /* vga_memory.cpp in Sources */,
@@ -4865,6 +4860,7 @@
 				9F458D9D15D83B8C00DF9102 /* BXLaunchPanelController.m in Sources */,
 				9F458D9E15D83B9000DF9102 /* BXDOSWindowBackgroundView.m in Sources */,
 				9F57684A15DA27A300B50500 /* BXHUDSpinningProgressIndicator.m in Sources */,
+				55A76C612B6794DB00DEF246 /* URL+ADBQuickLookHelpers.swift in Sources */,
 				9FDFB46E15DBA38F004EA615 /* BXStandaloneAboutController.m in Sources */,
 				5514501B24BE81E00002CE28 /* SDL_sound.c in Sources */,
 				55574806208FA8040045E635 /* ymdeltat.cpp in Sources */,

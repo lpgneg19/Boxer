@@ -127,19 +127,6 @@
     return [components copy];
 }
 
-- (NSArray *) URLsByAppendingPaths: (NSArray *)paths
-{
-    NSMutableArray *URLs = [NSMutableArray arrayWithCapacity: paths.count];
-    
-    for (NSString *pathComponent in paths)
-    {
-        NSURL *URL = [self URLByAppendingPathComponent: pathComponent];
-        [URLs addObject: URL];
-    }
-    
-    return [URLs copy];
-}
-
 @end
 
 @implementation NSURL (ADBResourceValues)

@@ -8,12 +8,12 @@
 #import "BXDocumentationBrowser.h"
 #import "BXSession.h"
 #import "BXGamebox.h"
-#import "NSURL+ADBQuickLookHelpers.h"
 #import "BXBaseAppController.h"
 #import "NSView+ADBDrawingHelpers.h"
 #import "BXBaseAppController.h"
 #import "NSError+ADBErrorHelpers.h"
 #import "NSBezierPath+MCAdditions.h"
+#import "Boxer-Swift.h"
 
 NS_ENUM(NSInteger) {
     BXDocumentationItemIcon = 1,

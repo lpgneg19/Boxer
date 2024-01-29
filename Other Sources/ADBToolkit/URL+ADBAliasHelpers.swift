@@ -26,3 +26,14 @@ extension URL {
         try self.init(resolvingBookmarkData: bookmarkData, options: options, relativeTo: relativeURL, bookmarkDataIsStale: &isStale)
     }
 }
+
+extension NSURL {
+	/// Returns a URL resolved from the specified Finder alias record.
+	///
+	/// Directly equivalent to `URLByResolvingBookmarkData:options:relativeToURL:bookmarkDataIsStale:error:`.
+	@objc(URLByResolvingAliasRecord:options:relativeToURL:bookmarkDataIsStale:error:)
+	static func resolvingAliasRecord(_ aliasRecord: Data, options: URL.BookmarkResolutionOptions, relativeTo relativeURL: URL?, bookmarkDataIsStale isStale: UnsafeMutablePointer<ObjCBool>?) throws -> NSURL {
+		let bookData = try URL.bookmarkData(fromAliasRecord: aliasRecord)
+		return try self.init(resolvingBookmarkData: bookData, options: options, relativeTo: relativeURL, bookmarkDataIsStale: isStale)
+	}
+}

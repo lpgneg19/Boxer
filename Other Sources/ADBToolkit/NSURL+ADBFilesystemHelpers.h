@@ -56,9 +56,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// Returns an array containing this URL and every parent directory leading back to the root.
 @property (readonly, copy) NSArray<NSURL*> *componentURLs;
 
-/// An analogue for NSString stringsByAppendingPaths:
-- (NSArray<NSURL*> *) URLsByAppendingPaths: (NSArray<NSString*> *)paths;
-
 @end
 
 

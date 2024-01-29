@@ -59,6 +59,8 @@
 
 #import "ADBUserNotificationDispatcher.h"
 
+#import "Boxer-Swift.h"
+
 
 #pragma mark -
 #pragma mark Private method declarations
