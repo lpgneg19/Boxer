@@ -64,7 +64,6 @@
     NSSize logicalSize = pixelSize;
     
     //TODO: ask our drawing context to do the conversion itself
-    if ([[NSScreen mainScreen] respondsToSelector: @selector(convertRectFromBacking:)])
     {
         NSRect pixelFrame = NSMakeRect(0, 0, pixelSize.width, pixelSize.height);
         logicalSize = [[NSScreen mainScreen] convertRectFromBacking: pixelFrame].size;

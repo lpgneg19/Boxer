@@ -62,14 +62,11 @@
     [super viewDidLoad];
     
     //These attributes are unsupported in 10.6 and so cannot be defined in the XIB.
-    if ([self.launcherScrollView respondsToSelector: @selector(setScrollerKnobStyle:)])
-        self.launcherScrollView.scrollerKnobStyle = NSScrollerKnobStyleLight;
+    self.launcherScrollView.scrollerKnobStyle = NSScrollerKnobStyleLight;
     
-    if ([self.launcherScrollView respondsToSelector: @selector(setUsesPredominantAxisScrolling:)])
-        self.launcherScrollView.usesPredominantAxisScrolling = YES;
+    self.launcherScrollView.usesPredominantAxisScrolling = YES;
     
-    if ([self.launcherScrollView respondsToSelector: @selector(setHorizontalScrollElasticity:)])
-        self.launcherScrollView.horizontalScrollElasticity = NSScrollElasticityNone;
+    self.launcherScrollView.horizontalScrollElasticity = NSScrollElasticityNone;
 }
 
 - (void) setRepresentedObject: (id)representedObject

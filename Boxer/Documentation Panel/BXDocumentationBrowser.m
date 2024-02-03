@@ -87,11 +87,9 @@ NS_ENUM(NSInteger) {
 
 - (void) awakeFromNib
 {
-    if ([self.documentationScrollView respondsToSelector: @selector(setUsesPredominantAxisScrolling:)])
-        self.documentationScrollView.usesPredominantAxisScrolling = YES;
+    self.documentationScrollView.usesPredominantAxisScrolling = YES;
     
-    if ([self.documentationScrollView respondsToSelector: @selector(setHorizontalScrollElasticity:)])
-        self.documentationScrollView.horizontalScrollElasticity = NSScrollElasticityNone;
+    self.documentationScrollView.horizontalScrollElasticity = NSScrollElasticityNone;
     
 	[self.view registerForDraggedTypes: @[NSPasteboardTypeFileURL]];
     //Allow documentation files to be dragged out of the documentation list to other applications,
@@ -195,8 +193,7 @@ NS_ENUM(NSInteger) {
             [self.delegate documentationBrowser: self didUpdateFromURLs: oldURLs toURLs: newURLs];
         
         //Flash the scrollbars (if any) to indicate that the content of the scroller has changed.
-        if ([self.documentationScrollView respondsToSelector: @selector(flashScrollers)])
-            [self.documentationScrollView flashScrollers];
+        [self.documentationScrollView flashScrollers];
     }
 }
 
@@ -837,8 +834,7 @@ NS_ENUM(NSInteger) {
             //Meanwhile, load in a quicklook preview for this file in the background.
             //Take retina displays into account when calculating the appropriate preview size.
             NSSize thumbnailSize = self.view.bounds.size;
-            if ([self.view respondsToSelector: @selector(convertSizeToBacking:)])
-                thumbnailSize = [self.view convertSizeToBacking: thumbnailSize];
+            thumbnailSize = [self.view convertSizeToBacking: thumbnailSize];
             
             //We perform this in an asynchronous block, because it can take a while
             //to prepare the thumbnail.

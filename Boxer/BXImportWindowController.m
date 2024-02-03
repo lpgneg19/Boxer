@@ -25,8 +25,7 @@
 	self.currentPanel = self.dropzonePanel;
     
     //Disable window restoration.
-    if ([self.window respondsToSelector: @selector(setRestorable:)])
-        self.window.restorable = NO;
+	self.window.restorable = NO;
 
     //Observe ourselves for changes to the document or its import stage,
     //so we can sync the active panel.
@@ -148,7 +147,6 @@
     
     //Suppress the default Lion window animations...
     NSWindowAnimationBehavior oldToBehavior = NSWindowAnimationBehaviorDefault, oldFromBehavior = NSWindowAnimationBehaviorDefault;
-    if ([toWindow respondsToSelector: @selector(setAnimationBehavior:)])
     {
         oldToBehavior = toWindow.animationBehavior;
         oldFromBehavior = fromWindow.animationBehavior;
@@ -165,7 +163,6 @@
     [fromWindow orderOut: self];
     
     //...and then turn the Lion animations back on after the transition is complete.
-    if ([toWindow respondsToSelector: @selector(setAnimationBehavior:)])
     {
         toWindow.animationBehavior = oldToBehavior;
         fromWindow.animationBehavior = oldFromBehavior;
@@ -195,7 +192,6 @@
     
     //Suppress the default Lion window animations...
     NSWindowAnimationBehavior oldToBehavior = NSWindowAnimationBehaviorDefault, oldFromBehavior = NSWindowAnimationBehaviorDefault;
-    if ([toWindow respondsToSelector: @selector(setAnimationBehavior:)])
     {
         oldToBehavior = toWindow.animationBehavior;
         oldFromBehavior = fromWindow.animationBehavior;
@@ -215,7 +211,6 @@
     [fromWindow orderOut: self];
     
     //...and then turn them back on after the transition is complete.
-    if ([toWindow respondsToSelector: @selector(setAnimationBehavior:)])
     {
         toWindow.animationBehavior = oldToBehavior;
         fromWindow.animationBehavior = oldFromBehavior;

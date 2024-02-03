@@ -29,7 +29,7 @@
 
 - (NSSize) knobMargin
 {
-    if ([self respondsToSelector: @selector(scrollerStyle)] && [self scrollerStyle] == NSScrollerStyleOverlay)
+    if ([self scrollerStyle] == NSScrollerStyleOverlay)
     {
         return NSMakeSize(2.0f, 3.0f);
     }
@@ -41,7 +41,7 @@
 
 - (NSSize) slotMargin
 {
-    if ([self respondsToSelector: @selector(scrollerStyle)] && [self scrollerStyle] == NSScrollerStyleOverlay)
+    if ([self scrollerStyle] == NSScrollerStyleOverlay)
     {
         return NSMakeSize(1.0f, 2.0f);
     }
@@ -88,17 +88,7 @@
 - (void) drawRect: (NSRect)dirtyRect
 {
     //On 10.7 and above, the regular NSScroller class should handle drawing
-    if ([self respondsToSelector: @selector(scrollerStyle)])
-    {
-        [super drawRect: dirtyRect];
-    }
-    //On 10.6 and below, we wish to override drawing to avoid drawing the 'caps'
-    //on the end of the standard scroller.
-    else
-    {
-        [self drawKnobSlotInRect: [self rectForPart: NSScrollerKnobSlot] highlight: NO];
-        [self drawKnob];
-    }
+    [super drawRect: dirtyRect];
 }
 
 - (void) drawKnob
@@ -186,7 +176,7 @@
 
 - (NSSize) knobMargin
 {
-    if ([self respondsToSelector: @selector(scrollerStyle)] && [self scrollerStyle] == NSScrollerStyleOverlay)
+    if ([self scrollerStyle] == NSScrollerStyleOverlay)
     {
         return NSMakeSize(2.0f, 2.0f);
     }
@@ -198,7 +188,7 @@
 
 - (NSSize) slotMargin
 {
-    if ([self respondsToSelector: @selector(scrollerStyle)] && [self scrollerStyle] == NSScrollerStyleOverlay)
+    if ([self scrollerStyle] == NSScrollerStyleOverlay)
     {
         return NSMakeSize(1.0f, 1.0f);
     }

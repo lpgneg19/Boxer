@@ -142,7 +142,6 @@ NSString * const BXGamesFolderBookmarkUserDefaultsKey = @"gamesFolderURLBookmark
 {
     BOOL useRetinaAssets = NO;
     //10.7 and up
-    if ([[NSScreen mainScreen] respondsToSelector: @selector(convertRectToBacking:)])
     {
         NSRect backingPixel = [[NSScreen mainScreen] convertRectToBacking: NSMakeRect(0, 0, 1, 1)];
         useRetinaAssets = (backingPixel.size.width >= 2.0);

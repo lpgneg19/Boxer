@@ -171,8 +171,7 @@ NSString * const BXDOSWindowFullscreenSizeFormat = @"Fullscreen size for %@";
 	self.window.acceptsMouseMovedEvents = YES;
 	
     //Disable window restoration.
-    if ([self.window respondsToSelector: @selector(setRestorable:)])
-        self.window.restorable = NO;
+    self.window.restorable = NO;
     
     //Adjust the window's initial dimensions to suit the current aspect-ratio correction settings.
     BOOL aspectCorrectText = [[NSUserDefaults standardUserDefaults] boolForKey: @"aspectCorrectedText"];
