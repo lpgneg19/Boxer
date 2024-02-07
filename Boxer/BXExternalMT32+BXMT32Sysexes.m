@@ -90,7 +90,7 @@
 }
 
 //Calculate the Roland checksum for the specified raw bytes.
-+ (NSUInteger) _checksumForBytes: (UInt8 *)bytes length: (NSUInteger)length
++ (NSUInteger) _checksumForBytes: (const UInt8 *)bytes length: (NSUInteger)length
 {
     NSUInteger i, checksum = 0;
     for (i = 0; i < length; i++) checksum += bytes[i];
@@ -110,7 +110,7 @@
     //The checksum for a Roland sysex message is calculated from
     //the bytes of the message address and the message data:
     //skip the bytes before and after that block.
-    UInt8 *bytes = (UInt8 *)sysex.bytes;
+    const UInt8 *bytes = sysex.bytes;
     
     NSUInteger length = sysex.length - BXRolandSysexHeaderLength - BXRolandSysexTailLength;
     
@@ -152,7 +152,7 @@
     [sysex appendData: data];
     
     //Calculate the checksum based on the address and data parts of the overall sysex
-    UInt8 *bytes = (UInt8 *)sysex.bytes;
+    const UInt8 *bytes = sysex.bytes;
     NSUInteger checksum = [self _checksumForBytes: &bytes[BXRolandSysexHeaderLength]
                                            length: (BXRolandSysexAddressLength + [data length])];
     
@@ -187,7 +187,7 @@
     [sysex appendBytes: requestSize length: BXRolandSysexRequestSizeLength];
     
     //Calculate the checksum based on the address and request size parts of the overall sysex
-    UInt8 *bytes = (UInt8 *)sysex.bytes;
+    const UInt8 *bytes = sysex.bytes;
     NSUInteger checksum = [self _checksumForBytes: &bytes[BXRolandSysexHeaderLength]
                                            length: (BXRolandSysexAddressLength + BXRolandSysexRequestSizeLength)];
     
