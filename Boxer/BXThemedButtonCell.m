@@ -7,7 +7,7 @@
 
 #import "BXThemedButtonCell.h"
 #import "ADBGeometry.h"
-#import "NSImage+ADBImageEffects.h"
+#import "Boxer-Swift.h"
 
 @implementation BXThemedButtonCell
 

@@ -13,9 +13,9 @@
 #import "BXDrivePanelController.h"
 #import "ADBGeometry.h"
 #import "NSShadow+ADBShadowExtensions.h"
-#import "NSImage+ADBImageEffects.h"
 #import "BXThemes.h"
 #import "NSView+ADBDrawingHelpers.h"
+#import "Boxer-Swift.h"
 
 
 @implementation BXDriveItemView

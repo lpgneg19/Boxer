@@ -8,8 +8,8 @@
 #import "BXStandaloneLaunchPanelButtonCell.h"
 #import "NSShadow+ADBShadowExtensions.h"
 #import "NSBezierPath+MCAdditions.h"
-#import "NSImage+ADBImageEffects.h"
 #import "ADBGeometry.h"
+#import "Boxer-Swift.h"
 
 @interface BXStandaloneLaunchPanelButtonCell ()
 

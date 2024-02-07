@@ -8,8 +8,8 @@
 #import "BXThemedImageCell.h"
 #import "ADBGeometry.h"
 #import "NSShadow+ADBShadowExtensions.h"
-#import "NSImage+ADBImageEffects.h"
 #import "BXThemes.h"
+#import "Boxer-Swift.h"
 
 
 @interface BXThemedImageCell ()
